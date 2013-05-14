@@ -23,10 +23,10 @@
     <ClCompile Include="Pieces.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Visual Studio 2010\Projects\assignment2 hlut\assignment2 hlut\Game.cpp">
+    <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Visual Studio 2010\Projects\assignment2 hlut\assignment2 hlut\GameEngine.cpp">
+    <ClCompile Include="GameEngine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

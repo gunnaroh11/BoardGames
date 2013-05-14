@@ -3,7 +3,9 @@
 
 struct Point{
 public:
-	
+	int m_x;
+	int m_y;
+
 	Point();
 	Point(int x, int y):m_x(x), m_y(y){};
 	
@@ -11,9 +13,6 @@ public:
 		m_x = 0;
 		m_y = 0;
 	};
-
-	int m_x;
-	int m_y;
 };
 
 class Piece{
