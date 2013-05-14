@@ -81,6 +81,8 @@
     <ClInclude Include="Pieces.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\Visual Studio 2010\Projects\assignment2 hlut\assignment2 hlut\Game.cpp" />
+    <ClCompile Include="..\..\..\Visual Studio 2010\Projects\assignment2 hlut\assignment2 hlut\GameEngine.cpp" />
     <ClCompile Include="Pieces.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
