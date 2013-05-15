@@ -100,7 +100,6 @@ using namespace std;
 		CurrentPlayer = 1;
 		GameBoard.SetSize(5,5);
 	
-		GameBoard = Board(5,5);
 	}
 	
 

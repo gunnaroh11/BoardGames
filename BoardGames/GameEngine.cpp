@@ -14,7 +14,7 @@ void list(vector<Game> G)
 {
 	for(int i = 0;i< (int)G.size();i++)
 	{
-		cout << i << ". " << G[i].GetName();
+		cout << i << ". " << G[i].GetName() << endl;
 	}
 };
 
@@ -77,7 +77,8 @@ string word;
 int nr = -1;
 
 Game t;
-Games.push_back(t.getTestGame()); // á að vera new test game... eða e-ð
+t.GetTestGame();
+Games.push_back(t); // á að vera new test game... eða e-ð
 
 cout << "type list to get a list of all supported games" << endl;
 cout << "type game to pick game to play" << endl;
