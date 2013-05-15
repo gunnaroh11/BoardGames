@@ -3,10 +3,11 @@
 #include <string>
 #include "Board.h"
 using namespace std;
+
 class Game
 {
 public:
-	
+	bool m_finished;
 	Game()
 	{
 	}
