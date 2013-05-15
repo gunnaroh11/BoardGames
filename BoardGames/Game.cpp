@@ -11,24 +11,39 @@ using namespace std;
 	}
 	void Game::start()
 	{
-
+	cout << "blarg start is not possible"<< endl;
+	cout << "current player is "<< CurrentPlayer << " and turn is " << CurrentTurn << "off "<<MaxPlays <<" turns "<< endl;
+	display(5,5);
+	make(1,1,2,1);
+	make(3,1,2,1);
+	display(5,5);
 	}
 	void Game::make(int FromX,int FromY,int ToX,int ToY)
 	{
-
+		if(GameBoard.GameBoard[FromX][FromY].getPlayer() == CurrentPlayer)
+		{
+			Piece temp = GameBoard.GameBoard[ToX][ToY];
+			GameBoard.GameBoard[ToX][ToY]=GameBoard.GameBoard[FromX][FromY];
+			GameBoard.GameBoard[FromX][FromY] = temp; 
+			
+			if(CurrentPlayer == 1)
+			{
+				CurrentPlayer = 2;
+			}
+			else
+			{
+				CurrentPlayer = 1;
+			}
+		}
+		else
+		{
+			cout<< "that piece does not belong to the current player "<< endl;
+		}
 		//check if the piece at fromX,fromY belongs to current player
 		//evaluate if move is leagal
 		//if(evaluate(fromX,fromY,toX,toY){
 		//exchange GameBoard[FromX,FromY] with GameBoard[ToX,ToY]
-		if(CurrentPlayer == 1)
-		{
-			CurrentPlayer = 2;
-		}
-		else
-		{
-			CurrentPlayer = 1;
-		}
-		//else{cout<<"illegal Move"<<end;}
+				//else{cout<<"illegal Move"<<end;}
 	}
 	void Game::go()
 	{
@@ -44,14 +59,7 @@ using namespace std;
 	}
 	void Game::display(int height,int with)
 	{
-		for(int i = 0;i<height;i++)
-		{
-			for(int j = 0;j<with;j++)
-			{
-				//std::cout<<GameBoard[i][j] << "
-			}
-			std::cout<<std::endl;
-		}
+		GameBoard.GenerateBoard();
 	}
 	void Game::evaluate()
 		{
@@ -98,7 +106,9 @@ using namespace std;
 		CurrentPlayer = 1;
 		GameBoard.SetSize(5,5);
 		GameBoard.GameBoard[3][1].setPlayer(1);
+		GameBoard.GameBoard[3][1].setMoves(1,1,1,1);
 		GameBoard.GameBoard[1][1].setPlayer(2);
+		GameBoard.GameBoard[1][1].setMoves(1,1,1,1);
 		GameBoard.GenerateBoard();
 	
 	}
