@@ -1,14 +1,7 @@
-#include <iostream>
-#include <vector>
-#include <string>
-#include "Board.h"
+#include "Game.h"
 using namespace std;
 
-class Game
-{
-public:
-	bool m_finished;
-	Game()
+	Game::Game()
 	{
 	}
 	void legal()
@@ -16,11 +9,11 @@ public:
 		//foreach piece on board get leagal moves
 
 	}
-	virtual void start()
+	void Game::start()
 	{
 
 	}
-	void make(int FromX,int FromY,int ToX,int ToY)
+	void Game::make(int FromX,int FromY,int ToX,int ToY)
 	{
 
 		//check if the piece at fromX,fromY belongs to current player
@@ -37,11 +30,11 @@ public:
 		}
 		//else{cout<<"illegal Move"<<end;}
 	}
-	void go()
+	void Game::go()
 	{
 
 	}
-	void retract()
+	void Game::retract()
 	{
 		if(CurrentTurn != 0)
 		{
@@ -49,7 +42,7 @@ public:
 		GameBoard.Revert(history[CurrentTurn]);
 		}
 	}
-	virtual void display(int height,int with)
+	void Game::display(int height,int with)
 	{
 		for(int i = 0;i<height;i++)
 		{
@@ -62,18 +55,18 @@ public:
 			std::cout<<std::endl;
 		}
 	}
-	void evaluate()
+	void Game::evaluate()
 		{
 			//to be implemented;
 		}
-	void level(std::string difficulty)
+	void Game::level(string difficulty)
 	{
 		//easy
 		//medium
 		//hard
 		//random
 	}
-	bool debug()
+	void Game::debug()
 	{
 		if(Debug == true)
 		{
@@ -84,20 +77,9 @@ public:
 			Debug = true;
 		}
 	}
-	void quit(){}
-	string GetName()
+	void Game::quit(){}
+	string Game::GetName()
 	{
 		return GameName;
 	}
 
-protected:
-	string GameName;
-	bool Debug;
-	int difficulty;
-	Board GameBoard;
-	vector<Board> history;
-	int MaxPlays;
-	int CurrentTurn;
-	int CurrentPlayer;
-
-};
