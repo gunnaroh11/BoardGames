@@ -109,7 +109,7 @@ cout << "type game to pick game to play" << endl;
 
 		if(word == "game")
 		{
-			cout << "pick the number of the game you want to play"<<endl;
+			cout << "pick the number of the game you want to play" << endl;
 			
 			cin>>nr;			
 		}
@@ -130,7 +130,7 @@ cout << "type game to pick game to play" << endl;
 		{
 			if(debug == true)
 				debug == false;
-			if(debug == fale)
+			if(debug == false)
 				debug == true;
 		}
 
