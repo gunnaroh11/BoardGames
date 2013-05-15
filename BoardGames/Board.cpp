@@ -27,3 +27,12 @@ std::string Board::CheckOwner(int X,int Y)
 				return "0";
 				}
 }
+void Board::Revert(Board G)
+{
+	//GameBoard = G;
+}
+void Board::SetSize(int h,int w)
+{
+	height = h;
+	width = w;
+}

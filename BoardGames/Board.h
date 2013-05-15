@@ -9,6 +9,8 @@ public:
 	Board();
 	Board(int h,int w);
 	std::string CheckOwner(int X,int Y);
+	void Revert(Board G);
+	void SetSize(int h,int w);
 private:
 	int height;
 	int width;

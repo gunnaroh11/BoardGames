@@ -15,7 +15,7 @@ public:
 		//foreach piece on board get leagal moves
 
 	}
-	void start()
+	virtual void start()
 	{
 
 	}
@@ -45,7 +45,7 @@ public:
 		if(CurrentTurn != 0)
 		{
 		CurrentTurn-=1;
-		//board = history[CurrentTurn]
+		GameBoard.Revert(history[CurrentTurn]);
 		}
 	}
 	virtual void display(int height,int with)
@@ -84,13 +84,17 @@ public:
 		}
 	}
 	void quit(){}
-		
+	string GetName()
+	{
+		return GameName;
+	}
 
-private:
+protected:
+	string GameName;
 	bool Debug;
 	int difficulty;
 	Board GameBoard;
-	vector<Board*> history;
+	vector<Board> history;
 	int MaxPlays;
 	int CurrentTurn;
 	int CurrentPlayer;
