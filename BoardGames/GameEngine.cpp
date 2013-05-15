@@ -61,8 +61,7 @@ int inGameMode(Game &playGame){
 
 		if(gameWord == "level")
 		{
-			if(playGame.getDifficulty() != "")
-			cin >>  playGame.setDifficulty;
+			cout << "ble";
 		}
 
 

@@ -6,7 +6,7 @@
 class Board
 {
 public:
-	Board();
+	Board(){};
 	Board(int h,int w);
 	std::string CheckOwner(int X,int Y);
 	void Revert(Board G);

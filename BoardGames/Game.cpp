@@ -83,3 +83,11 @@ using namespace std;
 		return GameName;
 	}
 
+	void Game::setDifficulty(int diff){
+		difficulty = diff;
+	}
+
+	int Game::getDifficulty(){
+		return difficulty;
+	}
+

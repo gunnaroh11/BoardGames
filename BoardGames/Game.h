@@ -24,6 +24,8 @@ public:
 	void debug();
 	void quit();
 	string GetName();
+	void setDifficulty(int diff);
+	int getDifficulty();
 
 protected:
 	string GameName;
