@@ -24,9 +24,9 @@ class Piece{
 
 public:
 	Piece();
-	Piece(char *type, int playerNumber, Point position);
+	Piece(char *type, int playerNumber);
 	
-	virtual void move(Point p) = 0;
+	virtual void move(Point p);
 	virtual void setMoves(int dirN, int dirE, int dirS, int dirW);
 	virtual void getMoves(Point *points[], const int boardSize);
 	

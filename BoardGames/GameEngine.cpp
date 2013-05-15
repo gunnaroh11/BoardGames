@@ -1,11 +1,12 @@
 #include "Game.cpp"
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 void list(vector<Game> G)
 {
-	for(int i = 0;i<G.size();i++)
+	for(int i = 0;i< (int)G.size();i++)
 	{
 	//cout lists
 	}

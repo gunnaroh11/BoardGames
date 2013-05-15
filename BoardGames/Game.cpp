@@ -95,4 +95,4 @@ private:
 	int CurrentTurn;
 	int CurrentPlayer;
 
-}
+};

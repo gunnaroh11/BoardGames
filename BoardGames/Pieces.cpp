@@ -6,10 +6,10 @@ Piece::Piece(){
 
 //Piece constructor, initialize piece type, what player the piece belongs to
 // and position on the gameboard.
-Piece::Piece(char *type, int playerNumber, Point position){
+Piece::Piece(char *type, int playerNumber){
 	m_type = type;
 	m_playerNumber = playerNumber;
-	setPosition(position);
+	//setPosition(position);
 	m_hasMoved = false;
 }
 
@@ -75,7 +75,4 @@ char* Piece::getType(){
 	return m_type;
 }
 
-
-
-Point Piece::getMoves(){}
 

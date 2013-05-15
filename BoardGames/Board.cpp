@@ -6,19 +6,19 @@ Board::Board(int h,int w)
 	{
 		for(int j = 0;j<w;j++)
 		{
-			GameBoard[i,j]= new Piece("0",0,Point(i,j));
+			//GameBoard[i,j]= Piece("0",0,Point(i,j));
 		}
 	}
 
 }
 
-Board::CheckOwner(int X,int Y)
+std::string Board::CheckOwner(int X,int Y)
 {
-	if(GameBoard[X,Y].m_playerNumber == 1)
+	if(GameBoard[X][Y].getPlayer() == 1)
 				{
 					return "P";
 				}
-				else if(GameBoard[X,Y].m_playerNumber == 2)
+				else if(GameBoard[X][Y].getPlayer() == 2)
 				{
 					return "p";
 				}
