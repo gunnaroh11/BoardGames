@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "Board.h"
+using namespace std;
 class Game
 {
 public:
@@ -52,20 +54,9 @@ public:
 		{
 			for(int j = 0;j<with;j++)
 			{
-				/*
-				if(GameBoard[i,j].player == 1)
-				{
-					cout<<"P";
-				}
-				else if(GameBoard[i,j].player == 2)
-				{
-					cout<<"p";
-				}
-				else
-				{
-				cout<<"0";
-				}
-				*/
+				
+				
+				
 			}
 			std::cout<<std::endl;
 		}
@@ -81,25 +72,25 @@ public:
 		//hard
 		//random
 	}
-	void debug()
+	bool debug()
 	{
-		if(debug == true)
+		if(Debug == true)
 		{
-			debug= false;
+			Debug= false;
 		}
 		else
 		{
-			debug = true;
+			Debug = true;
 		}
 	}
 	void quit(){}
 		
 
 private:
-	bool debug;
+	bool Debug;
 	int difficulty;
-	//Board GameBoard
-	//vector<Board*> history
+	Board GameBoard;
+	vector<Board*> history;
 	int MaxPlays;
 	int CurrentTurn;
 	int CurrentPlayer;
