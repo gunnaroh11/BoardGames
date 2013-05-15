@@ -70,6 +70,11 @@ int Piece::getPlayer(){
 	return m_playerNumber;
 }
 
+void Piece::setPlayer(int p)
+{
+	m_playerNumber = p;	
+}
+
 //Returns what type selected piece is, if relevant
 char* Piece::getType(){
 	return m_type;

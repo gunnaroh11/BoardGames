@@ -6,15 +6,16 @@
 class Board
 {
 public:
-	Board(){};
+	Board();
 	Board(int h,int w);
 	std::string CheckOwner(int X,int Y);
 	void Revert(Board G);
 	void SetSize(int h,int w);
 	void GenerateBoard();
+	std::vector<std::vector<Piece> > GameBoard;
 private:
 	int height;
 	int width;
-	std::vector<std::vector<Piece> > GameBoard;
+	
 };
 #endif

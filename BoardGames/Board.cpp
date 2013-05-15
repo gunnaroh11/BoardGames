@@ -1,13 +1,32 @@
 #include "Board.h"
+#include <iostream>
+Board::Board()
+{
+	height = 5;
+	width = 5;
+	for(int i = 0;i<height;i++)
+	{
+		std::vector<Piece> temp;
+		for(int j = 0;j<width;j++)
+		{
+			temp.push_back(Piece("0",0,Point(i,j)));
+		}
+		GameBoard.push_back(temp);
+	}
+
+}
+
 
 Board::Board(int h,int w)
 {
 	for(int i = 0;i<h;i++)
 	{
+		std::vector<Piece> temp;
 		for(int j = 0;j<w;j++)
 		{
-			GameBoard[i][j]= Piece("0",0,Point(i,j));
+			temp.push_back(Piece("0",0,Point(i,j)));
 		}
+		GameBoard.push_back(temp);
 	}
 
 }
@@ -38,5 +57,12 @@ void Board::SetSize(int h,int w)
 }
 void Board::GenerateBoard()
 {
-
+	for(int i = 0;i<height;i++)
+		{
+			for(int j = 0;j<width;j++)
+			{
+				std::cout <<CheckOwner(i,j);
+			}
+			std::cout<<std::endl;
+		}
 }

@@ -48,9 +48,7 @@ using namespace std;
 		{
 			for(int j = 0;j<with;j++)
 			{
-				
-				
-				
+				//std::cout<<GameBoard[i][j] << "
 			}
 			std::cout<<std::endl;
 		}
@@ -99,6 +97,9 @@ using namespace std;
 		CurrentTurn = 0;
 		CurrentPlayer = 1;
 		GameBoard.SetSize(5,5);
+		GameBoard.GameBoard[3][1].setPlayer(1);
+		GameBoard.GameBoard[1][1].setPlayer(2);
+		GameBoard.GenerateBoard();
 	
 	}
 	

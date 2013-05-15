@@ -27,6 +27,7 @@ public:
 	Piece(char *type, int playerNumber, Point position);
 	
 	virtual void move(Point p);
+	virtual void setPlayer(int p);
 	virtual void setMoves(int dirN, int dirE, int dirS, int dirW);
 	virtual void getMoves(Point *points[], const int boardSize);
 	
