@@ -51,6 +51,15 @@ Point Piece::getPostion(){
 	return m_position;
 }
 
+MoveDir Piece::getMovDir(){
+	m_moveDir.N = m_directionN;
+	m_moveDir.E = m_directionE;
+	m_moveDir.S = m_directionS;
+	m_moveDir.W = m_directionW;
+
+	return m_moveDir; 
+}
+
 //Indicates if selected piece has moved from starting position
 bool Piece::getHasMoved(){
 	return m_hasMoved;

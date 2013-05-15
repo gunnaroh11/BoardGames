@@ -15,6 +15,11 @@ public:
 	};
 };
 
+struct MoveDir{
+public:
+	int N, E, S, W;
+};
+
 class Piece{
 
 public:
@@ -28,6 +33,7 @@ public:
 	void setPosition(int x, int y);
 	void setPosition(Point p);
 	Point getPostion();
+	MoveDir getMovDir();
 	
 	bool getHasMoved();
 	int getPlayer();
@@ -41,6 +47,7 @@ private:
 	bool m_hasMoved;
 	int m_directionN, m_directionE, m_directionS, m_directionW;
 	Point m_position;
+	MoveDir m_moveDir;
 };
 
 #endif
