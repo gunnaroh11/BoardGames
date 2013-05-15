@@ -27,12 +27,12 @@ public:
 	void setDifficulty(int diff);
 	int getDifficulty();
 	void GetTestGame();
+	bool Debug;
+	Board GameBoard;
 
 protected:
 	string GameName;
-	bool Debug;
 	int difficulty;
-	Board GameBoard;
 	vector<Board> history;
 	int MaxPlays;
 	int CurrentTurn;

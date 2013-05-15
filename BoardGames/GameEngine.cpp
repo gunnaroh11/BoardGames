@@ -46,7 +46,16 @@ int inGameMode(Game &playGame){
 
 		if(gameWord == "display")
 		{
-			// TODO - Display board
+			int height = playGame.GameBoard.getHeight();
+			int width = playGame.GameBoard.getWidth();
+
+			for(int i = 0; i < height; i++)
+			{
+				for(int j = 0; j < width; j++)
+				{
+					playGame.GameBoard.GameBoard[i][j].print();
+				}
+			}
 		}
 
 		if(gameWord == "evaluate")
@@ -129,9 +138,9 @@ cout << "type game to pick game to play" << endl;
 		if(word == "debug")
 		{
 			if(debug == true)
-				debug == false;
+				debug = false;
 			if(debug == false)
-				debug == true;
+				debug = true;
 		}
 
 		if(word == "quit")

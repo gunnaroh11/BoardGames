@@ -33,6 +33,7 @@ public:
 	
 	void setPosition(int x, int y);
 	void setPosition(Point p);
+	void print();
 	Point getPostion();
 	MoveDir getMovDir();
 	

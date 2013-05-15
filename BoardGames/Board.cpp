@@ -55,6 +55,14 @@ void Board::SetSize(int h,int w)
 	height = h;
 	width = w;
 }
+
+int Board::getWidth(){
+	return width;
+}
+
+int Board::getHeight(){
+	return height;
+}
 void Board::GenerateBoard()
 {
 	for(int i = 0;i<height;i++)

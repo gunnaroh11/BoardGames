@@ -1,5 +1,6 @@
 #include "Pieces.h"
-
+#include <iostream>
+using namespace std;
 Piece::Piece(){
 	m_hasMoved = false;
 }
@@ -49,6 +50,18 @@ void Piece::setPosition(Point p){
 //Returns current position for piece
 Point Piece::getPostion(){
 	return m_position;
+}
+
+void Piece::print()
+{
+	if(m_playerNumber == 0)
+		cout << 'P';
+	if(m_playerNumber == 1)
+		cout << 'p';
+	if(m_playerNumber == 2) // empty slot
+		cout << '.';
+	if(m_playerNumber == 4) // á eftir að implimenta löglega reiti
+		cout << '*';
 }
 
 MoveDir Piece::getMovDir(){
