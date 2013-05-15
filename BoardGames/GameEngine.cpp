@@ -64,6 +64,16 @@ int inGameMode(Game &playGame){
 			cout << "ble";
 		}
 
+		if(gameWord == "debug")
+		{
+			playGame.debug();
+		}
+
+		if(gameWord == "quit")
+		{
+			exit(0);
+		}
+
 
 	}
 
@@ -75,6 +85,7 @@ int main()
 vector<Game> Games;
 string word;
 int nr = -1;
+bool debug = false;
 
 Game t;
 t.GetTestGame();
@@ -105,12 +116,27 @@ cout << "type game to pick game to play" << endl;
 
 		if(word == "start")
 		{
-			Game ChosenGame = game(nr,Games);
+			Game ChosenGame = game(nr,Games);			
+			//	ChosenGame.Debug = debug;
+
 			ChosenGame.start();
 			nr = -1;
 
 			inGameMode(ChosenGame);
 			
+		}
+
+		if(word == "debug")
+		{
+			if(debug == true)
+				debug == false;
+			if(debug == fale)
+				debug == true;
+		}
+
+		if(word == "quit")
+		{
+			exit(0);
 		}
 
 		
