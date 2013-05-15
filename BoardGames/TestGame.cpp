@@ -1,9 +1,13 @@
-#include "Game.cpp"
+#include "Game.h"
 class TestGame : Game
 {
+	TestGame()
+	{
 
+	}
 	virtual void start()
 	{
+
 		Debug = false;
 		difficulty = 0;
 		MaxPlays = 10;

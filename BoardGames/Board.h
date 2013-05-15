@@ -11,6 +11,7 @@ public:
 	std::string CheckOwner(int X,int Y);
 	void Revert(Board G);
 	void SetSize(int h,int w);
+	void GenerateBoard();
 private:
 	int height;
 	int width;

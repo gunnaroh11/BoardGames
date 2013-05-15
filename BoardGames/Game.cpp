@@ -90,4 +90,17 @@ using namespace std;
 	int Game::getDifficulty(){
 		return difficulty;
 	}
+	void Game::GetTestGame()
+	{
+		GameName = "TestGame";
+			Debug = false;
+		difficulty = 0;
+		MaxPlays = 10;
+		CurrentTurn = 0;
+		CurrentPlayer = 1;
+		GameBoard.SetSize(5,5);
+	
+		GameBoard = Board(5,5);
+	}
+	
 

@@ -6,7 +6,7 @@ Board::Board(int h,int w)
 	{
 		for(int j = 0;j<w;j++)
 		{
-			//GameBoard[i,j]= Piece("0",0,Point(i,j));
+			GameBoard[i][j]= Piece("0",0,Point(i,j));
 		}
 	}
 
@@ -35,4 +35,8 @@ void Board::SetSize(int h,int w)
 {
 	height = h;
 	width = w;
+}
+void Board::GenerateBoard()
+{
+
 }
