@@ -1,9 +1,14 @@
-#include "Game.cpp"
+#include "Game.h"
 #include "TestGame.h"
 #include <iostream>
 #include <string>
 
 using namespace std;
+
+const string DIFF_EASY = "easy";
+const string DIFF_MID = "medium";
+const string DIFF_HARD = "hard";
+
 
 void list(vector<Game> G)
 {
@@ -20,6 +25,7 @@ Game game(int n,vector<Game> G)
 
 int inGameMode(Game &playGame){
 	string gameWord;
+	
 	int from_col, from_row, to_col, to_row;
 	
 	while(!playGame.m_finished)
@@ -42,6 +48,24 @@ int inGameMode(Game &playGame){
 		{
 			// TODO - Display board
 		}
+
+		if(gameWord == "evaluate")
+		{
+			// TODO - Display evaluation value of current board state
+		}
+
+		if(gameWord == "go")
+		{
+			// Computer plays using current difficulty lvl
+		}
+
+		if(gameWord == "level")
+		{
+			if(playGame.getDifficulty() != "")
+			cin >>  playGame.setDifficulty;
+		}
+
+
 	}
 
 	return 0; // á að skila gildi fyrir winner eða draw
