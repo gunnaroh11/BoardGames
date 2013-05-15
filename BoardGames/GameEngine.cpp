@@ -1,5 +1,5 @@
 #include "Game.h"
-#include "TestGame.h"
+#include "TestGame.cpp"
 #include <iostream>
 #include <string>
 
@@ -76,7 +76,8 @@ vector<Game> Games;
 string word;
 int nr = -1;
 
-//Games.push_back(new Game()); // á að vera new test game... eða e-ð
+Game t;
+Games.push_back(t.getTestGame()); // á að vera new test game... eða e-ð
 
 cout << "type list to get a list of all supported games" << endl;
 cout << "type game to pick game to play" << endl;
