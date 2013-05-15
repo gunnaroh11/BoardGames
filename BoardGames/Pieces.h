@@ -6,7 +6,7 @@ public:
 	int m_x;
 	int m_y;
 
-	Point();
+	Point(){};
 	Point(int x, int y):m_x(x), m_y(y){};
 	
 	void setEmpty(){
@@ -24,7 +24,7 @@ class Piece{
 
 public:
 	Piece();
-	Piece(char *type, int playerNumber);
+	Piece(char *type, int playerNumber, Point position);
 	
 	virtual void move(Point p);
 	virtual void setMoves(int dirN, int dirE, int dirS, int dirW);
