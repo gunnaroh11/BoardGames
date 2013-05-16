@@ -9,7 +9,7 @@ Board::Board()
 		std::vector<Piece> temp;
 		for(int j = 0;j<width;j++)
 		{
-			temp.push_back(Piece("0",0,Point(i,j)));
+			temp.push_back(Piece("0",2,Point(i,j)));
 		}
 		GameBoard.push_back(temp);
 	}
@@ -24,7 +24,7 @@ Board::Board(int h,int w)
 		std::vector<Piece> temp;
 		for(int j = 0;j<w;j++)
 		{
-			temp.push_back(Piece("0",0,Point(i,j)));
+			temp.push_back(Piece("0",2,Point(i,j)));
 		}
 		GameBoard.push_back(temp);
 	}
@@ -33,11 +33,11 @@ Board::Board(int h,int w)
 
 std::string Board::CheckOwner(int X,int Y)
 {
-	if(GameBoard[X][Y].getPlayer() == 1)
+	if(GameBoard[X][Y].getPlayer() == 0)
 				{
 					return "P";
 				}
-				else if(GameBoard[X][Y].getPlayer() == 2)
+				else if(GameBoard[X][Y].getPlayer() == 1)
 				{
 					return "p";
 				}
@@ -69,7 +69,7 @@ void Board::GenerateBoard()
 		{
 			for(int j = 0;j<width;j++)
 			{
-				std::cout <<CheckOwner(i,j);
+				GameBoard[i][j].print();
 			}
 			std::cout<<std::endl;
 		}

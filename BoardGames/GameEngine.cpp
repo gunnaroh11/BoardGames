@@ -30,13 +30,17 @@ int inGameMode(Game &playGame){
 	
 	while(!playGame.m_finished)
 	{
+		
+	cin>> gameWord;
 		if(gameWord == "make")
-		{			
+		{	
+			cout<< "type the possition of the piece you want to move and where you want to move it" << endl;
 			cin >> from_col;
 			cin >> from_row;
 			cin >> to_col;
 			cin >> to_row;
 			// TODO make move
+			playGame.make(from_col,from_row,to_col,to_row);
 		}
 
 		if(gameWord == "retract")
@@ -48,7 +52,8 @@ int inGameMode(Game &playGame){
 		{
 			int height = playGame.GameBoard.getHeight();
 			int width = playGame.GameBoard.getWidth();
-
+			playGame.GameBoard.GenerateBoard();
+			/*
 			for(int i = 0; i < height; i++)
 			{
 				for(int j = 0; j < width; j++)
@@ -56,6 +61,8 @@ int inGameMode(Game &playGame){
 					playGame.GameBoard.GameBoard[i][j].print();
 				}
 			}
+			*/
+		
 		}
 
 		if(gameWord == "evaluate")

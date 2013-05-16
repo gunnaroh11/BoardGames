@@ -11,12 +11,13 @@ using namespace std;
 	}
 	void Game::start()
 	{
+
 	cout << "blarg start is not possible"<< endl;
-	cout << "current player is "<< CurrentPlayer << " and turn is " << CurrentTurn << "off "<<MaxPlays <<" turns "<< endl;
-	display(5,5);
-	make(1,1,2,1);
-	make(3,1,2,1);
-	display(5,5);
+	
+	//GameBoard.GenerateBoard();
+	//make(1,1,2,1);
+	//make(3,1,2,1);
+//	GameBoard.GenerateBoard();
 	}
 	void Game::make(int FromX,int FromY,int ToX,int ToY)
 	{
@@ -26,14 +27,17 @@ using namespace std;
 			GameBoard.GameBoard[ToX][ToY]=GameBoard.GameBoard[FromX][FromY];
 			GameBoard.GameBoard[FromX][FromY] = temp; 
 			
-			if(CurrentPlayer == 1)
-			{
-				CurrentPlayer = 2;
-			}
-			else
+			if(CurrentPlayer == 0)
 			{
 				CurrentPlayer = 1;
 			}
+			else
+			{
+				CurrentPlayer = 0;
+			}
+			CurrentTurn++;
+			history.push_back(GameBoard);
+			display(5,5);
 		}
 		else
 		{
@@ -59,6 +63,7 @@ using namespace std;
 	}
 	void Game::display(int height,int with)
 	{
+		cout << "current player is "<< CurrentPlayer << " and turn is " << CurrentTurn << "off "<<MaxPlays <<" turns "<< endl;
 		GameBoard.GenerateBoard();
 	}
 	void Game::evaluate()
@@ -98,6 +103,7 @@ using namespace std;
 	}
 	void Game::GetTestGame()
 	{
+		m_finished = false;
 		GameName = "TestGame";
 			Debug = false;
 		difficulty = 0;
@@ -105,11 +111,12 @@ using namespace std;
 		CurrentTurn = 0;
 		CurrentPlayer = 1;
 		GameBoard.SetSize(5,5);
-		GameBoard.GameBoard[3][1].setPlayer(1);
+		GameBoard.GameBoard[3][1].setPlayer(0);
 		GameBoard.GameBoard[3][1].setMoves(1,1,1,1);
-		GameBoard.GameBoard[1][1].setPlayer(2);
+		GameBoard.GameBoard[1][1].setPlayer(1);
 		GameBoard.GameBoard[1][1].setMoves(1,1,1,1);
 		GameBoard.GenerateBoard();
+		
 	
 	}
 	
