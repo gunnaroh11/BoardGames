@@ -99,6 +99,12 @@ int inGameMode(Game &playGame){
 
 		if(gameWord == "go")
 		{
+			// test get moves
+			vector<Point> vect;
+			playGame.GameBoard.GameBoard[2][1].getMoves(vect, 5);
+			for(int i = 0; i<(int)vect.size();i++){
+			cout<< endl << "x: " << vect[i].m_x << " y: " << vect[i].m_y << endl;
+			}
 			// Computer plays using current difficulty lvl
 		}
 

@@ -82,7 +82,7 @@ using namespace std;
 	}
 	void Game::go()
 	{
-
+		
 	}
 	void Game::retract()
 	{

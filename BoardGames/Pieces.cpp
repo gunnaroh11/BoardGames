@@ -24,6 +24,12 @@ void Piece::setMoves(int dirN, int dirE, int dirS, int dirW){
 	m_directionE = dirE;
 	m_directionS = dirS;
 	m_directionW = dirW;
+
+	m_moveDir.N = dirN;
+	m_moveDir.E = dirE;
+	m_moveDir.S = dirS;
+	m_moveDir.W = dirW;
+	
 }
 
 void Piece::getMoves(vector<Point> &points, const int boardSize){
@@ -34,36 +40,58 @@ void Piece::getMoves(vector<Point> &points, const int boardSize){
 	p = getPostion();
 	int count = 0;
 	
+	points.clear();
 
 	if((p.m_x + m_moveDir.E) <= boardSize)
 	{
+			count = 0;
 		for(int i = p.m_x; i < (p.m_x + m_moveDir.E); i++)
 		{
-			points.push_back(Point(i, p.m_y));
+			count++;
+			points.push_back(Point(p.m_x + count, p.m_y));
+			
+			if(p.m_y < boardSize)
+			{
+				points.push_back(Point(p.m_x + count, p.m_y+ count));
+			}
 			/*
 			points[count]->m_x = i;
 			points[count]->m_y = p.m_y;
-			*/count++;
+			*/
 		}
 	}
 
-	if((p.m_x - m_moveDir.E) >= 0)
+	if((p.m_x - m_moveDir.W) >= 0)
 	{
+		count = 0;
 		for(int i = p.m_x; i > (p.m_x - m_moveDir.W); i--)
 		{
-			points.push_back(Point(i, p.m_y));
+			count++;
+			points.push_back(Point(p.m_x - count, p.m_y));
+
+			if(p.m_y < boardSize)
+			{
+				points.push_back(Point(p.m_x - count, p.m_y - count)); // p.m_y -
+			}
 			/*
 			points[count]->m_x = i;
-			points[count]->m_y = p.m_y;
-			count++;*/
+			points[count]->m_y = p.m_y;*/
+			
 		}
 	}
 
 	if((p.m_y + m_moveDir.N) <= boardSize)
 	{
+		count = 0;
 		for(int i = p.m_y; i < (p.m_y + m_moveDir.E); i++)
 		{
-			points.push_back(Point(p.m_x, i));
+			count++;
+			points.push_back(Point(p.m_x, p.m_y+count));
+
+			if(p.m_x < boardSize)
+			{
+				points.push_back(Point(p.m_x - count, p.m_y+ count));
+			}
 			/*
 			points[count]->m_x = p.m_x;
 			points[count]->m_y = i;
@@ -73,9 +101,16 @@ void Piece::getMoves(vector<Point> &points, const int boardSize){
 
 	if((p.m_y - m_moveDir.S) >= 0)
 	{
+		count = 0;
 		for(int i = p.m_y; i > (p.m_y - m_moveDir.S); i--)
 		{
-			points.push_back(Point(p.m_x, i));
+			count++;
+			points.push_back(Point(p.m_x, p.m_y - count));
+
+			if(p.m_x > 0)
+			{
+				points.push_back(Point(p.m_x + count, p.m_y- count)); // p.m_x -
+			}
 			/*
 			points[count]->m_x = p.m_x;
 			points[count]->m_y = i;
