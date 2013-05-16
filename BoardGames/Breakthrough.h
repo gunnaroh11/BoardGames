@@ -1,7 +1,7 @@
 #ifndef BREAKTHROUGH_H
 #define BREAKTHROUGH_H
 #include "Game.h"
-class Breaktrough : Game
+class Breaktrough : public Game
 {
 public:
 	Breaktrough();

@@ -1,5 +1,6 @@
 #include "Game.h"
 #include "TestGame.cpp"
+#include "Breakthrough.h"
 #include <iostream>
 #include <string>
 
@@ -36,17 +37,19 @@ void printGameCommands()
 }
 
 
-void list(vector<Game> G)
+void list(vector<Game*> G)
 {
+	cout << "size is " <<G.size() <<endl;
+
 	for(int i = 0;i< (int)G.size();i++)
 	{
-		cout << i << ". " << G[i].GetName() << endl;
+		cout << i << ". " << G[i]->GetName() << endl;
 	}
 };
 
-Game game(int n,vector<Game> G)
+Game game(int n,vector<Game*> G)
 {
-	return G[n];
+	return *G[n];
 }
 
 int inGameMode(Game &playGame){
@@ -143,14 +146,16 @@ int inGameMode(Game &playGame){
 
 int main()
 {
-vector<Game> Games;
+vector<Game*> Games;
 string word;
 int nr = -1;
 bool debug = false;
 
 Game t;
+Breaktrough B;;
 t.GetTestGame();
-Games.push_back(t); // á að vera new test game... eða e-ð
+Games.push_back(&t); // á að vera new test game... eða e-ð
+Games.push_back(&B);
 
 cout << "type list to get a list of all supported games" << endl;
 cout << "type game to pick game to play" << endl;
