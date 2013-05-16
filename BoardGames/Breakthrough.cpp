@@ -29,9 +29,10 @@ void Breaktrough::setMoveForPlayer(int P)
 	{
 		for(int i = 0; i<2;i++)
 		{
-			for(int j= 0;j<GameBoard.getWidth;j++)
+			for(int j= 0;j<GameBoard.getWidth();j++)
 			{
-
+				GameBoard.GameBoard[i][j].setPlayer(0);
+				GameBoard.GameBoard[i][j].setMoves(1,1,1,1);
 			}
 		}
 	}

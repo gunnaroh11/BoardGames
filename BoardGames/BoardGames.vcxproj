@@ -81,6 +81,7 @@
     <ClInclude Include="Board.h" />
     <ClInclude Include="Breakthrough.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Pawn.h" />
     <ClInclude Include="Pieces.h" />
     <ClInclude Include="TestGame.h" />
   </ItemGroup>
@@ -90,6 +91,7 @@
     <ClCompile Include="Breakthrough.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameEngine.cpp" />
+    <ClCompile Include="Pawn.cpp" />
     <ClCompile Include="Pieces.cpp" />
     <ClCompile Include="TestGame.cpp" />
   </ItemGroup>
