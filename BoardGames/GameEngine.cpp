@@ -152,9 +152,22 @@ cout << "type game to pick game to play" << endl;
 
 		if(word == "game")
 		{
-			cout << "pick the number of the game you want to play" << endl;
-			
-			cin>>nr;			
+			bool check = true;
+			while(check)
+			{
+				cout << "pick the number of the game you want to play" << endl;
+				cin>>nr;
+
+				if(nr < 0 || nr > (int)Games.size()-1)
+				{
+					system("cls");
+					cout << "Game not avalible. Please try again, select avalible game number.\n";										
+				}
+				else
+				{
+					check = false;
+				}
+			}
 		}
 
 		if(word == "start")
