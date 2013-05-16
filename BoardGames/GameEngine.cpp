@@ -9,6 +9,32 @@ const string DIFF_EASY = "easy";
 const string DIFF_MID = "medium";
 const string DIFF_HARD = "hard";
 
+void printGameEngineCommands()
+{
+	cout << "\n - Command \"list\" : Prints out avalible games"; 
+	cout << "\n - Command \"game\" <number> : Write fx \"game 1\" to select game no 1"; 
+	cout << "\n - Command \"start\" : To start selected game"; 
+	cout << "\n - Command \"debug\" : Toggle debug mode on and off"; 
+	cout << "\n - Command \"quit\" : Exit program\n\n"; 	
+}
+
+void printGameCommands()
+{
+	system("cls");
+	cout << "\n - Command \"make\" <number> <number> <number> <number> : make from_col from_row to_col to_row"; 
+	cout << "\n - Command \"retract\" : Retracts last move played"; 
+	cout << "\n - Command \"display\" : Display the current game state\n";
+		cout << "\t \".\" = Empty\n" ; 
+		cout << "\t \"*\" = Not legal\n" ;
+		cout << "\t \"P\" = Player 1\n" ;
+		cout << "\t \"p\" = Player 2\n" ;
+	cout << "\n - Command \"evaluate\" : Display the evaluation value of the current board state, depending on difficulty level."; 
+	cout << "\n - Command \"go\" : The computer plays for the side to move and outputs the move it makes"; 
+	cout << "\n - Command \"level\" [ random | easy | medium | hard ] : Play level"; 
+	cout << "\n - Command \"debug\" : Toggle debug mode on and off"; 
+	cout << "\n - Command \"quit\" : Exit program\n\n"; 	
+}
+
 
 void list(vector<Game> G)
 {
@@ -26,8 +52,8 @@ Game game(int n,vector<Game> G)
 int inGameMode(Game &playGame){
 	string gameWord;
 	
-	int from_col, from_row, to_col, to_row;
-	
+	int from_col, from_row, to_col, to_row;	
+	printGameCommands();
 	while(!playGame.m_finished)
 	{
 		
@@ -112,10 +138,10 @@ cout << "type list to get a list of all supported games" << endl;
 cout << "type game to pick game to play" << endl;
 
 	while(true)
-	{
-
+	{		
+		printGameEngineCommands();
 		cin >> word;	
-
+		system("cls");
 		if(word == "list")
 		{				
 			if(!Games.empty())
