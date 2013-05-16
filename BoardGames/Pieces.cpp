@@ -53,11 +53,7 @@ void Piece::getMoves(vector<Point> &points, const int boardSize){
 			if(p.m_y < boardSize)
 			{
 				points.push_back(Point(p.m_x + count, p.m_y+ count));
-			}
-			/*
-			points[count]->m_x = i;
-			points[count]->m_y = p.m_y;
-			*/
+			}			
 		}
 	}
 
@@ -73,10 +69,6 @@ void Piece::getMoves(vector<Point> &points, const int boardSize){
 			{
 				points.push_back(Point(p.m_x - count, p.m_y - count)); // p.m_y -
 			}
-			/*
-			points[count]->m_x = i;
-			points[count]->m_y = p.m_y;*/
-			
 		}
 	}
 
@@ -91,11 +83,7 @@ void Piece::getMoves(vector<Point> &points, const int boardSize){
 			if(p.m_x < boardSize)
 			{
 				points.push_back(Point(p.m_x - count, p.m_y+ count));
-			}
-			/*
-			points[count]->m_x = p.m_x;
-			points[count]->m_y = i;
-			count++;*/
+			}			
 		}
 	}
 
@@ -110,12 +98,7 @@ void Piece::getMoves(vector<Point> &points, const int boardSize){
 			if(p.m_x > 0)
 			{
 				points.push_back(Point(p.m_x + count, p.m_y- count)); // p.m_x -
-			}
-			/*
-			points[count]->m_x = p.m_x;
-			points[count]->m_y = i;
-			count++;
-			*/
+			}			
 		}
 	}
 
