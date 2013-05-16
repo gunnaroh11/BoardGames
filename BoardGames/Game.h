@@ -5,7 +5,6 @@
 #include <vector>
 #include <string>
 #include "Board.h"
-using namespace std;
 
 class Game
 {
@@ -14,7 +13,7 @@ public:
 	Game();
 	void legal();
 	virtual void start();
-	void make(int FromX,int FromY,int ToX,int ToY);
+	virtual void make(int FromX,int FromY,int ToX,int ToY);
 	void go();
 	void retract();
 	virtual void display(int height,int with);
@@ -23,7 +22,7 @@ public:
 	void level(std::string difficulty);
 	void debug();
 	void quit();
-	string GetName();
+	std::string GetName();
 	void setDifficulty(int diff);
 	int getDifficulty();
 	void GetTestGame();
@@ -32,11 +31,11 @@ public:
 	Board GameBoard;
 
 protected:
-	string GameName;
+	std::string GameName;
 	int player1_pieces;
 	int player2_pieces;
 	int difficulty;
-	vector<Board> history;
+	std::vector<Board> history;
 	int MaxPlays;
 	int CurrentTurn;
 	int CurrentPlayer;

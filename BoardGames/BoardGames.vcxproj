@@ -79,12 +79,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Board.h" />
+    <ClInclude Include="Breakthrough.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Pieces.h" />
     <ClInclude Include="TestGame.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Ataxx.cpp" />
     <ClCompile Include="Board.cpp" />
+    <ClCompile Include="Breakthrough.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameEngine.cpp" />
     <ClCompile Include="Pieces.cpp" />
