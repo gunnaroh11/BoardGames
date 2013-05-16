@@ -8,6 +8,7 @@ using namespace std;
 const string DIFF_EASY = "easy";
 const string DIFF_MID = "medium";
 const string DIFF_HARD = "hard";
+const string DIFF_RANDOM = "random";
 
 void printGameEngineCommands()
 {
@@ -79,22 +80,13 @@ int inGameMode(Game &playGame){
 		{
 			int height = playGame.GameBoard.getHeight();
 			int width = playGame.GameBoard.getWidth();
-			playGame.display(height,width);
-			/*
-			for(int i = 0; i < height; i++)
-			{
-				for(int j = 0; j < width; j++)
-				{
-					playGame.GameBoard.GameBoard[i][j].print();
-				}
-			}
-			*/
-		
+			playGame.display(height,width);					
 		}
 
 		if(gameWord == "evaluate")
 		{
 			// TODO - Display evaluation value of current board state
+			playGame.evaluate();
 		}
 
 		if(gameWord == "go")
@@ -122,7 +114,29 @@ int inGameMode(Game &playGame){
 
 		if(gameWord == "level")
 		{
-			cout << "ble";
+			
+			cin >> gameWord;
+			
+			if(gameWord == DIFF_RANDOM)
+			{
+				playGame.setDifficulty(0);
+			}
+
+			if(gameWord == DIFF_EASY)
+			{
+				playGame.setDifficulty(1);
+			}
+
+			if(gameWord == DIFF_MID)
+			{
+				playGame.setDifficulty(2);
+			}
+
+			if(gameWord == DIFF_HARD)
+			{
+				playGame.setDifficulty(3);
+			}
+
 		}
 
 		if(gameWord == "debug")
