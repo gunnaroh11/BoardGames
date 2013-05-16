@@ -58,7 +58,13 @@ using namespace std;
 		if(CurrentTurn != 0)
 		{
 		CurrentTurn-=1;
-		GameBoard.Revert(history[CurrentTurn]);
+		GameBoard = history[CurrentTurn];
+		//GameBoard.Revert(history[CurrentTurn]);
+		display(5,5);
+		}
+		else
+		{
+			cout << " this is the begining state you can not retract past the begining state"<< endl;
 		}
 	}
 	void Game::display(int height,int with)
@@ -112,10 +118,14 @@ using namespace std;
 		CurrentPlayer = 1;
 		GameBoard.SetSize(5,5);
 		GameBoard.GameBoard[3][1].setPlayer(0);
+		player1_pieces++;
+		
 		GameBoard.GameBoard[3][1].setMoves(1,1,1,1);
 		GameBoard.GameBoard[1][1].setPlayer(1);
+		player2_pieces++;
 		GameBoard.GameBoard[1][1].setMoves(1,1,1,1);
 		GameBoard.GenerateBoard();
+		history.push_back(GameBoard);
 		
 	
 	}

@@ -65,12 +65,19 @@ int Board::getHeight(){
 }
 void Board::GenerateBoard()
 {
-	for(int i = 0;i<height;i++)
+	for(int i = height-1;i>=0;i--)
 		{
 			for(int j = 0;j<width;j++)
 			{
-				GameBoard[i][j].print();
+				GameBoard[j][i].print();
 			}
 			std::cout<<std::endl;
 		}
+}
+Board& Board::operator=(Board& NewBoard)
+{
+	height = NewBoard.getHeight();
+	width = NewBoard.getWidth();
+	GameBoard = NewBoard.GameBoard;
+	return *this;
 }

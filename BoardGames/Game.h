@@ -32,6 +32,8 @@ public:
 
 protected:
 	string GameName;
+	int player1_pieces;
+	int player2_pieces;
 	int difficulty;
 	vector<Board> history;
 	int MaxPlays;

@@ -8,6 +8,7 @@ class Board
 public:
 	Board();
 	Board(int h,int w);
+	Board& operator=(Board& rhs);
 	std::string CheckOwner(int X,int Y);
 	void Revert(Board G);
 	void SetSize(int h,int w);

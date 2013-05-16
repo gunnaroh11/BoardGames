@@ -45,6 +45,7 @@ int inGameMode(Game &playGame){
 
 		if(gameWord == "retract")
 		{
+			playGame.retract();
 			// TODO - Retract last move
 		}
 
