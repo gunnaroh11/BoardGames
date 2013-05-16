@@ -23,26 +23,57 @@ using namespace std;
 	{
 		if(GameBoard.GameBoard[FromX][FromY].getPlayer() == CurrentPlayer)
 		{
-			Piece temp = GameBoard.GameBoard[ToX][ToY];
-			GameBoard.GameBoard[ToX][ToY]=GameBoard.GameBoard[FromX][FromY];
-			GameBoard.GameBoard[FromX][FromY] = temp; 
-			
-			if(CurrentPlayer == 0)
+			//if piece on the destination spot belongs to the other player
+			if((GameBoard.GameBoard[ToX][ToY].getPlayer() != CurrentPlayer)&&(GameBoard.GameBoard[ToX][ToY].getPlayer() != CurrentPlayer))
 			{
-				CurrentPlayer = 1;
+				Piece temp = Piece("0",2,Point(FromX,FromY));
+				GameBoard.GameBoard[ToX][ToY]=GameBoard.GameBoard[FromX][FromY];
+				GameBoard.GameBoard[FromX][FromY] = temp; 
+			
+				if(CurrentPlayer == 0)
+				{
+					player2_pieces--;
+					CurrentPlayer = 1;
+				}	
+				else
+				{
+					player1_pieces--;
+					CurrentPlayer = 0;
+				}
+				CurrentTurn++;
+				history.push_back(GameBoard);
+				checkFinished();
+
+			}
+			else if(GameBoard.GameBoard[ToX][ToY].getPlayer() == CurrentPlayer)
+			{
+				cout << "cant move there a piece belonging to you already ocupies the tile" << endl;
 			}
 			else
 			{
-				CurrentPlayer = 0;
+				Piece temp = GameBoard.GameBoard[ToX][ToY];
+				GameBoard.GameBoard[ToX][ToY]=GameBoard.GameBoard[FromX][FromY];
+				GameBoard.GameBoard[FromX][FromY] = temp; 
+			
+				if(CurrentPlayer == 0)
+				{
+					CurrentPlayer = 1;
+				}	
+				else
+				{
+					CurrentPlayer = 0;
+				}
+				CurrentTurn++;
+				history.push_back(GameBoard);
+				checkFinished();
 			}
-			CurrentTurn++;
-			history.push_back(GameBoard);
-			display(5,5);
+			
 		}
 		else
 		{
 			cout<< "that piece does not belong to the current player "<< endl;
 		}
+		display(5,5);
 		//check if the piece at fromX,fromY belongs to current player
 		//evaluate if move is leagal
 		//if(evaluate(fromX,fromY,toX,toY){
@@ -113,14 +144,19 @@ using namespace std;
 		GameName = "TestGame";
 			Debug = false;
 		difficulty = 0;
+		player1_pieces = 0;
+		player2_pieces = 0;
 		MaxPlays = 10;
 		CurrentTurn = 0;
-		CurrentPlayer = 1;
+		CurrentPlayer = 0;
 		GameBoard.SetSize(5,5);
 		GameBoard.GameBoard[3][1].setPlayer(0);
 		player1_pieces++;
+		GameBoard.GameBoard[2][1].setPlayer(0);
+		player1_pieces++;
 		
 		GameBoard.GameBoard[3][1].setMoves(1,1,1,1);
+		GameBoard.GameBoard[2][1].setMoves(1,1,1,1);
 		GameBoard.GameBoard[1][1].setPlayer(1);
 		player2_pieces++;
 		GameBoard.GameBoard[1][1].setMoves(1,1,1,1);
@@ -128,6 +164,23 @@ using namespace std;
 		history.push_back(GameBoard);
 		
 	
+	}
+	void Game::checkFinished()
+	{
+		if(player1_pieces == 0)
+		{
+			cout << "Player 0 wins he did it in "<< CurrentTurn << " turns " <<endl;
+			m_finished = true;
+		}
+		else if(player2_pieces == 0)
+		{
+			cout << "Player 1 wins he did it in "<< CurrentTurn << " turns " <<endl;
+			m_finished = true;
+		}
+		else
+		{
+
+		}
 	}
 	
 

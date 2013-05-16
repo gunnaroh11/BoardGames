@@ -79,7 +79,7 @@ int inGameMode(Game &playGame){
 		{
 			int height = playGame.GameBoard.getHeight();
 			int width = playGame.GameBoard.getWidth();
-			playGame.GameBoard.GenerateBoard();
+			playGame.display(height,width);
 			/*
 			for(int i = 0; i < height; i++)
 			{

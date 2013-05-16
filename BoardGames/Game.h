@@ -27,6 +27,7 @@ public:
 	void setDifficulty(int diff);
 	int getDifficulty();
 	void GetTestGame();
+	void checkFinished();
 	bool Debug;
 	Board GameBoard;
 
