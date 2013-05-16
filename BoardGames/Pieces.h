@@ -18,7 +18,7 @@ public:
 	{
 		if(lhs.m_x == rhs.m_x)
 		{
-			if(lhs.m_y == lhs.m_y)
+			if(lhs.m_y == rhs.m_y)
 			{
 				return true;
 			}

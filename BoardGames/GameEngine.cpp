@@ -105,6 +105,18 @@ int inGameMode(Game &playGame){
 			for(int i = 0; i<(int)vect.size();i++){
 			cout<< endl << "x: " << vect[i].m_x << " y: " << vect[i].m_y << endl;
 			}
+
+			Point p;
+			p.m_x = 2;
+			p.m_y = 2;
+			if(playGame.canMake(&playGame.GameBoard.GameBoard[2][1], p))
+			{
+				cout << endl << "canMake = true"<< endl;
+			}
+			else
+			{
+				cout << endl << "canMake = false"<< endl;
+			}
 			// Computer plays using current difficulty lvl
 		}
 

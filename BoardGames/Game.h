@@ -30,7 +30,7 @@ public:
 	void checkFinished();
 	bool Debug;
 	Board GameBoard;
-
+	bool canMake(Piece *piece, Point p);
 protected:
 	string GameName;
 	int player1_pieces;
@@ -41,8 +41,6 @@ protected:
 	int CurrentTurn;
 	int CurrentPlayer;
 
-private:
-	bool canMake(Piece *piece, Point p);
 
 };
 #endif
