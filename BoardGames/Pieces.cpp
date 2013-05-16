@@ -1,5 +1,6 @@
 #include "Pieces.h"
 #include <iostream>
+
 using namespace std;
 Piece::Piece(){
 	m_hasMoved = false;
@@ -25,14 +26,64 @@ void Piece::setMoves(int dirN, int dirE, int dirS, int dirW){
 	m_directionW = dirW;
 }
 
-void Piece::getMoves(Point *points[], const int boardSize){
+void Piece::getMoves(vector<Point> &points, const int boardSize){
 
 	// TODO  Á EFTIR AÐ KLÁRA
-	for(int i = m_position.m_x; i < boardSize; i++)
+
+	Point p;
+	p = getPostion();
+	int count = 0;
+	
+
+	if((p.m_x + m_moveDir.E) <= boardSize)
 	{
-		if((m_directionN + m_position.m_x) <= boardSize)
-			points[i]->m_x = i;
+		for(int i = p.m_x; i < (p.m_x + m_moveDir.E); i++)
+		{
+			points.push_back(Point(i, p.m_y));
+			/*
+			points[count]->m_x = i;
+			points[count]->m_y = p.m_y;
+			*/count++;
+		}
 	}
+
+	if((p.m_x - m_moveDir.E) >= 0)
+	{
+		for(int i = p.m_x; i > (p.m_x - m_moveDir.W); i--)
+		{
+			points.push_back(Point(i, p.m_y));
+			/*
+			points[count]->m_x = i;
+			points[count]->m_y = p.m_y;
+			count++;*/
+		}
+	}
+
+	if((p.m_y + m_moveDir.N) <= boardSize)
+	{
+		for(int i = p.m_y; i < (p.m_y + m_moveDir.E); i++)
+		{
+			points.push_back(Point(p.m_x, i));
+			/*
+			points[count]->m_x = p.m_x;
+			points[count]->m_y = i;
+			count++;*/
+		}
+	}
+
+	if((p.m_y - m_moveDir.S) >= 0)
+	{
+		for(int i = p.m_y; i > (p.m_y - m_moveDir.S); i--)
+		{
+			points.push_back(Point(p.m_x, i));
+			/*
+			points[count]->m_x = p.m_x;
+			points[count]->m_y = i;
+			count++;
+			*/
+		}
+	}
+
 	
 }
 

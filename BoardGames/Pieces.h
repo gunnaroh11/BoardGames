@@ -1,6 +1,6 @@
 #ifndef PIECES_H
 #define PIECES_H
-
+#include <vector>
 struct Point{
 public:
 	int m_x;
@@ -29,7 +29,7 @@ public:
 	virtual void move(Point p);
 	virtual void setPlayer(int p);
 	virtual void setMoves(int dirN, int dirE, int dirS, int dirW);
-	virtual void getMoves(Point *points[], const int boardSize);
+	virtual void getMoves(std::vector<Point> &points, const int boardSize);
 	
 	void setPosition(int x, int y);
 	void setPosition(Point p);
