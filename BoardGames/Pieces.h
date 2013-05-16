@@ -13,6 +13,18 @@ public:
 		m_x = 0;
 		m_y = 0;
 	};
+
+	friend bool operator==(Point &lhs, Point &rhs)
+	{
+		if(lhs.m_x == rhs.m_x)
+		{
+			if(lhs.m_y == lhs.m_y)
+			{
+				return true;
+			}
+		}
+		return false;
+	};
 };
 
 struct MoveDir{

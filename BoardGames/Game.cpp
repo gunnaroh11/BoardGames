@@ -19,6 +19,23 @@ using namespace std;
 	//make(3,1,2,1);
 //	GameBoard.GenerateBoard();
 	}
+
+	// check if piece can move to provided cords
+	bool Game::canMake(Piece *piece, Point p)
+	{
+		vector<Point> points;
+		piece->getMoves(points, GameBoard.getHeight());
+
+		for(int i = 0; i < (int)points.size(); i++)
+		{
+			if(points[i] == p)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
 	void Game::make(int FromX,int FromY,int ToX,int ToY)
 	{
 		if(GameBoard.GameBoard[FromX][FromY].getPlayer() == CurrentPlayer)
