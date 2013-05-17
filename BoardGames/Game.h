@@ -26,7 +26,7 @@ public:
 	virtual void make(int FromX,int FromY,int ToX,int ToY); //!< Virtual void to make move, move 1 piece from cord to other cord
 	virtual void go();				//!< Virtual void function to let cpu make move according to difficult level
 	void retract();			//!< Retract last move, pops GameBoard state and sets game to last state
-	virtual void display(int height,int with); //!< Display board
+	virtual void display(); //!< Display board
 	
 	virtual void evaluate();		//!< Virtual void, evaluate if player can make move in current position and set score
 	void debug();					//!< Switch between debug mode and non-debug mode

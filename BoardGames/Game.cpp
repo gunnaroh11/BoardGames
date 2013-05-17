@@ -102,7 +102,7 @@ using namespace std;
 		{
 			cout<< "that piece does not belong to the current player "<< endl;
 		}
-		display(5,5);
+		display();
 		//check if the piece at fromX,fromY belongs to current player
 		//evaluate if move is leagal
 		//if(evaluate(fromX,fromY,toX,toY){
@@ -120,14 +120,14 @@ using namespace std;
 		CurrentTurn-=1;
 		GameBoard = history[CurrentTurn];
 		//GameBoard.Revert(history[CurrentTurn]);
-		display(5,5);
+		display();
 		}
 		else
 		{
 			cout << " this is the begining state you can not retract past the begining state"<< endl;
 		}
 	}
-	void Game::display(int height,int with)
+	void Game::display()
 	{
 		cout << "current player is "<< CurrentPlayer << " and turn is " << CurrentTurn << "off "<<MaxPlays <<" turns "<< endl;
 		GameBoard.GenerateBoard();

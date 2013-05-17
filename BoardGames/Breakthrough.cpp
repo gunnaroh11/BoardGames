@@ -177,6 +177,14 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 			
 		vector<Point> vect;
 	legal(vect,GameBoard.GameBoard[FromX][FromY]);
+	if(Debug)
+	{
+		cout << endl << "Legal moves: " << endl;
+		for(int i=0;i <(int)vect.size();i++)
+		{
+			vect[i].print();
+		}
+	}
 
 			//if piece on the destination spot belongs to the other player
 			if((GameBoard.GameBoard[ToX][ToY].getPlayer() != CurrentPlayer)&&(GameBoard.GameBoard[ToX][ToY].getPlayer() != 2))
@@ -292,7 +300,7 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 		{
 			cout<< "that piece does not belong to the current player "<< endl;
 		}
-		display(5,5);
+		display();
 		//check if the piece at fromX,fromY belongs to current player
 		//evaluate if move is leagal
 		//if(evaluate(fromX,fromY,toX,toY){

@@ -83,7 +83,7 @@ int inGameMode(Game *playGame){
 		{
 			int height = playGame->GameBoard.getHeight();
 			int width = playGame->GameBoard.getWidth();
-			playGame->display(height,width);					
+			playGame->display();					
 		}
 
 		if(gameWord == "evaluate")
