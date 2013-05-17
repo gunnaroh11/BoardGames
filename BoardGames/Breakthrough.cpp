@@ -4,6 +4,112 @@ Breaktrough::Breaktrough()
 {		
 }
 
+void Breaktrough::legal(vector<Point> &legalMoves, Piece &piece){
+	
+	vector<Point> moves;
+	Point currentPoint = piece.getPostion();
+	piece.getMoves(moves, GameBoard.getHeight());
+	legalMoves.clear();
+
+	if(CurrentPlayer == 0)
+	{	
+		if(Debug)
+		{
+			cout << endl << "Selected Player - Player One - Get all moves for piece and clear vector lecalMoves" << endl;
+			for(int i = 0; i<(int)moves.size();i++)
+			{
+				cout << "1: ";  
+				moves[i].print();				
+			}
+		}
+
+		for(int i = 0; i < (int)moves.size();i++)
+		{
+			//upright		
+			if(Point(currentPoint.m_x+1, currentPoint.m_y+1) == moves[i])
+			{
+				if(Debug)
+				{
+					cout << "Point found in moves, push_back to legalMoves" << endl;
+					moves[i].print();
+				}
+				legalMoves.push_back(Point(currentPoint.m_x+1, currentPoint.m_y+1)); 
+			}
+
+			//up		
+			if(Point(currentPoint.m_x, currentPoint.m_y+1) == moves[i])
+			{
+				if(Debug)
+				{
+					cout << "Point found in moves, push_back to legalMoves" << endl;
+					moves[i].print();
+				}
+				legalMoves.push_back(Point(currentPoint.m_x, currentPoint.m_y+1)); 
+			}
+
+			//upleft
+			if(Point(currentPoint.m_x-1, currentPoint.m_y+1) == moves[i])
+			{
+				if(Debug)
+				{
+					cout << "Point found in moves, push_back to legalMoves" << endl;
+					moves[i].print();
+				}
+				legalMoves.push_back(Point(currentPoint.m_x-1, currentPoint.m_y+1)); 
+			}
+		}
+	}
+	else
+	{
+		if(Debug)
+		{
+			cout << endl << "Selected Player - Player One - Get all moves for piece and clear vector lecalMoves" << endl;
+			for(int i = 0; i<(int)moves.size();i++)
+			{
+				cout << "1: ";  
+				moves[i].print();				
+			}
+		}
+
+		for(int i = 0; i < (int)moves.size();i++)
+		{
+			//downleft		
+			if(Point(currentPoint.m_x-1, currentPoint.m_y-1) == moves[i])
+			{
+				if(Debug)
+				{
+					cout << "Point found in moves, push_back to legalMoves" << endl;
+					moves[i].print();
+				}
+				legalMoves.push_back(Point(currentPoint.m_x-1, currentPoint.m_y-1)); 
+			}
+
+			//down
+			if(Point(currentPoint.m_x, currentPoint.m_y-1) == moves[i])
+			{
+				if(Debug)
+				{
+					cout << "Point found in moves, push_back to legalMoves" << endl;
+					moves[i].print();
+				}
+				legalMoves.push_back(Point(currentPoint.m_x, currentPoint.m_y-1)); 
+			}
+
+			//downright
+			if(Point(currentPoint.m_x-1, currentPoint.m_y-1) == moves[i])
+			{
+				if(Debug)
+				{
+					cout << "Point found in moves, push_back to legalMoves" << endl;
+					moves[i].print();
+				}
+				legalMoves.push_back(Point(currentPoint.m_x-1, currentPoint.m_y-1)); 
+			}
+		}
+	}
+}
+
+
 void Breaktrough::start()
 {
 	GameName = "Breakthrough";

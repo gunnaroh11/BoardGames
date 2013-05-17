@@ -12,7 +12,7 @@ class Game
 public:
 	bool m_finished;
 	Game();
-	void legal();
+	virtual void legal(vector<Point> &legalMoves, Piece &piece);
 	virtual void start();
 	void make(int FromX,int FromY,int ToX,int ToY);
 	void go();
