@@ -13,6 +13,11 @@ public:
 	virtual void start();
 	void legal(vector<Point> &legalMoves, Piece &piece);
 
+<<<<<<< HEAD
+=======
+	virtual void checkFinished();
+	
+>>>>>>> a4ac5c15d42ba045452087062e26d138dffe3632
 private:
 protected:
 };

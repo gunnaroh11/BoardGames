@@ -135,25 +135,25 @@ void Breaktrough::setMoveForPlayer(int P)
 {
 	if(P == 0)
 	{
-		for(int i = 0; i<2;i++)
+		for(int i = 0; i<GameBoard.getWidth();i++)
 		{
-			for(int j= 0;j<GameBoard.getWidth();j++)
+			for(int j= 0;j<2;j++)
 			{
 
 				GameBoard.GameBoard[i][j].setPlayer(0);
-				//GameBoard.GameBoard[i][j].setMoves(1,1,1,1);
+				GameBoard.GameBoard[i][j].setMoves(1,1,1,1);
 			}
 		}
 	}
 	else
 	{
-		for(int i = 0; i<2;i++)
+		for(int i = 0; i<GameBoard.getWidth();i++)
 		{
-			for(int j= GameBoard.getHeight()-1;j>GameBoard.getWidth();j++)
+			for(int j= GameBoard.getHeight()-2;j<GameBoard.getWidth();j++)
 			{
 
-				GameBoard.GameBoard[i][j].setPlayer(0);
-				//GameBoard.GameBoard[i][j].setMoves(1,1,1,1);
+				GameBoard.GameBoard[i][j].setPlayer(1);
+				GameBoard.GameBoard[i][j].setMoves(1,1,1,1);
 			}
 		}
 	}
@@ -161,6 +161,11 @@ void Breaktrough::setMoveForPlayer(int P)
 
 void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 {
+	vector<Point> vect;
+	vect.clear();
+	legal(vect,GameBoard.GameBoard[FromX][FromY]);
+
+	
 	if(GameBoard.GameBoard[FromX][FromY].getPlayer() == CurrentPlayer)
 		{
 			int *i= new int();
@@ -170,10 +175,11 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 				*i = player2_pieces;
 			}
 			
-			vector<Point> vect;
-			GameBoard.GameBoard[2][1].getMoves(vect, 5);
+		vector<Point> vect;
+	legal(vect,GameBoard.GameBoard[FromX][FromY]);
+
 			//if piece on the destination spot belongs to the other player
-			if((GameBoard.GameBoard[ToX][ToY].getPlayer() != CurrentPlayer)&&(GameBoard.GameBoard[ToX][ToY].getPlayer() != CurrentPlayer))
+			if((GameBoard.GameBoard[ToX][ToY].getPlayer() != CurrentPlayer)&&(GameBoard.GameBoard[ToX][ToY].getPlayer() != 2))
 			{
 				//left end
 				if(FromX == 0)
@@ -183,7 +189,10 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 						Piece temp = Piece("0",2,Point(FromX,FromY));
 						GameBoard.GameBoard[ToX][ToY]=GameBoard.GameBoard[FromX][FromY];
 						GameBoard.GameBoard[FromX][FromY] = temp; 
+						GameBoard.GameBoard[ToY][ToX].setPosition(Point(ToX,ToY));
 						i--;
+						checkFinished();
+
 					}
 					else
 					{
@@ -198,7 +207,9 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 						Piece temp = Piece("0",2,Point(FromX,FromY));
 						GameBoard.GameBoard[ToX][ToY]=GameBoard.GameBoard[FromX][FromY];
 						GameBoard.GameBoard[FromX][FromY] = temp; 
+						GameBoard.GameBoard[ToY][ToX].setPosition(Point(ToX,ToY));
 						i--;
+						checkFinished();
 					}
 					else
 					{
@@ -213,7 +224,9 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 						Piece temp = Piece("0",2,Point(FromX,FromY));
 						GameBoard.GameBoard[ToX][ToY]=GameBoard.GameBoard[FromX][FromY];
 						GameBoard.GameBoard[FromX][FromY] = temp; 
+						GameBoard.GameBoard[ToY][ToX].setPosition(Point(ToX,ToY));
 						i--;
+						checkFinished();
 					}
 					else
 					{
@@ -226,12 +239,11 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 			
 				if(CurrentPlayer == 0)
 				{
-					player2_pieces--;
 					CurrentPlayer = 1;
 				}	
 				else
 				{
-					player1_pieces--;
+					
 					CurrentPlayer = 0;
 				}
 				CurrentTurn++;
@@ -254,6 +266,7 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 						Piece temp = GameBoard.GameBoard[ToX][ToY];
 						GameBoard.GameBoard[ToX][ToY]=GameBoard.GameBoard[FromX][FromY];
 						GameBoard.GameBoard[FromX][FromY] = temp; 
+						GameBoard.GameBoard[ToY][ToX].setPosition(Point(ToX,ToY));
 			
 						if(CurrentPlayer == 0)
 						{
@@ -285,4 +298,38 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 		//if(evaluate(fromX,fromY,toX,toY){
 		//exchange GameBoard[FromX,FromY] with GameBoard[ToX,ToY]
 				//else{cout<<"illegal Move"<<end;}
+				
+}
+
+void Breaktrough::checkFinished()
+{
+	if(player1_pieces == 0)
+		{
+			cout << "Player 0 wins he did it in "<< CurrentTurn << " turns " <<endl;
+			m_finished = true;
+		}
+		else if(player2_pieces == 0)
+		{
+			cout << "Player 1 wins he did it in "<< CurrentTurn << " turns " <<endl;
+			m_finished = true;
+		}
+		else
+		{
+			for(int i = 0;i<GameBoard.getHeight();i++)
+			{
+				if(GameBoard.GameBoard[i][0].getPlayer() == 1)
+				{
+					cout << "Player 1 wins he did it in "<< CurrentTurn << " turns " <<endl;
+					m_finished = true;
+				}
+			}
+			for(int i = 0;i<GameBoard.getHeight();i++)
+			{
+				if(GameBoard.GameBoard[i][GameBoard.getHeight()-1].getPlayer() == 0)
+				{
+					cout << "Player 0 wins he did it in "<< CurrentTurn << " turns " <<endl;
+					m_finished = true;
+				}
+			}
+		}
 }

@@ -131,6 +131,7 @@ using namespace std;
 	{
 		cout << "current player is "<< CurrentPlayer << " and turn is " << CurrentTurn << "off "<<MaxPlays <<" turns "<< endl;
 		GameBoard.GenerateBoard();
+		cout << "player 0 has " << player1_pieces << " left and player 1 has " <<player2_pieces << " pieces left" <<endl;
 	}
 	void Game::evaluate()
 		{

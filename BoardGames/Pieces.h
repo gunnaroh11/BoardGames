@@ -30,6 +30,13 @@ public:
 		}
 		return false;
 	};
+	void operator=(const Point &rhs)
+	{
+
+	    m_x = rhs.m_x;
+		m_y = rhs.m_y;
+		
+	};
 };
 
 struct MoveDir{

@@ -23,7 +23,7 @@ public:
 	Game();
 	virtual void legal(vector<Point> &legalMoves, Piece &piece){};
 	virtual void start();
-	void make(int FromX,int FromY,int ToX,int ToY);
+	virtual void make(int FromX,int FromY,int ToX,int ToY);
 	void go();
 	void retract();
 	virtual void display(int height,int with);
@@ -35,9 +35,15 @@ public:
 	void setDifficulty(int diff);
 	int getDifficulty();
 	void GetTestGame();
+<<<<<<< HEAD
 	void checkFinished();
 	bool Debug;				/**< Toggle switch for debugging, if true program prints debug info  */
 	Board GameBoard;		/**< Game instance of class GameBoard */
+=======
+	virtual void checkFinished();
+	bool Debug;
+	Board GameBoard;
+>>>>>>> a4ac5c15d42ba045452087062e26d138dffe3632
 	bool canMake(Piece *piece, Point p);
 protected:
 	string GameName;		/**< Name of the game */
