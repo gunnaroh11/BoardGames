@@ -98,42 +98,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="class_game.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_game.html" title="Brief description. Class Game use as base interface for 2 player board games.">Game</a></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="class_game.html#aee0b70deb19422d35b2061beb339bdf8">   22</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_game.html#aee0b70deb19422d35b2061beb339bdf8">m_finished</a>;        </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_game.html" title="Brief description. Class Game use as base interface for 2 player board games.">Game</a>();                 </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> legal(vector&lt;Point&gt; &amp;legalMoves, <a class="code" href="class_piece.html">Piece</a> &amp;piece){}; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> start();   </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> make(<span class="keywordtype">int</span> FromX,<span class="keywordtype">int</span> FromY,<span class="keywordtype">int</span> ToX,<span class="keywordtype">int</span> ToY); </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> go();              </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> retract();         </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> display(<span class="keywordtype">int</span> height,<span class="keywordtype">int</span> with); </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> evaluate();        </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> debug();                   </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> quit();                    </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">string</span> GetName();               </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> setDifficulty(<span class="keywordtype">int</span> diff);   </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span> getDifficulty();            </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> GetTestGame();             </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> checkFinished();           </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="class_game.html#ad79740c2d2fa299cf322bf6ea322d9aa">   40</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_game.html#ad79740c2d2fa299cf322bf6ea322d9aa">Debug</a>;             </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="class_game.html#aeb67bc4fc06221330cfd7c862c85b66d">   41</a></span>&#160;    <a class="code" href="class_board.html">Board</a> <a class="code" href="class_game.html#aeb67bc4fc06221330cfd7c862c85b66d">GameBoard</a>;        </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">bool</span> canMake(<a class="code" href="class_piece.html">Piece</a> *piece, <a class="code" href="struct_point.html">Point</a> p);    </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="class_game.html#a1b56d5db37d900da0911378cc01f4cad">   44</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_game.html#a1b56d5db37d900da0911378cc01f4cad">GameName</a>;        </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="class_game.html#aea2c7f8bdb891f32026750c81f6eac16">   45</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_game.html#aea2c7f8bdb891f32026750c81f6eac16">player1_pieces</a>;     </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="class_game.html#a2b82ab082220d93bab2d7d1d181ad639">   46</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_game.html#a2b82ab082220d93bab2d7d1d181ad639">player2_pieces</a>;     </div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="class_game.html#a536a6390d16f05d402928bd731e06ef3">   47</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_game.html#a536a6390d16f05d402928bd731e06ef3">difficulty</a>;         </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="class_game.html#a7c0dd74fa2e5c366638596b7e82428f1">   48</a></span>&#160;    vector&lt;Board&gt; <a class="code" href="class_game.html#a7c0dd74fa2e5c366638596b7e82428f1">history</a>;  </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="class_game.html#a53cb9be6604469db6b3abac24c5a2ab6">   49</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_game.html#a53cb9be6604469db6b3abac24c5a2ab6">MaxPlays</a>;           </div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="class_game.html#a88700a4643e08b12130ba2950c54ed8b">   50</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_game.html#a88700a4643e08b12130ba2950c54ed8b">CurrentTurn</a>;        </div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="class_game.html#a661282d67a0e4a972293c98478bc02e4">   51</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_game.html#a661282d67a0e4a972293c98478bc02e4">CurrentPlayer</a>;      </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="class_game.html#acf61b27aed22684d96fbc7fa2692feeb">   31</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_game.html#acf61b27aed22684d96fbc7fa2692feeb">legal</a>(vector&lt;Point&gt; &amp;legalMoves, <a class="code" href="class_piece.html">Piece</a> &amp;piece){}; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> start();   </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> make(<span class="keywordtype">int</span> FromX,<span class="keywordtype">int</span> FromY,<span class="keywordtype">int</span> ToX,<span class="keywordtype">int</span> ToY); </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> go();              </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> retract();         </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> display(); </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> evaluate();        </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> debug();                   </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> quit();                    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">string</span> GetName();               </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> setDifficulty(<span class="keywordtype">int</span> diff);   </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> getDifficulty();            </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> GetTestGame();             </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="class_game.html#aee0b70deb19422d35b2061beb339bdf8">   55</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_game.html#aee0b70deb19422d35b2061beb339bdf8">m_finished</a>;        </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> checkFinished();           </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="code" href="class_game.html#ad79740c2d2fa299cf322bf6ea322d9aa">   57</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_game.html#ad79740c2d2fa299cf322bf6ea322d9aa">Debug</a>;             </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="code" href="class_game.html#aeb67bc4fc06221330cfd7c862c85b66d">   58</a></span>&#160;    <a class="code" href="class_board.html">Board</a> <a class="code" href="class_game.html#aeb67bc4fc06221330cfd7c862c85b66d">GameBoard</a>;        </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">bool</span> canMake(<a class="code" href="class_piece.html">Piece</a> *piece, <a class="code" href="struct_point.html">Point</a> p);    </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="class_game.html#a1b56d5db37d900da0911378cc01f4cad">   61</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_game.html#a1b56d5db37d900da0911378cc01f4cad">GameName</a>;        </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="class_game.html#aea2c7f8bdb891f32026750c81f6eac16">   62</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_game.html#aea2c7f8bdb891f32026750c81f6eac16">player1_pieces</a>;     </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="class_game.html#a2b82ab082220d93bab2d7d1d181ad639">   63</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_game.html#a2b82ab082220d93bab2d7d1d181ad639">player2_pieces</a>;     </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="class_game.html#a536a6390d16f05d402928bd731e06ef3">   64</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_game.html#a536a6390d16f05d402928bd731e06ef3">difficulty</a>;         </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="class_game.html#a7c0dd74fa2e5c366638596b7e82428f1">   65</a></span>&#160;    vector&lt;Board&gt; <a class="code" href="class_game.html#a7c0dd74fa2e5c366638596b7e82428f1">history</a>;  </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="code" href="class_game.html#a53cb9be6604469db6b3abac24c5a2ab6">   66</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_game.html#a53cb9be6604469db6b3abac24c5a2ab6">MaxPlays</a>;           </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="class_game.html#a88700a4643e08b12130ba2950c54ed8b">   67</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_game.html#a88700a4643e08b12130ba2950c54ed8b">CurrentTurn</a>;        </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="class_game.html#a661282d67a0e4a972293c98478bc02e4">   68</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_game.html#a661282d67a0e4a972293c98478bc02e4">CurrentPlayer</a>;      </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 17 2013 17:47:07 for BoardGame by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri May 17 2013 18:25:13 for BoardGame by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

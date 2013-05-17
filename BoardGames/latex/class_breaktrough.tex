@@ -13,13 +13,11 @@ Inheritance diagram for Breaktrough\-:\begin{figure}[H]
 \hypertarget{class_breaktrough_a1e1244669a6ab63043329afcdaaeec37}{void {\bfseries set\-Move\-For\-Player} (int P)}\label{class_breaktrough_a1e1244669a6ab63043329afcdaaeec37}
 
 \item 
-\hypertarget{class_breaktrough_a07006aa5d9919ddefa68554f3022afc6}{virtual void \hyperlink{class_breaktrough_a07006aa5d9919ddefa68554f3022afc6}{make} (int From\-X, int From\-Y, int To\-X, int To\-Y)}\label{class_breaktrough_a07006aa5d9919ddefa68554f3022afc6}
-
-\begin{DoxyCompactList}\small\item\em Virtual void to make move, move 1 piece from cord to other cord. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_breaktrough_a07006aa5d9919ddefa68554f3022afc6}{make} (int From\-X, int From\-Y, int To\-X, int To\-Y)
+\item 
 virtual void \hyperlink{class_breaktrough_a1e4b2c80e074f7052c4c491abe95c9f6}{start} ()
-\begin{DoxyCompactList}\small\item\em Virtual void, returns legal moves for piece in current game with moves ref. \end{DoxyCompactList}\item 
-\hypertarget{class_breaktrough_a6bf5d444ace61244df9a0255fde5d533}{void {\bfseries legal} (vector$<$ \hyperlink{struct_point}{Point} $>$ \&legal\-Moves, \hyperlink{class_piece}{Piece} \&piece)}\label{class_breaktrough_a6bf5d444ace61244df9a0255fde5d533}
-
+\begin{DoxyCompactList}\small\item\em Virtual void to start game. \end{DoxyCompactList}\item 
+void \hyperlink{class_breaktrough_a6bf5d444ace61244df9a0255fde5d533}{legal} (vector$<$ \hyperlink{struct_point}{Point} $>$ \&legal\-Moves, \hyperlink{class_piece}{Piece} \&piece)
 \item 
 \hypertarget{class_breaktrough_ae9e5edbac2c2fcce47711697eb3a8a2d}{virtual void {\bfseries check\-Finished} ()}\label{class_breaktrough_ae9e5edbac2c2fcce47711697eb3a8a2d}
 
@@ -28,6 +26,53 @@ virtual void \hyperlink{class_breaktrough_a1e4b2c80e074f7052c4c491abe95c9f6}{sta
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_breaktrough_a6bf5d444ace61244df9a0255fde5d533}{\index{Breaktrough@{Breaktrough}!legal@{legal}}
+\index{legal@{legal}!Breaktrough@{Breaktrough}}
+\subsubsection[{legal}]{\setlength{\rightskip}{0pt plus 5cm}void Breaktrough\-::legal (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Point} $>$ \&}]{legal\-Moves, }
+\item[{{\bf Piece} \&}]{piece}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_breaktrough_a6bf5d444ace61244df9a0255fde5d533}
+
+\begin{DoxyParams}{Parameters}
+{\em \&legal\-Moves} & a reference to vector of \hyperlink{struct_point}{Point}. Returns legal moves in vector \\
+\hline
+{\em \&piece} & a reference to piece being moved \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The test results 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_game_acf61b27aed22684d96fbc7fa2692feeb}{Game}.
+
+\hypertarget{class_breaktrough_a07006aa5d9919ddefa68554f3022afc6}{\index{Breaktrough@{Breaktrough}!make@{make}}
+\index{make@{make}!Breaktrough@{Breaktrough}}
+\subsubsection[{make}]{\setlength{\rightskip}{0pt plus 5cm}void Breaktrough\-::make (
+\begin{DoxyParamCaption}
+\item[{int}]{From\-X, }
+\item[{int}]{From\-Y, }
+\item[{int}]{To\-X, }
+\item[{int}]{To\-Y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_breaktrough_a07006aa5d9919ddefa68554f3022afc6}
+
+\begin{DoxyParams}{Parameters}
+{\em From\-X} & x value for piece to be moved \\
+\hline
+{\em From\-Y} & y value for piece to be moved \\
+\hline
+{\em To\-X} & x value for destination \\
+\hline
+{\em To\-Y} & y value for destination \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_a50b3e0e1e7a73793a9f9eae1b0660eff}{Game}.
+
 \hypertarget{class_breaktrough_a1e4b2c80e074f7052c4c491abe95c9f6}{\index{Breaktrough@{Breaktrough}!start@{start}}
 \index{start@{start}!Breaktrough@{Breaktrough}}
 \subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void Breaktrough\-::start (
@@ -37,9 +82,9 @@ virtual void \hyperlink{class_breaktrough_a1e4b2c80e074f7052c4c491abe95c9f6}{sta
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_breaktrough_a1e4b2c80e074f7052c4c491abe95c9f6}
 
 
-Virtual void, returns legal moves for piece in current game with moves ref. 
+Virtual void to start game. 
 
-Virtual void to start game 
+Virtual void to make move, move 1 piece from cord to other cord 
 
 Reimplemented from \hyperlink{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90}{Game}.
 

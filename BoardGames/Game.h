@@ -19,11 +19,27 @@ using namespace std;
 class Game
 {
 public:
-	bool m_finished;		/**< Indicates if still possible to make moves or if game has finished */
-	Game();					//!< Default Game constructor
-	virtual void legal(vector<Point> &legalMoves, Piece &piece){}; //!< Virtual void, returns legal moves for piece in current game with moves ref
-	virtual void start();	//!< Virtual void to start game
-	virtual void make(int FromX,int FromY,int ToX,int ToY); //!< Virtual void to make move, move 1 piece from cord to other cord
+	//!< Default Game constructor							
+	Game();					
+
+	//!< Virtual void, returns legal moves for piece in current game with moves ref
+	/*!
+		\param &legalMoves a reference to vector of Point. Returns legal moves in vector
+		\param &piece a reference to piece being moved
+		\return The test results		
+	*/
+	virtual void legal(vector<Point> &legalMoves, Piece &piece){}; 
+	
+	//!< Virtual void to start game
+	virtual void start();	
+	//!< Virtual void to make move, move 1 piece from cord to other cord
+	/*!
+		\param FromX x value for piece to be moved
+		\param FromY y value for piece to be moved
+		\param ToX x value for destination
+		\param ToY y value for destination
+	*/
+	virtual void make(int FromX,int FromY,int ToX,int ToY); 
 	virtual void go();				//!< Virtual void function to let cpu make move according to difficult level
 	void retract();			//!< Retract last move, pops GameBoard state and sets game to last state
 	virtual void display(); //!< Display board
@@ -36,6 +52,7 @@ public:
 	int getDifficulty();			//!< Returns current difficulty level
 	void GetTestGame();				//!< Runs Test game
 
+	bool m_finished;		/**< Indicates if still possible to make moves or if game has finished */
 	void checkFinished();			//!< Prints out result if game has finished
 	bool Debug;				/**< Toggle switch for debugging, if true program prints debug info  */
 	Board GameBoard;		/**< Game instance of class GameBoard */

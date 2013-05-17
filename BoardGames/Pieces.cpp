@@ -42,28 +42,30 @@ void Piece::getMoves(vector<Point> &points, const int boardSize){
 	
 	points.clear();
 
+	// move right
 	if((p.m_x + m_moveDir.E) <= boardSize)
 	{
-			count = 0;
+		count = 0;
 		for(int i = p.m_x; i < (p.m_x + m_moveDir.E); i++)
 		{
 			count++;
-			points.push_back(Point(p.m_x + count, p.m_y));
+			points.push_back(Point(p.m_x + count, p.m_y)); // x + 1, y = y => einn til hægri
 			
 			if(p.m_y < boardSize)
 			{
-				points.push_back(Point(p.m_x + count, p.m_y+ count));
+				points.push_back(Point(p.m_x + count, p.m_y+ count)); // x + 1, y + 1 => ská upp til hægri
 			}			
 		}
 	}
 
+	// move left
 	if((p.m_x - m_moveDir.W) >= 0)
 	{
 		count = 0;
 		for(int i = p.m_x; i > (p.m_x - m_moveDir.W); i--)
 		{
 			count++;
-			points.push_back(Point(p.m_x - count, p.m_y));
+			points.push_back(Point(p.m_x - count, p.m_y));	
 
 			if(p.m_y < boardSize)
 			{
