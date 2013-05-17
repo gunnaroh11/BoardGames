@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.3.1"/>
-<title>My Project: Breaktrough Class Reference</title>
+<title>BoardGame: Breaktrough Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,8 +22,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">BoardGame
+   &#160;<span id="projectnumber">1.0</span>
    </div>
+   <div id="projectbrief">Simpleboardgameinterfacewithexamplegames</div>
   </td>
  </tr>
  </tbody>
@@ -70,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -104,93 +106,128 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setMoveForPlayer</b> (int P)</td></tr>
 <tr class="separator:a1e1244669a6ab63043329afcdaaeec37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07006aa5d9919ddefa68554f3022afc6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07006aa5d9919ddefa68554f3022afc6"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>make</b> (int FromX, int FromY, int ToX, int ToY)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_breaktrough.html#a07006aa5d9919ddefa68554f3022afc6">make</a> (int FromX, int FromY, int ToX, int ToY)</td></tr>
+<tr class="memdesc:a07006aa5d9919ddefa68554f3022afc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual void to make move, move 1 piece from cord to other cord. <br/></td></tr>
 <tr class="separator:a07006aa5d9919ddefa68554f3022afc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e4b2c80e074f7052c4c491abe95c9f6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e4b2c80e074f7052c4c491abe95c9f6"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> ()</td></tr>
+<tr class="memitem:a1e4b2c80e074f7052c4c491abe95c9f6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_breaktrough.html#a1e4b2c80e074f7052c4c491abe95c9f6">start</a> ()</td></tr>
+<tr class="memdesc:a1e4b2c80e074f7052c4c491abe95c9f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual void, returns legal moves for piece in current game with moves ref.  <a href="#a1e4b2c80e074f7052c4c491abe95c9f6">More...</a><br/></td></tr>
 <tr class="separator:a1e4b2c80e074f7052c4c491abe95c9f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bf5d444ace61244df9a0255fde5d533"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bf5d444ace61244df9a0255fde5d533"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>legal</b> (vector&lt; <a class="el" href="struct_point.html">Point</a> &gt; &amp;legalMoves, <a class="el" href="class_piece.html">Piece</a> &amp;piece)</td></tr>
 <tr class="separator:a6bf5d444ace61244df9a0255fde5d533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9e5edbac2c2fcce47711697eb3a8a2d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9e5edbac2c2fcce47711697eb3a8a2d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>checkFinished</b> ()</td></tr>
+<tr class="separator:ae9e5edbac2c2fcce47711697eb3a8a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_game"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_game')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_game.html">Game</a></td></tr>
-<tr class="memitem:a50b3e0e1e7a73793a9f9eae1b0660eff inherit pub_methods_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50b3e0e1e7a73793a9f9eae1b0660eff"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>make</b> (int FromX, int FromY, int ToX, int ToY)</td></tr>
-<tr class="separator:a50b3e0e1e7a73793a9f9eae1b0660eff inherit pub_methods_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad59df6562a58a614fda24622d3715b65 inherit pub_methods_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad59df6562a58a614fda24622d3715b65"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ad59df6562a58a614fda24622d3715b65">Game</a> ()</td></tr>
+<tr class="memdesc:ad59df6562a58a614fda24622d3715b65 inherit pub_methods_class_game"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default <a class="el" href="class_game.html" title="Brief description. Class Game use as base interface for 2 player board games.">Game</a> constructor. <br/></td></tr>
+<tr class="separator:ad59df6562a58a614fda24622d3715b65 inherit pub_methods_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab411d0da584724addd4fdb96fc16b9a4 inherit pub_methods_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab411d0da584724addd4fdb96fc16b9a4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>go</b> ()</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ab411d0da584724addd4fdb96fc16b9a4">go</a> ()</td></tr>
+<tr class="memdesc:ab411d0da584724addd4fdb96fc16b9a4 inherit pub_methods_class_game"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual void function to let cpu make move according to difficult level. <br/></td></tr>
 <tr class="separator:ab411d0da584724addd4fdb96fc16b9a4 inherit pub_methods_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9be0655102af94f1a37a7eaec1be36fc inherit pub_methods_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9be0655102af94f1a37a7eaec1be36fc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>retract</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a9be0655102af94f1a37a7eaec1be36fc">retract</a> ()</td></tr>
+<tr class="memdesc:a9be0655102af94f1a37a7eaec1be36fc inherit pub_methods_class_game"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retract last move, pops GameBoard state and sets game to last state. <br/></td></tr>
 <tr class="separator:a9be0655102af94f1a37a7eaec1be36fc inherit pub_methods_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0c93cb242e1802b94072c3c94e7523a inherit pub_methods_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0c93cb242e1802b94072c3c94e7523a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>display</b> (int height, int with)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ac0c93cb242e1802b94072c3c94e7523a">display</a> (int height, int with)</td></tr>
+<tr class="memdesc:ac0c93cb242e1802b94072c3c94e7523a inherit pub_methods_class_game"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display board. <br/></td></tr>
 <tr class="separator:ac0c93cb242e1802b94072c3c94e7523a inherit pub_methods_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bc8822cacd9cf8c5f71021072eb24a4 inherit pub_methods_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3bc8822cacd9cf8c5f71021072eb24a4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>evaluate</b> ()</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a3bc8822cacd9cf8c5f71021072eb24a4">evaluate</a> ()</td></tr>
+<tr class="memdesc:a3bc8822cacd9cf8c5f71021072eb24a4 inherit pub_methods_class_game"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual void, evaluate if player can make move in current position and set score. <br/></td></tr>
 <tr class="separator:a3bc8822cacd9cf8c5f71021072eb24a4 inherit pub_methods_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29997a321e10a5456f0aef9e95c51757 inherit pub_methods_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29997a321e10a5456f0aef9e95c51757"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>debug</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a29997a321e10a5456f0aef9e95c51757">debug</a> ()</td></tr>
+<tr class="memdesc:a29997a321e10a5456f0aef9e95c51757 inherit pub_methods_class_game"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch between debug mode and non-debug mode. <br/></td></tr>
 <tr class="separator:a29997a321e10a5456f0aef9e95c51757 inherit pub_methods_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8272be134d16c277bb014ad6a22fc357 inherit pub_methods_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8272be134d16c277bb014ad6a22fc357"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>quit</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a8272be134d16c277bb014ad6a22fc357">quit</a> ()</td></tr>
+<tr class="memdesc:a8272be134d16c277bb014ad6a22fc357 inherit pub_methods_class_game"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exit program. <br/></td></tr>
 <tr class="separator:a8272be134d16c277bb014ad6a22fc357 inherit pub_methods_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab81299d944d2779d482067640e576389 inherit pub_methods_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab81299d944d2779d482067640e576389"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>GetName</b> ()</td></tr>
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ab81299d944d2779d482067640e576389">GetName</a> ()</td></tr>
+<tr class="memdesc:ab81299d944d2779d482067640e576389 inherit pub_methods_class_game"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns name. <br/></td></tr>
 <tr class="separator:ab81299d944d2779d482067640e576389 inherit pub_methods_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8ac0005c039f0f5f2dd1c10a299fe8d inherit pub_methods_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8ac0005c039f0f5f2dd1c10a299fe8d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setDifficulty</b> (int diff)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ae8ac0005c039f0f5f2dd1c10a299fe8d">setDifficulty</a> (int diff)</td></tr>
+<tr class="memdesc:ae8ac0005c039f0f5f2dd1c10a299fe8d inherit pub_methods_class_game"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets difficult state 0 = random, 1 = easy, 2 = medium, 3 = hard. <br/></td></tr>
 <tr class="separator:ae8ac0005c039f0f5f2dd1c10a299fe8d inherit pub_methods_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c0efe888e453a7fc0e644503fbd6316 inherit pub_methods_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c0efe888e453a7fc0e644503fbd6316"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getDifficulty</b> ()</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a2c0efe888e453a7fc0e644503fbd6316">getDifficulty</a> ()</td></tr>
+<tr class="memdesc:a2c0efe888e453a7fc0e644503fbd6316 inherit pub_methods_class_game"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns current difficulty level. <br/></td></tr>
 <tr class="separator:a2c0efe888e453a7fc0e644503fbd6316 inherit pub_methods_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f47238d93728540edb7940a80a9db89 inherit pub_methods_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f47238d93728540edb7940a80a9db89"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>GetTestGame</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a1f47238d93728540edb7940a80a9db89">GetTestGame</a> ()</td></tr>
+<tr class="memdesc:a1f47238d93728540edb7940a80a9db89 inherit pub_methods_class_game"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs Test game. <br/></td></tr>
 <tr class="separator:a1f47238d93728540edb7940a80a9db89 inherit pub_methods_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5be70ea28f2ec151cd93e86086f23a9 inherit pub_methods_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5be70ea28f2ec151cd93e86086f23a9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>checkFinished</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ae5be70ea28f2ec151cd93e86086f23a9">checkFinished</a> ()</td></tr>
+<tr class="memdesc:ae5be70ea28f2ec151cd93e86086f23a9 inherit pub_methods_class_game"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints out result if game has finished. <br/></td></tr>
 <tr class="separator:ae5be70ea28f2ec151cd93e86086f23a9 inherit pub_methods_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37edad1c1ded84b1735653f809ccb585 inherit pub_methods_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37edad1c1ded84b1735653f809ccb585"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>canMake</b> (<a class="el" href="class_piece.html">Piece</a> *piece, <a class="el" href="struct_point.html">Point</a> p)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a37edad1c1ded84b1735653f809ccb585">canMake</a> (<a class="el" href="class_piece.html">Piece</a> *piece, <a class="el" href="struct_point.html">Point</a> p)</td></tr>
+<tr class="memdesc:a37edad1c1ded84b1735653f809ccb585 inherit pub_methods_class_game"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cheks if piece can make move to cord p. <br/></td></tr>
 <tr class="separator:a37edad1c1ded84b1735653f809ccb585 inherit pub_methods_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_class_game"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_game')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_game.html">Game</a></td></tr>
-<tr class="memitem:aee0b70deb19422d35b2061beb339bdf8 inherit pub_attribs_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee0b70deb19422d35b2061beb339bdf8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_finished</b></td></tr>
+<tr class="memitem:aee0b70deb19422d35b2061beb339bdf8 inherit pub_attribs_class_game"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#aee0b70deb19422d35b2061beb339bdf8">m_finished</a></td></tr>
 <tr class="separator:aee0b70deb19422d35b2061beb339bdf8 inherit pub_attribs_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad79740c2d2fa299cf322bf6ea322d9aa inherit pub_attribs_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad79740c2d2fa299cf322bf6ea322d9aa"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Debug</b></td></tr>
+<tr class="memitem:ad79740c2d2fa299cf322bf6ea322d9aa inherit pub_attribs_class_game"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ad79740c2d2fa299cf322bf6ea322d9aa">Debug</a></td></tr>
 <tr class="separator:ad79740c2d2fa299cf322bf6ea322d9aa inherit pub_attribs_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb67bc4fc06221330cfd7c862c85b66d inherit pub_attribs_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb67bc4fc06221330cfd7c862c85b66d"></a>
-<a class="el" href="class_board.html">Board</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GameBoard</b></td></tr>
+<tr class="memitem:aeb67bc4fc06221330cfd7c862c85b66d inherit pub_attribs_class_game"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_board.html">Board</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#aeb67bc4fc06221330cfd7c862c85b66d">GameBoard</a></td></tr>
 <tr class="separator:aeb67bc4fc06221330cfd7c862c85b66d inherit pub_attribs_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_game"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_game')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_game.html">Game</a></td></tr>
-<tr class="memitem:a1b56d5db37d900da0911378cc01f4cad inherit pro_attribs_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b56d5db37d900da0911378cc01f4cad"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>GameName</b></td></tr>
+<tr class="memitem:a1b56d5db37d900da0911378cc01f4cad inherit pro_attribs_class_game"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a1b56d5db37d900da0911378cc01f4cad">GameName</a></td></tr>
 <tr class="separator:a1b56d5db37d900da0911378cc01f4cad inherit pro_attribs_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea2c7f8bdb891f32026750c81f6eac16 inherit pro_attribs_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea2c7f8bdb891f32026750c81f6eac16"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>player1_pieces</b></td></tr>
+<tr class="memitem:aea2c7f8bdb891f32026750c81f6eac16 inherit pro_attribs_class_game"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#aea2c7f8bdb891f32026750c81f6eac16">player1_pieces</a></td></tr>
 <tr class="separator:aea2c7f8bdb891f32026750c81f6eac16 inherit pro_attribs_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b82ab082220d93bab2d7d1d181ad639 inherit pro_attribs_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b82ab082220d93bab2d7d1d181ad639"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>player2_pieces</b></td></tr>
+<tr class="memitem:a2b82ab082220d93bab2d7d1d181ad639 inherit pro_attribs_class_game"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a2b82ab082220d93bab2d7d1d181ad639">player2_pieces</a></td></tr>
 <tr class="separator:a2b82ab082220d93bab2d7d1d181ad639 inherit pro_attribs_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a536a6390d16f05d402928bd731e06ef3 inherit pro_attribs_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a536a6390d16f05d402928bd731e06ef3"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>difficulty</b></td></tr>
+<tr class="memitem:a536a6390d16f05d402928bd731e06ef3 inherit pro_attribs_class_game"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a536a6390d16f05d402928bd731e06ef3">difficulty</a></td></tr>
 <tr class="separator:a536a6390d16f05d402928bd731e06ef3 inherit pro_attribs_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c0dd74fa2e5c366638596b7e82428f1 inherit pro_attribs_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c0dd74fa2e5c366638596b7e82428f1"></a>
-vector&lt; <a class="el" href="class_board.html">Board</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>history</b></td></tr>
+<tr class="memitem:a7c0dd74fa2e5c366638596b7e82428f1 inherit pro_attribs_class_game"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_board.html">Board</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a7c0dd74fa2e5c366638596b7e82428f1">history</a></td></tr>
 <tr class="separator:a7c0dd74fa2e5c366638596b7e82428f1 inherit pro_attribs_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53cb9be6604469db6b3abac24c5a2ab6 inherit pro_attribs_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53cb9be6604469db6b3abac24c5a2ab6"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxPlays</b></td></tr>
+<tr class="memitem:a53cb9be6604469db6b3abac24c5a2ab6 inherit pro_attribs_class_game"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a53cb9be6604469db6b3abac24c5a2ab6">MaxPlays</a></td></tr>
 <tr class="separator:a53cb9be6604469db6b3abac24c5a2ab6 inherit pro_attribs_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88700a4643e08b12130ba2950c54ed8b inherit pro_attribs_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a88700a4643e08b12130ba2950c54ed8b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>CurrentTurn</b></td></tr>
+<tr class="memitem:a88700a4643e08b12130ba2950c54ed8b inherit pro_attribs_class_game"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a88700a4643e08b12130ba2950c54ed8b">CurrentTurn</a></td></tr>
 <tr class="separator:a88700a4643e08b12130ba2950c54ed8b inherit pro_attribs_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a661282d67a0e4a972293c98478bc02e4 inherit pro_attribs_class_game"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a661282d67a0e4a972293c98478bc02e4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>CurrentPlayer</b></td></tr>
+<tr class="memitem:a661282d67a0e4a972293c98478bc02e4 inherit pro_attribs_class_game"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a661282d67a0e4a972293c98478bc02e4">CurrentPlayer</a></td></tr>
 <tr class="separator:a661282d67a0e4a972293c98478bc02e4 inherit pro_attribs_class_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a1e4b2c80e074f7052c4c491abe95c9f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Breaktrough::start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Virtual void, returns legal moves for piece in current game with moves ref. </p>
+<p>Virtual void to start game </p>
+
+<p>Reimplemented from <a class="el" href="class_game.html#a3d9b98f7c4a96ecf578f75b96c9f0e90">Game</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_breakthrough_8h_source.html">Breakthrough.h</a></li>
 <li>Breakthrough.cpp</li>
@@ -198,7 +235,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>CurrentPlayer</b></td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 17 2013 16:49:58 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri May 17 2013 17:47:07 for BoardGame by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
