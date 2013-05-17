@@ -11,6 +11,7 @@ public:
 	//void display(int height,int with);
 	virtual void make(int FromX,int FromY,int ToX,int ToY);
 	virtual void start();
+	void legal(vector<Point> &legalMoves, Piece &piece);
 
 	void legal(vector<Point> &legalMoves, Piece &piece);
 
