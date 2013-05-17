@@ -1,0 +1,116 @@
+\hypertarget{class_game}{\section{Game Class Reference}
+\label{class_game}\index{Game@{Game}}
+}
+
+
+Brief description. Class \hyperlink{class_game}{Game} use as base interface for 2 player board games.  
+
+
+
+
+{\ttfamily \#include $<$Game.\-h$>$}
+
+Inheritance diagram for Game\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_acf61b27aed22684d96fbc7fa2692feeb}{virtual void {\bfseries legal} (vector$<$ \hyperlink{struct_point}{Point} $>$ \&legal\-Moves, \hyperlink{class_piece}{Piece} \&piece)}\label{class_game_acf61b27aed22684d96fbc7fa2692feeb}
+
+\item 
+\hypertarget{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90}{virtual void {\bfseries start} ()}\label{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90}
+
+\item 
+\hypertarget{class_game_a50b3e0e1e7a73793a9f9eae1b0660eff}{void {\bfseries make} (int From\-X, int From\-Y, int To\-X, int To\-Y)}\label{class_game_a50b3e0e1e7a73793a9f9eae1b0660eff}
+
+\item 
+\hypertarget{class_game_ab411d0da584724addd4fdb96fc16b9a4}{void {\bfseries go} ()}\label{class_game_ab411d0da584724addd4fdb96fc16b9a4}
+
+\item 
+\hypertarget{class_game_a9be0655102af94f1a37a7eaec1be36fc}{void {\bfseries retract} ()}\label{class_game_a9be0655102af94f1a37a7eaec1be36fc}
+
+\item 
+\hypertarget{class_game_ac0c93cb242e1802b94072c3c94e7523a}{virtual void {\bfseries display} (int height, int with)}\label{class_game_ac0c93cb242e1802b94072c3c94e7523a}
+
+\item 
+\hypertarget{class_game_a3bc8822cacd9cf8c5f71021072eb24a4}{void {\bfseries evaluate} ()}\label{class_game_a3bc8822cacd9cf8c5f71021072eb24a4}
+
+\item 
+\hypertarget{class_game_a29997a321e10a5456f0aef9e95c51757}{void {\bfseries debug} ()}\label{class_game_a29997a321e10a5456f0aef9e95c51757}
+
+\item 
+\hypertarget{class_game_a8272be134d16c277bb014ad6a22fc357}{void {\bfseries quit} ()}\label{class_game_a8272be134d16c277bb014ad6a22fc357}
+
+\item 
+\hypertarget{class_game_ab81299d944d2779d482067640e576389}{string {\bfseries Get\-Name} ()}\label{class_game_ab81299d944d2779d482067640e576389}
+
+\item 
+\hypertarget{class_game_ae8ac0005c039f0f5f2dd1c10a299fe8d}{void {\bfseries set\-Difficulty} (int diff)}\label{class_game_ae8ac0005c039f0f5f2dd1c10a299fe8d}
+
+\item 
+\hypertarget{class_game_a2c0efe888e453a7fc0e644503fbd6316}{int {\bfseries get\-Difficulty} ()}\label{class_game_a2c0efe888e453a7fc0e644503fbd6316}
+
+\item 
+\hypertarget{class_game_a1f47238d93728540edb7940a80a9db89}{void {\bfseries Get\-Test\-Game} ()}\label{class_game_a1f47238d93728540edb7940a80a9db89}
+
+\item 
+\hypertarget{class_game_ae5be70ea28f2ec151cd93e86086f23a9}{void {\bfseries check\-Finished} ()}\label{class_game_ae5be70ea28f2ec151cd93e86086f23a9}
+
+\item 
+\hypertarget{class_game_a37edad1c1ded84b1735653f809ccb585}{bool {\bfseries can\-Make} (\hyperlink{class_piece}{Piece} $\ast$piece, \hyperlink{struct_point}{Point} p)}\label{class_game_a37edad1c1ded84b1735653f809ccb585}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_aee0b70deb19422d35b2061beb339bdf8}{bool {\bfseries m\-\_\-finished}}\label{class_game_aee0b70deb19422d35b2061beb339bdf8}
+
+\item 
+\hypertarget{class_game_ad79740c2d2fa299cf322bf6ea322d9aa}{bool {\bfseries Debug}}\label{class_game_ad79740c2d2fa299cf322bf6ea322d9aa}
+
+\item 
+\hypertarget{class_game_aeb67bc4fc06221330cfd7c862c85b66d}{\hyperlink{class_board}{Board} {\bfseries Game\-Board}}\label{class_game_aeb67bc4fc06221330cfd7c862c85b66d}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_a1b56d5db37d900da0911378cc01f4cad}{string {\bfseries Game\-Name}}\label{class_game_a1b56d5db37d900da0911378cc01f4cad}
+
+\item 
+\hypertarget{class_game_aea2c7f8bdb891f32026750c81f6eac16}{int {\bfseries player1\-\_\-pieces}}\label{class_game_aea2c7f8bdb891f32026750c81f6eac16}
+
+\item 
+\hypertarget{class_game_a2b82ab082220d93bab2d7d1d181ad639}{int {\bfseries player2\-\_\-pieces}}\label{class_game_a2b82ab082220d93bab2d7d1d181ad639}
+
+\item 
+\hypertarget{class_game_a536a6390d16f05d402928bd731e06ef3}{int {\bfseries difficulty}}\label{class_game_a536a6390d16f05d402928bd731e06ef3}
+
+\item 
+\hypertarget{class_game_a7c0dd74fa2e5c366638596b7e82428f1}{vector$<$ \hyperlink{class_board}{Board} $>$ {\bfseries history}}\label{class_game_a7c0dd74fa2e5c366638596b7e82428f1}
+
+\item 
+\hypertarget{class_game_a53cb9be6604469db6b3abac24c5a2ab6}{int {\bfseries Max\-Plays}}\label{class_game_a53cb9be6604469db6b3abac24c5a2ab6}
+
+\item 
+\hypertarget{class_game_a88700a4643e08b12130ba2950c54ed8b}{int {\bfseries Current\-Turn}}\label{class_game_a88700a4643e08b12130ba2950c54ed8b}
+
+\item 
+\hypertarget{class_game_a661282d67a0e4a972293c98478bc02e4}{int {\bfseries Current\-Player}}\label{class_game_a661282d67a0e4a972293c98478bc02e4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Brief description. Class \hyperlink{class_game}{Game} use as base interface for 2 player board games. 
+
+\hyperlink{class_game}{Game} class is used as parent class for each type of boardgames. The class has some basic default actions. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Game.\-h\item 
+Game.\-cpp\end{DoxyCompactItemize}

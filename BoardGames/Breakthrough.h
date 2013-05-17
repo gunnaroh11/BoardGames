@@ -13,8 +13,6 @@ public:
 	virtual void start();
 	void legal(vector<Point> &legalMoves, Piece &piece);
 
-
-	
 private:
 protected:
 };

@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Documentation">
+      <UniqueIdentifier>{e1946ccb-9ea7-446f-806c-434a95ce50a6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Pieces.h">
@@ -59,5 +62,10 @@
     <ClCompile Include="Pawn.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BoardGameDoc">
+      <Filter>Documentation</Filter>
+    </None>
   </ItemGroup>
 </Project>

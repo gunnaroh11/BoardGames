@@ -9,10 +9,17 @@
 
 using namespace std;
 
+/*! \brief Brief description.
+ *         Class Game use as base interface for 2 player board games.
+ *
+ *  Game class is used as parent class for each type of boardgames. The class has some 
+ *  basic default actions. 
+ */
+
 class Game
 {
 public:
-	bool m_finished;
+	bool m_finished;		/**< Indicates if still possible to make moves or if game has finished */
 	Game();
 	virtual void legal(vector<Point> &legalMoves, Piece &piece){};
 	virtual void start();
@@ -22,7 +29,6 @@ public:
 	virtual void display(int height,int with);
 	
 	void evaluate();
-	void level(std::string difficulty);
 	void debug();
 	void quit();
 	string GetName();
@@ -30,11 +36,11 @@ public:
 	int getDifficulty();
 	void GetTestGame();
 	void checkFinished();
-	bool Debug;
-	Board GameBoard;
+	bool Debug;				/**< Toggle switch for debugging, if true program prints debug info  */
+	Board GameBoard;		/**< Game instance of class GameBoard */
 	bool canMake(Piece *piece, Point p);
 protected:
-	string GameName;
+	string GameName;		/**< Name of the game */
 	int player1_pieces;
 	int player2_pieces;
 	int difficulty;

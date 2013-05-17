@@ -12,12 +12,8 @@ using namespace std;
 	void Game::start()
 	{
 
-	cout << "blarg start is not possible"<< endl;
+		cout << "blarg start is not possible"<< endl;
 	
-	//GameBoard.GenerateBoard();
-	//make(1,1,2,1);
-	//make(3,1,2,1);
-//	GameBoard.GenerateBoard();
 	}
 
 	// check if piece can move to provided cords
@@ -140,13 +136,6 @@ using namespace std;
 		{
 			//to be implemented;
 		}
-	void Game::level(string difficulty)
-	{
-		//easy
-		//medium
-		//hard
-		//random
-	}
 	void Game::debug()
 	{
 		if(Debug == true)
