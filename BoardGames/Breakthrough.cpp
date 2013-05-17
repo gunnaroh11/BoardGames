@@ -141,7 +141,7 @@ void Breaktrough::setMoveForPlayer(int P)
 			{
 
 				GameBoard.GameBoard[i][j].setPlayer(0);
-				//GameBoard.GameBoard[i][j].setMoves(1,1,1,1);
+				GameBoard.GameBoard[i][j].setMoves(1,1,1,1);
 			}
 		}
 	}
@@ -153,7 +153,7 @@ void Breaktrough::setMoveForPlayer(int P)
 			{
 
 				GameBoard.GameBoard[i][j].setPlayer(1);
-				//GameBoard.GameBoard[i][j].setMoves(1,1,1,1);
+				GameBoard.GameBoard[i][j].setMoves(1,1,1,1);
 			}
 		}
 	}
@@ -161,6 +161,11 @@ void Breaktrough::setMoveForPlayer(int P)
 
 void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 {
+	vector<Point> vect;
+	vect.clear();
+	legal(vect,GameBoard.GameBoard[FromX][FromY]);
+
+	
 	if(GameBoard.GameBoard[FromX][FromY].getPlayer() == CurrentPlayer)
 		{
 			int *i= new int();
@@ -170,8 +175,9 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 				*i = player2_pieces;
 			}
 			
-			vector<Point> vect;
-			GameBoard.GameBoard[2][1].getMoves(vect, 5);
+		vector<Point> vect;
+	legal(vect,GameBoard.GameBoard[FromX][FromY]);
+
 			//if piece on the destination spot belongs to the other player
 			if((GameBoard.GameBoard[ToX][ToY].getPlayer() != CurrentPlayer)&&(GameBoard.GameBoard[ToX][ToY].getPlayer() != 2))
 			{
@@ -183,6 +189,7 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 						Piece temp = Piece("0",2,Point(FromX,FromY));
 						GameBoard.GameBoard[ToX][ToY]=GameBoard.GameBoard[FromX][FromY];
 						GameBoard.GameBoard[FromX][FromY] = temp; 
+						GameBoard.GameBoard[ToY][ToX].setPosition(Point(ToX,ToY));
 						i--;
 						checkFinished();
 
@@ -200,6 +207,7 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 						Piece temp = Piece("0",2,Point(FromX,FromY));
 						GameBoard.GameBoard[ToX][ToY]=GameBoard.GameBoard[FromX][FromY];
 						GameBoard.GameBoard[FromX][FromY] = temp; 
+						GameBoard.GameBoard[ToY][ToX].setPosition(Point(ToX,ToY));
 						i--;
 						checkFinished();
 					}
@@ -216,6 +224,7 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 						Piece temp = Piece("0",2,Point(FromX,FromY));
 						GameBoard.GameBoard[ToX][ToY]=GameBoard.GameBoard[FromX][FromY];
 						GameBoard.GameBoard[FromX][FromY] = temp; 
+						GameBoard.GameBoard[ToY][ToX].setPosition(Point(ToX,ToY));
 						i--;
 						checkFinished();
 					}
@@ -257,6 +266,7 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 						Piece temp = GameBoard.GameBoard[ToX][ToY];
 						GameBoard.GameBoard[ToX][ToY]=GameBoard.GameBoard[FromX][FromY];
 						GameBoard.GameBoard[FromX][FromY] = temp; 
+						GameBoard.GameBoard[ToY][ToX].setPosition(Point(ToX,ToY));
 			
 						if(CurrentPlayer == 0)
 						{
@@ -288,6 +298,7 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 		//if(evaluate(fromX,fromY,toX,toY){
 		//exchange GameBoard[FromX,FromY] with GameBoard[ToX,ToY]
 				//else{cout<<"illegal Move"<<end;}
+				
 }
 
 void Breaktrough::checkFinished()

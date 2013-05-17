@@ -108,7 +108,7 @@ void Piece::getMoves(vector<Point> &points, const int boardSize){
 // Set position for piece
 void Piece::setPosition(int x, int y){
 	m_position.m_x = x;
-	m_position.m_y;
+	m_position.m_y = y;
 }
 
 // Set position for piece
