@@ -2,7 +2,7 @@
 using namespace std;
 Breaktrough::Breaktrough()
 {
-	GameName = "Breakthogh";
+	GameName = "Breakthrough";
 	m_finished = false;
 		Debug = false;
 		difficulty = 0;
