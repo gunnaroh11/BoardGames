@@ -2,6 +2,12 @@
 using namespace std;
 Breaktrough::Breaktrough()
 {
+	
+		
+}
+
+void Breaktrough::start()
+{
 	GameName = "Breakthogh";
 	m_finished = false;
 		Debug = false;
@@ -14,14 +20,9 @@ Breaktrough::Breaktrough()
 		CurrentPlayer = 0;
 		
 		setMoveForPlayer(0);
-		//setMoveForPlayer(1);
-		
-}
-
-void Breaktrough::start()
-{
+		setMoveForPlayer(1);
 	cout << "size of board is " << GameBoard.getHeight() << ":" << GameBoard.getWidth() << endl;
-	display(7,7);
+	//display(7,7);
 	//	GameBoard.GenerateBoard();
 		history.push_back(GameBoard);
 }
@@ -31,7 +32,7 @@ void Breaktrough::setMoveForPlayer(int P)
 	{
 		for(int i = 0; i<2;i++)
 		{
-			for(int j= 0;j<GameBoard.getWidth()-2;j++)
+			for(int j= 0;j<GameBoard.getWidth();j++)
 			{
 
 				GameBoard.GameBoard[i][j].setPlayer(0);
@@ -41,6 +42,15 @@ void Breaktrough::setMoveForPlayer(int P)
 	}
 	else
 	{
+		for(int i = 0; i<2;i++)
+		{
+			for(int j= GameBoard.getHeight()-1;j>GameBoard.getWidth();j++)
+			{
+
+				GameBoard.GameBoard[i][j].setPlayer(0);
+				//GameBoard.GameBoard[i][j].setMoves(1,1,1,1);
+			}
+		}
 	}
 }
 

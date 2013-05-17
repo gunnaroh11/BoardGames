@@ -167,6 +167,7 @@ bool debug = false;
 
 Game t;
 Breaktrough B;;
+B.start();
 t.GetTestGame();
 Games.push_back(&t); // á að vera new test game... eða e-ð
 Games.push_back(&B);

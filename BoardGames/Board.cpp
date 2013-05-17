@@ -12,6 +12,7 @@ Board::Board()
 			temp.push_back(Piece("0",2,Point(i,j)));
 		}
 		GameBoard.push_back(temp);
+		
 	}
 
 }
@@ -54,6 +55,16 @@ void Board::SetSize(int h,int w)
 {
 	height = h;
 	width = w;
+	GameBoard.clear();
+	for(int i = 0;i<h;i++)
+	{
+		std::vector<Piece> temp;
+		for(int j = 0;j<w;j++)
+		{
+			temp.push_back(Piece("0",2,Point(i,j)));
+		}
+		GameBoard.push_back(temp);
+	}
 }
 
 int Board::getWidth(){
