@@ -1,14 +1,12 @@
 #include "Breakthrough.h"
 using namespace std;
 Breaktrough::Breaktrough()
-{
-	
-		
+{		
 }
 
 void Breaktrough::start()
 {
-	GameName = "Breakthogh";
+	GameName = "Breakthrough";
 	m_finished = false;
 		Debug = false;
 		difficulty = 0;

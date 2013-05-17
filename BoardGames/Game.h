@@ -41,6 +41,5 @@ protected:
 	int CurrentTurn;
 	int CurrentPlayer;
 
-
 };
 #endif
