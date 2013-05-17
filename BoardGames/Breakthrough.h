@@ -1,6 +1,8 @@
 #ifndef BREAKTHROUGH_H
 #define BREAKTHROUGH_H
 #include "Game.h"
+#include "Pieces.h"
+
 class Breaktrough : public Game
 {
 public:
