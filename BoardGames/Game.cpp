@@ -30,8 +30,24 @@ using namespace std;
 		{
 			if(points[i] == p)
 			{
+				if(Debug)
+				{
+					cout << "canMake(Piece *piece, Point p) => returns true" << endl
+						<< "player can make this move" << endl;
+				}
 				return true;
 			}
+
+			if(Debug)
+				{
+					cout << "canMake(Piece *piece, Point p) => getMoves() can not make move to \n (" 
+						<< points[i].m_x << "," << points[i].m_y << ")" << endl;
+				}
+		}
+		if(Debug)
+		{
+			cout << "canMake(Piece *piece, Point p) => returns false" << endl
+				<< "player can NOT make this move" << endl;
 		}
 		return false;
 	}
@@ -119,6 +135,7 @@ using namespace std;
 	{
 		cout << "current player is "<< CurrentPlayer << " and turn is " << CurrentTurn << "off "<<MaxPlays <<" turns "<< endl;
 		GameBoard.GenerateBoard();
+		cout << "player 0 has " << player1_pieces << " left and player 1 has " <<player2_pieces << " pieces left" <<endl;
 	}
 	void Game::evaluate()
 		{

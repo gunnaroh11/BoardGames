@@ -1,6 +1,7 @@
 #ifndef PIECES_H
 #define PIECES_H
 #include <vector>
+#include <iostream>
 struct Point{
 public:
 	int m_x;
@@ -12,6 +13,10 @@ public:
 	void setEmpty(){
 		m_x = 0;
 		m_y = 0;
+	};
+
+	void print(){
+		std::cout << "(" << m_x << ", " << m_y << ")" << std::endl;
 	};
 
 	friend bool operator==(Point &lhs, Point &rhs)

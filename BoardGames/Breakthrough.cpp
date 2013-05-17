@@ -1,8 +1,115 @@
 #include "Breakthrough.h"
+
 using namespace std;
 Breaktrough::Breaktrough()
 {		
 }
+
+void Breaktrough::legal(vector<Point> &legalMoves, Piece &piece){
+	
+	vector<Point> moves;
+	Point currentPoint = piece.getPostion();
+	piece.getMoves(moves, GameBoard.getHeight());
+	legalMoves.clear();
+
+	if(CurrentPlayer == 0)
+	{	
+		if(Debug)
+		{
+			cout << endl << "Selected Player - Player One - Get all moves for piece and clear vector lecalMoves" << endl;
+			for(int i = 0; i<(int)moves.size();i++)
+			{
+				cout << "1: ";  
+				moves[i].print();				
+			}
+		}
+
+		for(int i = 0; i < (int)moves.size();i++)
+		{
+			//upright		
+			if(Point(currentPoint.m_x+1, currentPoint.m_y+1) == moves[i])
+			{
+				if(Debug)
+				{
+					cout << "Point found in moves, push_back to legalMoves" << endl;
+					moves[i].print();
+				}
+				legalMoves.push_back(Point(currentPoint.m_x+1, currentPoint.m_y+1)); 
+			}
+
+			//up		
+			if(Point(currentPoint.m_x, currentPoint.m_y+1) == moves[i])
+			{
+				if(Debug)
+				{
+					cout << "Point found in moves, push_back to legalMoves" << endl;
+					moves[i].print();
+				}
+				legalMoves.push_back(Point(currentPoint.m_x, currentPoint.m_y+1)); 
+			}
+
+			//upleft
+			if(Point(currentPoint.m_x-1, currentPoint.m_y+1) == moves[i])
+			{
+				if(Debug)
+				{
+					cout << "Point found in moves, push_back to legalMoves" << endl;
+					moves[i].print();
+				}
+				legalMoves.push_back(Point(currentPoint.m_x-1, currentPoint.m_y+1)); 
+			}
+		}
+	}
+	else
+	{
+		if(Debug)
+		{
+			cout << endl << "Selected Player - Player One - Get all moves for piece and clear vector lecalMoves" << endl;
+			for(int i = 0; i<(int)moves.size();i++)
+			{
+				cout << "1: ";  
+				moves[i].print();				
+			}
+		}
+
+		for(int i = 0; i < (int)moves.size();i++)
+		{
+			//downleft		
+			if(Point(currentPoint.m_x-1, currentPoint.m_y-1) == moves[i])
+			{
+				if(Debug)
+				{
+					cout << "Point found in moves, push_back to legalMoves" << endl;
+					moves[i].print();
+				}
+				legalMoves.push_back(Point(currentPoint.m_x-1, currentPoint.m_y-1)); 
+			}
+
+			//down
+			if(Point(currentPoint.m_x, currentPoint.m_y-1) == moves[i])
+			{
+				if(Debug)
+				{
+					cout << "Point found in moves, push_back to legalMoves" << endl;
+					moves[i].print();
+				}
+				legalMoves.push_back(Point(currentPoint.m_x, currentPoint.m_y-1)); 
+			}
+
+			//downright
+			if(Point(currentPoint.m_x-1, currentPoint.m_y-1) == moves[i])
+			{
+				if(Debug)
+				{
+					cout << "Point found in moves, push_back to legalMoves" << endl;
+					moves[i].print();
+				}
+				legalMoves.push_back(Point(currentPoint.m_x-1, currentPoint.m_y-1)); 
+			}
+		}
+	}
+}
+
 
 void Breaktrough::start()
 {
@@ -28,9 +135,9 @@ void Breaktrough::setMoveForPlayer(int P)
 {
 	if(P == 0)
 	{
-		for(int i = 0; i<2;i++)
+		for(int i = 0; i<GameBoard.getWidth();i++)
 		{
-			for(int j= 0;j<GameBoard.getWidth();j++)
+			for(int j= 0;j<2;j++)
 			{
 
 				GameBoard.GameBoard[i][j].setPlayer(0);
@@ -40,12 +147,12 @@ void Breaktrough::setMoveForPlayer(int P)
 	}
 	else
 	{
-		for(int i = 0; i<2;i++)
+		for(int i = 0; i<GameBoard.getWidth();i++)
 		{
-			for(int j= GameBoard.getHeight()-1;j>GameBoard.getWidth();j++)
+			for(int j= GameBoard.getHeight()-2;j<GameBoard.getWidth();j++)
 			{
 
-				GameBoard.GameBoard[i][j].setPlayer(0);
+				GameBoard.GameBoard[i][j].setPlayer(1);
 				//GameBoard.GameBoard[i][j].setMoves(1,1,1,1);
 			}
 		}
@@ -66,7 +173,7 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 			vector<Point> vect;
 			GameBoard.GameBoard[2][1].getMoves(vect, 5);
 			//if piece on the destination spot belongs to the other player
-			if((GameBoard.GameBoard[ToX][ToY].getPlayer() != CurrentPlayer)&&(GameBoard.GameBoard[ToX][ToY].getPlayer() != CurrentPlayer))
+			if((GameBoard.GameBoard[ToX][ToY].getPlayer() != CurrentPlayer)&&(GameBoard.GameBoard[ToX][ToY].getPlayer() != 2))
 			{
 				//left end
 				if(FromX == 0)
@@ -77,6 +184,8 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 						GameBoard.GameBoard[ToX][ToY]=GameBoard.GameBoard[FromX][FromY];
 						GameBoard.GameBoard[FromX][FromY] = temp; 
 						i--;
+						checkFinished();
+
 					}
 					else
 					{
@@ -92,6 +201,7 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 						GameBoard.GameBoard[ToX][ToY]=GameBoard.GameBoard[FromX][FromY];
 						GameBoard.GameBoard[FromX][FromY] = temp; 
 						i--;
+						checkFinished();
 					}
 					else
 					{
@@ -107,6 +217,7 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 						GameBoard.GameBoard[ToX][ToY]=GameBoard.GameBoard[FromX][FromY];
 						GameBoard.GameBoard[FromX][FromY] = temp; 
 						i--;
+						checkFinished();
 					}
 					else
 					{
@@ -119,12 +230,11 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 			
 				if(CurrentPlayer == 0)
 				{
-					player2_pieces--;
 					CurrentPlayer = 1;
 				}	
 				else
 				{
-					player1_pieces--;
+					
 					CurrentPlayer = 0;
 				}
 				CurrentTurn++;
@@ -178,4 +288,37 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 		//if(evaluate(fromX,fromY,toX,toY){
 		//exchange GameBoard[FromX,FromY] with GameBoard[ToX,ToY]
 				//else{cout<<"illegal Move"<<end;}
+}
+
+void Breaktrough::checkFinished()
+{
+	if(player1_pieces == 0)
+		{
+			cout << "Player 0 wins he did it in "<< CurrentTurn << " turns " <<endl;
+			m_finished = true;
+		}
+		else if(player2_pieces == 0)
+		{
+			cout << "Player 1 wins he did it in "<< CurrentTurn << " turns " <<endl;
+			m_finished = true;
+		}
+		else
+		{
+			for(int i = 0;i<GameBoard.getHeight();i++)
+			{
+				if(GameBoard.GameBoard[i][0].getPlayer() == 1)
+				{
+					cout << "Player 1 wins he did it in "<< CurrentTurn << " turns " <<endl;
+					m_finished = true;
+				}
+			}
+			for(int i = 0;i<GameBoard.getHeight();i++)
+			{
+				if(GameBoard.GameBoard[i][GameBoard.getHeight()-1].getPlayer() == 0)
+				{
+					cout << "Player 0 wins he did it in "<< CurrentTurn << " turns " <<endl;
+					m_finished = true;
+				}
+			}
+		}
 }

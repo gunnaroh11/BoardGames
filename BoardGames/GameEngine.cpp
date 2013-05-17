@@ -48,17 +48,17 @@ void list(vector<Game*> G)
 	}
 };
 
-Game game(int n,vector<Game*> G)
+Game* game(int n,vector<Game*> G)
 {
-	return *G[n];
+	return G[n];
 }
 
-int inGameMode(Game &playGame){
+int inGameMode(Game *playGame){
 	string gameWord;
 	
 	int from_col, from_row, to_col, to_row;	
 	printGameCommands();
-	while(!playGame.m_finished)
+	while(!playGame->m_finished)
 	{
 		
 	cin>> gameWord;
@@ -70,33 +70,33 @@ int inGameMode(Game &playGame){
 			cin >> to_col;
 			cin >> to_row;
 			// TODO make move
-			playGame.make(from_col,from_row,to_col,to_row);
+			playGame->make(from_col,from_row,to_col,to_row);
 		}
 
 		if(gameWord == "retract")
 		{
-			playGame.retract();
+			playGame->retract();
 			// TODO - Retract last move
 		}
 
 		if(gameWord == "display")
 		{
-			int height = playGame.GameBoard.getHeight();
-			int width = playGame.GameBoard.getWidth();
-			playGame.display(height,width);					
+			int height = playGame->GameBoard.getHeight();
+			int width = playGame->GameBoard.getWidth();
+			playGame->display(height,width);					
 		}
 
 		if(gameWord == "evaluate")
 		{
 			// TODO - Display evaluation value of current board state
-			playGame.evaluate();
+			playGame->evaluate();
 		}
 
 		if(gameWord == "go")
 		{
 			// test get moves
 			vector<Point> vect;
-			playGame.GameBoard.GameBoard[2][1].getMoves(vect, 5);
+			playGame->GameBoard.GameBoard[2][1].getMoves(vect, 5);
 			for(int i = 0; i<(int)vect.size();i++){
 			cout<< endl << "x: " << vect[i].m_x << " y: " << vect[i].m_y << endl;
 			}
@@ -104,7 +104,8 @@ int inGameMode(Game &playGame){
 			Point p;
 			p.m_x = 2;
 			p.m_y = 2;
-			if(playGame.canMake(&playGame.GameBoard.GameBoard[2][1], p))
+			/*
+			if(playGame->canMake(playGame->GameBoard.GameBoard[2][1], p))
 			{
 				cout << endl << "canMake = true"<< endl;
 			}
@@ -113,6 +114,7 @@ int inGameMode(Game &playGame){
 				cout << endl << "canMake = false"<< endl;
 			}
 			// Computer plays using current difficulty lvl
+			*/
 		}
 
 		if(gameWord == "level")
@@ -122,29 +124,29 @@ int inGameMode(Game &playGame){
 			
 			if(gameWord == DIFF_RANDOM)
 			{
-				playGame.setDifficulty(0);
+				playGame->setDifficulty(0);
 			}
 
 			if(gameWord == DIFF_EASY)
 			{
-				playGame.setDifficulty(1);
+				playGame->setDifficulty(1);
 			}
 
 			if(gameWord == DIFF_MID)
 			{
-				playGame.setDifficulty(2);
+				playGame->setDifficulty(2);
 			}
 
 			if(gameWord == DIFF_HARD)
 			{
-				playGame.setDifficulty(3);
+				playGame->setDifficulty(3);
 			}
 
 		}
 
 		if(gameWord == "debug")
 		{
-			playGame.debug();
+			playGame->debug();
 		}
 
 		if(gameWord == "quit")
@@ -210,10 +212,10 @@ cout << "type game to pick game to play" << endl;
 
 		if(word == "start")
 		{
-			Game ChosenGame = game(nr,Games);			
+			Game* ChosenGame = game(nr,Games);			
 			//	ChosenGame.Debug = debug;
 
-			ChosenGame.start();
+			ChosenGame->start();
 			nr = -1;
 
 			inGameMode(ChosenGame);

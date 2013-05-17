@@ -5,6 +5,8 @@
 #include <vector>
 #include <string>
 #include "Board.h"
+#include "Pieces.h"
+
 using namespace std;
 
 class Game
@@ -12,9 +14,9 @@ class Game
 public:
 	bool m_finished;
 	Game();
-	void legal();
+	virtual void legal(vector<Point> &legalMoves, Piece &piece){};
 	virtual void start();
-	void make(int FromX,int FromY,int ToX,int ToY);
+	virtual void make(int FromX,int FromY,int ToX,int ToY);
 	void go();
 	void retract();
 	virtual void display(int height,int with);
@@ -27,7 +29,7 @@ public:
 	void setDifficulty(int diff);
 	int getDifficulty();
 	void GetTestGame();
-	void checkFinished();
+	virtual void checkFinished();
 	bool Debug;
 	Board GameBoard;
 	bool canMake(Piece *piece, Point p);
