@@ -22,6 +22,7 @@ using namespace std;
 	{
 
 		cout << "blarg start is not possible"<< endl;
+		emulate = false;
 	
 	}
 
@@ -62,15 +63,21 @@ using namespace std;
 		if(GameBoard.GameBoard[FromX][FromY].getPlayer() == CurrentPlayer)
 		{
 			//if piece on the destination spot belongs to the other player
-			if((GameBoard.GameBoard[ToX][ToY].getPlayer() != CurrentPlayer)&&(GameBoard.GameBoard[ToX][ToY].getPlayer() != CurrentPlayer))
+			if((GameBoard.GameBoard[ToX][ToY].getPlayer() != CurrentPlayer)&&(GameBoard.GameBoard[ToX][ToY].getPlayer() != 2))
 			{
 				Piece temp = Piece("0",2,Point(FromX,FromY));
 				GameBoard.GameBoard[ToX][ToY]=GameBoard.GameBoard[FromX][FromY];
 				GameBoard.GameBoard[FromX][FromY] = temp; 
+				GameBoard.GameBoard[ToX][ToY].setPosition(Point(ToX,ToY));
+				
 			
 				if(CurrentPlayer == 0)
 				{
 					GameBoard.player2_pieces--;
+					if(emulate == false)
+					{
+					checkFinished();
+					}
 					CurrentPlayer = 1;
 				}	
 				else
@@ -80,7 +87,7 @@ using namespace std;
 				}
 				CurrentTurn++;
 				history.push_back(GameBoard);
-				checkFinished();
+				
 
 			}
 			else if(GameBoard.GameBoard[ToX][ToY].getPlayer() == CurrentPlayer)
@@ -92,10 +99,12 @@ using namespace std;
 				Piece temp = GameBoard.GameBoard[ToX][ToY];
 				GameBoard.GameBoard[ToX][ToY]=GameBoard.GameBoard[FromX][FromY];
 				GameBoard.GameBoard[FromX][FromY] = temp; 
+				GameBoard.GameBoard[ToX][ToY].setPosition(Point(ToX,ToY));
 			
 				if(CurrentPlayer == 0)
 				{
 					CurrentPlayer = 1;
+					checkFinished();
 				}	
 				else
 				{
@@ -103,13 +112,18 @@ using namespace std;
 				}
 				CurrentTurn++;
 				history.push_back(GameBoard);
-				checkFinished();
+			
+				
+				
 			}
 			
 		}
 		else
 		{
+			if(emulate == false)
+			{
 			cout<< "that piece does not belong to the current player "<< endl;
+			}
 		}
 		//display();
 		//check if the piece at fromX,fromY belongs to current player
@@ -120,8 +134,15 @@ using namespace std;
 	}
 	void Game::go()
 	{
-		PlayedGames testMove = go(GameBoard,CurrentPlayer,0);
+		cout << " the current player is " << endl;
+		if((CurrentPlayer == 1)&&(m_finished == false))
+		{
+			emulate =true;
+		PlayedGames testMove = go(GameBoard,1,0);
+		emulate = false;
 		make(testMove.From.m_x,testMove.From.m_y,testMove.To.m_x,testMove.To.m_y);
+		checkFinished();
+		}
 	}
 	PlayedGames Game::go(Board B,int player,int deapth)
 	{
@@ -141,6 +162,19 @@ using namespace std;
 		}
 		Moves.clear();
 		PlayerLegal(Moves,player);
+		int random = rand() % Moves.size();
+		if(getDifficulty() == 0)
+		{
+			return Moves[random];
+		}
+		else if(getDifficulty() == 1)
+		{
+		Maxdeapth = 0;
+		}
+		else if(getDifficulty() == 2)
+		{
+			Maxdeapth = 3;
+		}
 		PlayedGames bestGame(Moves[0].From,Moves[0].To,Moves[0].score);
 		if(deapth != Maxdeapth)
 		{
@@ -174,6 +208,7 @@ using namespace std;
 	
 	void Game::PlayerLegal(vector<PlayedGames> &Moves,int player)
 	{
+		
 		for(int i = 0;i< GameBoard.getHeight();i++)
 		{
 			for(int j = 0;j< GameBoard.getHeight();j++)
@@ -183,13 +218,26 @@ using namespace std;
 	
 					if(GameBoard.GameBoard[i][j].getPlayer() == player)
 					{
+						Piece temp = GameBoard.GameBoard[i][j];
 						legal(vect,GameBoard.GameBoard[i][j]);
 						for(Point M : vect)
 						{
-							make(i,j,M.m_x,M.m_y);
-							int score = evaluate(GameBoard,player);
-							Moves.push_back(PlayedGames(Point(i,j),Point(M.m_x,M.m_y),score));
-							retract();
+							if((M.m_x >= 0)&&(M.m_x <= GameBoard.getHeight()))
+							{
+								if((M.m_y >= 0)&&(M.m_y <= GameBoard.getHeight()))
+								{
+									unsigned int hist = history.size();
+									make(i,j,M.m_x,M.m_y);
+									CurrentPlayer = player;
+									int score = evaluate(GameBoard,player);
+									
+									if(history.size() > hist)
+									{
+									Moves.push_back(PlayedGames(Point(i,j),Point(M.m_x,M.m_y),score));
+									retract();
+									}
+								}
+							}
 						}
 					}
 					
@@ -203,6 +251,7 @@ using namespace std;
 		{
 		CurrentTurn-=1;
 		GameBoard = history[CurrentTurn];
+		history.pop_back();
 		//GameBoard.Revert(history[CurrentTurn]);
 		//display();
 		}
@@ -221,11 +270,11 @@ using namespace std;
 		{
 			if(player == 0)
 			{
-				return GameBoard.player2_pieces;
+				return GameBoard.player1_pieces-GameBoard.player2_pieces;
 			}
 			else
 			{
-				return GameBoard.player1_pieces;
+				return GameBoard.player2_pieces-GameBoard.player1_pieces;
 			}
 		}
 	void Game::debug()
@@ -274,7 +323,7 @@ using namespace std;
 		GameBoard.GameBoard[1][1].setPlayer(1);
 		GameBoard.player2_pieces++;
 		GameBoard.GameBoard[1][1].setMoves(1,1,1,1);
-		GameBoard.GenerateBoard();
+	//	GameBoard.GenerateBoard();
 		history.push_back(GameBoard);
 		
 	

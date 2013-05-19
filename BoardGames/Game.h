@@ -127,5 +127,6 @@ protected:
 	
 	int CurrentPlayer;		
 	/**< Indicates who´s player turn it is */
+	bool emulate;
 };
 #endif
