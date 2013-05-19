@@ -21,18 +21,13 @@ public:
 	//!< Initialize and starta game Breakthrough
 	
 	void legal(vector<Point> &legalMoves, Piece &piece);
-<<<<<<< HEAD
 	//!< Get legal moves for piece, returns up to 3 legal cords depending on position. Front, FrontRight, and FrontLeft
-=======
 
 	//!< Check if game has ended
 	virtual void checkFinished();
 
 	void SwapTiles(Point From,Point To,int player);
->>>>>>> 66a1f031ff56ce17cc7a86bebe47e02e639c9472
 	
-	virtual void checkFinished();
-	//!< Check if game has ended
 private:
 protected:
 };

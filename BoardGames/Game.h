@@ -15,8 +15,6 @@ using namespace std;
  *  Game class is used as parent class for each type of boardgames. The class has some 
  *  basic default actions. 
  */
-<<<<<<< HEAD
-=======
 struct PlayerPieces
 {
 
@@ -35,48 +33,41 @@ struct PlayedGames
 	}
 };
 
->>>>>>> 66a1f031ff56ce17cc7a86bebe47e02e639c9472
 class Game
 {
 public:
 	
 	Game();					
-<<<<<<< HEAD
+
 	//!< Default Game constructor 	
 	
 	
-	virtual void legal(vector<Point> &legalMoves, Piece &piece){}; 
+	virtual void legal(vector<Point> &legalMoves, Piece &piece); 
 	//!< Virtual void, returns legal moves for piece in current game with moves ref
 	
-	
-=======
 
 	//!< Virtual void, returns legal moves for piece in current game with moves ref
 	/*!
 		\param &legalMoves a reference to vector of Point. Returns legal moves in vector
 		\param &piece a reference to piece being moved	
 	*/
-	virtual void legal(vector<Point> &legalMoves, Piece &piece); 
+
 	virtual void PlayerLegal(vector<PlayedGames> &Moves,int player); 
 	//!< Virtual void to start game
->>>>>>> 66a1f031ff56ce17cc7a86bebe47e02e639c9472
+
 	virtual void start();	
 	//!< Virtual void to start game
 	
 	virtual void make(int FromX,int FromY,int ToX,int ToY); 
-<<<<<<< HEAD
+
 	//!< Virtual void to make move, move 1 piece from cord to other cord
 	
 	
 	virtual void go();				
 	//!< Virtual void function to let cpu make move according to difficult level
-=======
 
-	//!< Virtual void function to let cpu make move according to difficult level
-	virtual void go();		
 	virtual PlayedGames go(Board B,int player,int deapth);
->>>>>>> 66a1f031ff56ce17cc7a86bebe47e02e639c9472
-	
+
 	void retract();			
 	//!< Retract last move, pops GameBoard state and sets game to last state
 	
