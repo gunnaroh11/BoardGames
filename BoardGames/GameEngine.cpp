@@ -71,11 +71,19 @@ int inGameMode(Game *playGame){
 			cin >> to_row;
 			// TODO make move
 			playGame->make(from_col,from_row,to_col,to_row);
+			playGame->display();
+			if(playGame->m_finished == true)
+			{
+				break;
+			}
+			playGame->go();
+			playGame->display();					
 		}
 
 		if(gameWord == "retract")
 		{
 			playGame->retract();
+			playGame->display();
 			// TODO - Retract last move
 		}
 
