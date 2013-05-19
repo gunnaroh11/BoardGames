@@ -86,28 +86,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </center><center> </center>  <center> </center><center> Gunnar Orn Haraldsson </center><center> </center><center> Kristofer Kristofersson </center><center> </center> <hr/>
 <h2>Report</h2>
 <p>We began to brake down the assignment and the general description of turn based boardgames for 2 players. </p>
+<p>Soon we decited to let each "part/class" take care of it self and related behavior and properties. Also one of the requirments was to be able to retract moves so we used vector off boards that stores each state of the game. </p>
 <p>We decited to brake the games project down to a "GameEngine" as main program to run the created games and following classes: </p>
 <ul>
 <li>
-<a class="el" href="class_game.html">Game</a>  </li>
+<p class="startli"></p>
+<p><a class="el" href="class_game.html" title="Brief description. Class Game use as base interface for 2 player board games.">Game</a> is the main game class with virtual functions to be overwritten for each new derived and implemented game. <a class="el" href="class_game.html" title="Brief description. Class Game use as base interface for 2 player board games.">Game</a> class has instance of <a class="el" href="class_board.html" title="Brief description. Gameboard used by class Game, contains pieces and size etc for common properties a...">Board</a>. <a class="el" href="class_game.html" title="Brief description. Class Game use as base interface for 2 player board games.">Game</a> also implements how and where <a class="el" href="class_piece.html" title="Brief description. Class Piece is a default piece class that can be derived from. And can have differ...">Piece</a> 's can move based considering current situation.</p>
+<p class="endli"></p>
+</li>
 <li>
-<a class="el" href="class_board.html">Board</a>  </li>
+<p class="startli"></p>
+<p><a class="el" href="class_board.html" title="Brief description. Gameboard used by class Game, contains pieces and size etc for common properties a...">Board</a> is a double vector class for gameboard grid, that holds pieces and controls the setup of board and basic functions. </p>
+<p class="endli"></p>
+</li>
 <li>
-<a class="el" href="class_piece.html">Piece</a>  </li>
+<p class="startli"></p>
+<p><a class="el" href="class_piece.html" title="Brief description. Class Piece is a default piece class that can be derived from. And can have differ...">Piece</a> is a class that is implemented for each type of pieces fx. <a class="el" href="class_pawn.html" title="Brief description. Pawn is a derived class from Piece and implements its own function getMoves...">Pawn</a>, this class contains functions and logic so it "knows" it position on the gameboard and what are possible cords that it can move to and provides <a class="el" href="class_game.html" title="Brief description. Class Game use as base interface for 2 player board games.">Game</a> class with this information. </p>
+<p class="endli"></p>
+</li>
 <li>
-<a class="el" href="class_pawn.html">Pawn</a>  </li>
+<p class="startli"></p>
+<p><a class="el" href="class_pawn.html" title="Brief description. Pawn is a derived class from Piece and implements its own function getMoves...">Pawn</a> is a derived class from <a class="el" href="class_piece.html" title="Brief description. Class Piece is a default piece class that can be derived from. And can have differ...">Piece</a> and has been implemented for the games in this project. </p>
+<p class="endli"></p>
+</li>
 </ul>
 <p>And the following structs:</p>
 <ul>
 <li>
-<a class="el" href="struct_point.html">Point</a> </li>
+<a class="el" href="struct_point.html" title="Brief description. struct Point simple struct for cords, implements comparision between Point instanc...">Point</a> is a simple cord struct with simple functionality, but as some comparision implemented and assignment.  </li>
 <li>
-<a class="el" href="struct_move_dir.html">MoveDir</a> </li>
+<a class="el" href="struct_move_dir.html" title="Brief description. Simple struct that indicats how far a piece can move each turn for each direction...">MoveDir</a> is part of <a class="el" href="class_piece.html" title="Brief description. Class Piece is a default piece class that can be derived from. And can have differ...">Piece</a> and holds indicates how pieces can move that is how far each direction </li>
+<li>
+<a class="el" href="struct_played_games.html" title="Brief description. PlayedGames is a simple struct to handle moves.">PlayedGames</a> simple struct to handle moves and score </li>
 </ul>
+<hr/>
+<p> The GameEngin holds and runs the games selected and passes input commands to each <a class="el" href="class_game.html" title="Brief description. Class Game use as base interface for 2 player board games.">Game</a> class. The game class and its derived classes implement and run the games according to each game rules etc. And takes care of moving <a class="el" href="class_piece.html" title="Brief description. Class Piece is a default piece class that can be derived from. And can have differ...">Piece</a> ´s on the table and holds the game logic. The <a class="el" href="class_game.html" title="Brief description. Class Game use as base interface for 2 player board games.">Game</a> class is responsible for putting every thing to gether like gameboard, pieces, scores etc. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 19 2013 18:33:25 for BoardGame by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 19 2013 22:15:39 for BoardGame by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

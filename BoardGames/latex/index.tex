@@ -22,20 +22,43 @@
 
 We began to brake down the assignment and the general description of turn based boardgames for 2 players. 
 
+Soon we decited to let each \char`\"{}part/class\char`\"{} take care of it self and related behavior and properties. Also one of the requirments was to be able to retract moves so we used vector off boards that stores each state of the game. 
+
 We decited to brake the games project down to a \char`\"{}\-Game\-Engine\char`\"{} as main program to run the created games and following classes\-: 
 
 
 \begin{DoxyItemize}
-\item \hyperlink{class_game}{Game}  
-\item \hyperlink{class_board}{Board}  
-\item \hyperlink{class_piece}{Piece}  
-\item \hyperlink{class_pawn}{Pawn}  
+\item 
+
+\hyperlink{class_game}{Game} is the main game class with virtual functions to be overwritten for each new derived and implemented game. \hyperlink{class_game}{Game} class has instance of \hyperlink{class_board}{Board}. \hyperlink{class_game}{Game} also implements how and where \hyperlink{class_piece}{Piece} 's can move based considering current situation.
+
+
+\item 
+
+\hyperlink{class_board}{Board} is a double vector class for gameboard grid, that holds pieces and controls the setup of board and basic functions. 
+
+
+\item 
+
+\hyperlink{class_piece}{Piece} is a class that is implemented for each type of pieces fx. \hyperlink{class_pawn}{Pawn}, this class contains functions and logic so it \char`\"{}knows\char`\"{} it position on the gameboard and what are possible cords that it can move to and provides \hyperlink{class_game}{Game} class with this information. 
+
+
+\item 
+
+\hyperlink{class_pawn}{Pawn} is a derived class from \hyperlink{class_piece}{Piece} and has been implemented for the games in this project. 
+
+
 \end{DoxyItemize}
 
 And the following structs\-:
 
 
 \begin{DoxyItemize}
-\item \hyperlink{struct_point}{Point} 
-\item \hyperlink{struct_move_dir}{Move\-Dir} 
+\item \hyperlink{struct_point}{Point} is a simple cord struct with simple functionality, but as some comparision implemented and assignment.  
+\item \hyperlink{struct_move_dir}{Move\-Dir} is part of \hyperlink{class_piece}{Piece} and holds indicates how pieces can move that is how far each direction 
+\item \hyperlink{struct_played_games}{Played\-Games} simple struct to handle moves and score 
 \end{DoxyItemize}
+
+
+
+ The Game\-Engin holds and runs the games selected and passes input commands to each \hyperlink{class_game}{Game} class. The game class and its derived classes implement and run the games according to each game rules etc. And takes care of moving \hyperlink{class_piece}{Piece} ´s on the table and holds the game logic. The \hyperlink{class_game}{Game} class is responsible for putting every thing to gether like gameboard, pieces, scores etc. 
