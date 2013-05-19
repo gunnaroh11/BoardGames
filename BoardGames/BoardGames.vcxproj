@@ -83,7 +83,6 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="Pawn.h" />
     <ClInclude Include="Pieces.h" />
-    <ClInclude Include="TestGame.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ataxx.cpp" />
@@ -93,7 +92,6 @@
     <ClCompile Include="GameEngine.cpp" />
     <ClCompile Include="Pawn.cpp" />
     <ClCompile Include="Pieces.cpp" />
-    <ClCompile Include="TestGame.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BoardGameDoc" />
