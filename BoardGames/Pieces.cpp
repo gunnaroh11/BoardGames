@@ -43,7 +43,7 @@ void Piece::getMoves(vector<Point> &points, const int boardSize){
 	points.clear();
 
 	// move right
-	if((p.m_x + m_moveDir.E) <= boardSize)
+	if(p.m_x < boardSize)	// ef x + E minni en mörk
 	{
 		count = 0;
 		for(int i = p.m_x; i < (p.m_x + m_moveDir.E); i++)
@@ -59,47 +59,50 @@ void Piece::getMoves(vector<Point> &points, const int boardSize){
 	}
 
 	// move left
-	if((p.m_x - m_moveDir.W) >= 0)
+	if(p.m_x > 0) // ef x - W stærra en 0
 	{
 		count = 0;
 		for(int i = p.m_x; i > (p.m_x - m_moveDir.W); i--)
 		{
 			count++;
-			points.push_back(Point(p.m_x - count, p.m_y));	
+			points.push_back(Point(p.m_x - count, p.m_y));	// x - 1, y = y => einn til vinstri
 
-			if(p.m_y < boardSize)
+			if((p.m_y - count) <= boardSize)
 			{
-				points.push_back(Point(p.m_x - count, p.m_y - count)); // p.m_y -
+				points.push_back(Point(p.m_x - count, p.m_y - count)); // x-1, y-1 => ská niður til vinstri
 			}
 		}
 	}
 
-	if((p.m_y + m_moveDir.N) <= boardSize)
+	if(p.m_y < boardSize) // upp - ef y minna en boardSize
 	{
 		count = 0;
 		for(int i = p.m_y; i < (p.m_y + m_moveDir.E); i++)
 		{
 			count++;
-			points.push_back(Point(p.m_x, p.m_y+count));
-
-			if(p.m_x < boardSize)
+			if((p.m_y + count) <= boardSize)
 			{
-				points.push_back(Point(p.m_x - count, p.m_y+ count));
+				points.push_back(Point(p.m_x, p.m_y+count));	// x = x, y+1 => Upp
+			}
+
+			if((p.m_x-count) >= 0) // > boardsize
+			{
+				points.push_back(Point(p.m_x - count, p.m_y+ count)); // x-1, y+1 => ská upp vinstrir
 			}			
 		}
 	}
 
-	if((p.m_y - m_moveDir.S) >= 0)
+	if(p.m_y > 0)
 	{
 		count = 0;
 		for(int i = p.m_y; i > (p.m_y - m_moveDir.S); i--)
 		{
 			count++;
-			points.push_back(Point(p.m_x, p.m_y - count));
+			points.push_back(Point(p.m_x, p.m_y - count));		// x=x, y-1 => Niður
 
-			if(p.m_x > 0)
+			if((p.m_x+count <= boardSize) && (p.m_y-count >=0))
 			{
-				points.push_back(Point(p.m_x + count, p.m_y- count)); // p.m_x -
+				points.push_back(Point(p.m_x + count, p.m_y- count)); // x+1, y-1 => ská niður hægri
 			}			
 		}
 	}

@@ -96,10 +96,22 @@ int inGameMode(Game *playGame){
 		{
 			// test get moves
 			vector<Point> vect;
+			cout << "print vect.getmoves for 2,1" << endl;
 			playGame->GameBoard.GameBoard[2][1].getMoves(vect, 5);
 			for(int i = 0; i<(int)vect.size();i++){
 			cout<< endl << "x: " << vect[i].m_x << " y: " << vect[i].m_y << endl;
 			}
+
+
+			vect.clear();
+			cout << endl << "print vect.getmoves for 0,2" << endl;
+			playGame->make(2,1,1,1);
+			playGame->make(1,1,0,2);
+			playGame->GameBoard.GameBoard[0][2].getMoves(vect, 5);
+			for(int i = 0; i<(int)vect.size();i++){
+			cout<< endl << "x: " << vect[i].m_x << " y: " << vect[i].m_y << endl;
+			}
+
 
 			Point p;
 			p.m_x = 2;

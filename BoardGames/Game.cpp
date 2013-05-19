@@ -178,7 +178,7 @@ using namespace std;
 		GameBoard.GameBoard[2][1].setPlayer(0);
 		player1_pieces++;
 		
-		GameBoard.GameBoard[3][1].setMoves(1,1,1,1);
+		GameBoard.GameBoard[0][2].setMoves(1,1,1,1);
 		GameBoard.GameBoard[2][1].setMoves(1,1,1,1);
 		GameBoard.GameBoard[1][1].setPlayer(1);
 		player2_pieces++;

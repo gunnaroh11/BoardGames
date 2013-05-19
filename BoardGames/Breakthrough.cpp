@@ -97,14 +97,14 @@ void Breaktrough::legal(vector<Point> &legalMoves, Piece &piece){
 			}
 
 			//downright
-			if(Point(currentPoint.m_x-1, currentPoint.m_y-1) == moves[i])
+			if(Point(currentPoint.m_x+1, currentPoint.m_y-1) == moves[i])
 			{
 				if(Debug)
 				{
 					cout << "Point found in moves, push_back to legalMoves" << endl;
 					moves[i].print();
 				}
-				legalMoves.push_back(Point(currentPoint.m_x-1, currentPoint.m_y-1)); 
+				legalMoves.push_back(Point(currentPoint.m_x+1, currentPoint.m_y-1)); 
 			}
 		}
 	}
