@@ -4,9 +4,18 @@ using namespace std;
 	Game::Game()
 	{
 	}
-	void legal()
+	void Game::legal(vector<Point> &legalMoves, Piece &piece)
 	{
 		//foreach piece on board get leagal moves
+	vector<Point> moves;
+	Point currentPoint = piece.getPostion();
+	piece.getMoves(moves, GameBoard.getHeight());
+	legalMoves.clear();
+
+	for(Point P : moves)
+	{
+		legalMoves.push_back(P);
+	}
 
 	}
 	void Game::start()
@@ -109,10 +118,79 @@ using namespace std;
 		//exchange GameBoard[FromX,FromY] with GameBoard[ToX,ToY]
 				//else{cout<<"illegal Move"<<end;}
 	}
-	void Game::go()
+	 PlayedGames Game::go(Board B,int player,int deapth)
 	{
 		
+
+		//if difficulty 
+		int Maxdeapth = 1;
+		int nextPlayer;
+		vector<PlayedGames> Moves;
+		if(player == 0)
+		{
+			nextPlayer = 1;
+		}
+		else if(player == 1)
+		{
+			nextPlayer = 0;
+		}
+		Moves.clear();
+		PlayerLegal(Moves,player);
+		PlayedGames bestGame(Moves[0].From,Moves[0].To,Moves[0].score);
+		if(deapth != Maxdeapth)
+		{
+			for(PlayedGames PG : Moves)
+			{
+				PlayedGames testMove =	go(GameBoard,nextPlayer,deapth+1);
+				if(testMove.score > bestGame.score)
+				{
+					bestGame.From = testMove.From;
+					bestGame.To = testMove.To;
+					bestGame.score = testMove.score;
+				}
+			}
+		}
+		else
+		{
+			for(PlayedGames PG : Moves)
+			{
+				
+				if(PG.score > bestGame.score)
+				{
+					bestGame.From = PG.From;
+					bestGame.To = PG.To;
+					bestGame.score = PG.score;
+				}
+			}
+		}
+		
 	}
+	
+	void Game::PlayerLegal(vector<PlayedGames> &Moves,int player)
+	{
+		for(int i = 0;i< GameBoard.getHeight();i++)
+		{
+			for(int j = 0;j< GameBoard.getHeight();j++)
+				{
+					vector<Point> vect;
+					vect.clear();
+	
+					if(GameBoard.GameBoard[i][j].getPlayer() == player)
+					{
+						legal(vect,GameBoard.GameBoard[i][j]);
+						for(Point M : vect)
+						{
+							make(i,j,M.m_x,M.m_y);
+							int score = evaluate(GameBoard,player);
+							Moves.push_back(PlayedGames(Point(i,j),Point(M.m_x,M.m_y),score));
+							retract();
+						}
+					}
+					
+				}
+		}
+	}
+
 	void Game::retract()
 	{
 		if(CurrentTurn != 0)
@@ -133,9 +211,16 @@ using namespace std;
 		GameBoard.GenerateBoard();
 		cout << "player 0 has " << player1_pieces << " left and player 1 has " <<player2_pieces << " pieces left" <<endl;
 	}
-	void Game::evaluate()
+	int Game::evaluate(Board B ,int player)
 		{
-			//to be implemented;
+			if(player == 0)
+			{
+				return player2_pieces;
+			}
+			else
+			{
+				return player1_pieces;
+			}
 		}
 	void Game::debug()
 	{

@@ -89,7 +89,7 @@ int inGameMode(Game *playGame){
 		if(gameWord == "evaluate")
 		{
 			// TODO - Display evaluation value of current board state
-			playGame->evaluate();
+			//playGame->evaluate();
 		}
 
 		if(gameWord == "go")

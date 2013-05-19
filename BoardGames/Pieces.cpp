@@ -42,67 +42,62 @@ void Piece::getMoves(vector<Point> &points, const int boardSize){
 	
 	points.clear();
 
-	// move right
-	if(p.m_x < boardSize)	// ef x + E minni en mörk
+	if((p.m_x + m_moveDir.E) <= boardSize)
 	{
-		count = 0;
+			count = 0;
 		for(int i = p.m_x; i < (p.m_x + m_moveDir.E); i++)
 		{
 			count++;
-			points.push_back(Point(p.m_x + count, p.m_y)); // x + 1, y = y => einn til hægri
+			points.push_back(Point(p.m_x + count, p.m_y));
 			
 			if(p.m_y < boardSize)
 			{
-				points.push_back(Point(p.m_x + count, p.m_y+ count)); // x + 1, y + 1 => ská upp til hægri
+				points.push_back(Point(p.m_x + count, p.m_y+ count));
 			}			
 		}
 	}
 
-	// move left
-	if(p.m_x > 0) // ef x - W stærra en 0
+	if((p.m_x - m_moveDir.W) >= 0)
 	{
 		count = 0;
 		for(int i = p.m_x; i > (p.m_x - m_moveDir.W); i--)
 		{
 			count++;
-			points.push_back(Point(p.m_x - count, p.m_y));	// x - 1, y = y => einn til vinstri
+			points.push_back(Point(p.m_x - count, p.m_y));
 
-			if((p.m_y - count) <= boardSize)
+			if(p.m_y < boardSize)
 			{
-				points.push_back(Point(p.m_x - count, p.m_y - count)); // x-1, y-1 => ská niður til vinstri
+				points.push_back(Point(p.m_x - count, p.m_y - count)); // p.m_y -
 			}
 		}
 	}
 
-	if(p.m_y < boardSize) // upp - ef y minna en boardSize
+	if((p.m_y + m_moveDir.N) <= boardSize)
 	{
 		count = 0;
 		for(int i = p.m_y; i < (p.m_y + m_moveDir.E); i++)
 		{
 			count++;
-			if((p.m_y + count) <= boardSize)
-			{
-				points.push_back(Point(p.m_x, p.m_y+count));	// x = x, y+1 => Upp
-			}
+			points.push_back(Point(p.m_x, p.m_y+count));
 
-			if((p.m_x-count) >= 0) // > boardsize
+			if(p.m_x < boardSize)
 			{
-				points.push_back(Point(p.m_x - count, p.m_y+ count)); // x-1, y+1 => ská upp vinstrir
+				points.push_back(Point(p.m_x - count, p.m_y+ count));
 			}			
 		}
 	}
 
-	if(p.m_y > 0)
+	if((p.m_y - m_moveDir.S) >= 0)
 	{
 		count = 0;
 		for(int i = p.m_y; i > (p.m_y - m_moveDir.S); i--)
 		{
 			count++;
-			points.push_back(Point(p.m_x, p.m_y - count));		// x=x, y-1 => Niður
+			points.push_back(Point(p.m_x, p.m_y - count));
 
-			if((p.m_x+count <= boardSize) && (p.m_y-count >=0))
+			if(p.m_x >= 0)
 			{
-				points.push_back(Point(p.m_x + count, p.m_y- count)); // x+1, y-1 => ská niður hægri
+				points.push_back(Point(p.m_x + count, p.m_y- count)); // p.m_x -
 			}			
 		}
 	}
