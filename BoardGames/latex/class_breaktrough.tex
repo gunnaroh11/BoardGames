@@ -10,102 +10,25 @@ Inheritance diagram for Breaktrough\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_breaktrough_a988083f0722bff1058a980748c65705f}{Breaktrough} ()
-\begin{DoxyCompactList}\small\item\em $<$ Default Breaktrhough game constructor \end{DoxyCompactList}\item 
-void \hyperlink{class_breaktrough_a1e1244669a6ab63043329afcdaaeec37}{set\-Move\-For\-Player} (int P)
-\item 
-virtual void \hyperlink{class_breaktrough_a07006aa5d9919ddefa68554f3022afc6}{make} (int From\-X, int From\-Y, int To\-X, int To\-Y)
-\begin{DoxyCompactList}\small\item\em $<$ Make move from current cord to dest cord \end{DoxyCompactList}\item 
+\hypertarget{class_breaktrough_a988083f0722bff1058a980748c65705f}{\hyperlink{class_breaktrough_a988083f0722bff1058a980748c65705f}{Breaktrough} ()}\label{class_breaktrough_a988083f0722bff1058a980748c65705f}
+
+\begin{DoxyCompactList}\small\item\em Default Breaktrhough game constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_breaktrough_a1e1244669a6ab63043329afcdaaeec37}{void \hyperlink{class_breaktrough_a1e1244669a6ab63043329afcdaaeec37}{set\-Move\-For\-Player} (int P)}\label{class_breaktrough_a1e1244669a6ab63043329afcdaaeec37}
+
+\begin{DoxyCompactList}\small\item\em initialize pieces for players and set distance for moves for each direction \end{DoxyCompactList}\item 
+\hypertarget{class_breaktrough_a07006aa5d9919ddefa68554f3022afc6}{virtual void \hyperlink{class_breaktrough_a07006aa5d9919ddefa68554f3022afc6}{make} (int From\-X, int From\-Y, int To\-X, int To\-Y)}\label{class_breaktrough_a07006aa5d9919ddefa68554f3022afc6}
+
+\begin{DoxyCompactList}\small\item\em Make move from current cord to dest cord. \end{DoxyCompactList}\item 
 \hypertarget{class_breaktrough_a1e4b2c80e074f7052c4c491abe95c9f6}{virtual void \hyperlink{class_breaktrough_a1e4b2c80e074f7052c4c491abe95c9f6}{start} ()}\label{class_breaktrough_a1e4b2c80e074f7052c4c491abe95c9f6}
 
+\begin{DoxyCompactList}\small\item\em Initialize and starta game Breakthrough. \end{DoxyCompactList}\item 
+\hypertarget{class_breaktrough_a6bf5d444ace61244df9a0255fde5d533}{void \hyperlink{class_breaktrough_a6bf5d444ace61244df9a0255fde5d533}{legal} (vector$<$ \hyperlink{struct_point}{Point} $>$ \&legal\-Moves, \hyperlink{class_piece}{Piece} \&piece)}\label{class_breaktrough_a6bf5d444ace61244df9a0255fde5d533}
+
 \begin{DoxyCompactList}\small\item\em Get legal moves for piece, returns up to 3 legal cords depending on position. Front, Front\-Right, and Front\-Left. \end{DoxyCompactList}\item 
-void \hyperlink{class_breaktrough_a6bf5d444ace61244df9a0255fde5d533}{legal} (vector$<$ \hyperlink{struct_point}{Point} $>$ \&legal\-Moves, \hyperlink{class_piece}{Piece} \&piece)
-\begin{DoxyCompactList}\small\item\em Check if game has ended. \end{DoxyCompactList}\item 
-\hypertarget{class_breaktrough_ae9e5edbac2c2fcce47711697eb3a8a2d}{virtual void {\bfseries check\-Finished} ()}\label{class_breaktrough_ae9e5edbac2c2fcce47711697eb3a8a2d}
+\hypertarget{class_breaktrough_ae9e5edbac2c2fcce47711697eb3a8a2d}{virtual void \hyperlink{class_breaktrough_ae9e5edbac2c2fcce47711697eb3a8a2d}{check\-Finished} ()}\label{class_breaktrough_ae9e5edbac2c2fcce47711697eb3a8a2d}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if game has ended. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
-
-
-\subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_breaktrough_a988083f0722bff1058a980748c65705f}{\index{Breaktrough@{Breaktrough}!Breaktrough@{Breaktrough}}
-\index{Breaktrough@{Breaktrough}!Breaktrough@{Breaktrough}}
-\subsubsection[{Breaktrough}]{\setlength{\rightskip}{0pt plus 5cm}Breaktrough\-::\-Breaktrough (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{class_breaktrough_a988083f0722bff1058a980748c65705f}
-
-
-$<$ Default Breaktrhough game constructor 
-
-initialize pieces for players and set distance for moves for each direction 
-
-\subsection{Member Function Documentation}
-\hypertarget{class_breaktrough_a6bf5d444ace61244df9a0255fde5d533}{\index{Breaktrough@{Breaktrough}!legal@{legal}}
-\index{legal@{legal}!Breaktrough@{Breaktrough}}
-\subsubsection[{legal}]{\setlength{\rightskip}{0pt plus 5cm}void Breaktrough\-::legal (
-\begin{DoxyParamCaption}
-\item[{vector$<$ {\bf Point} $>$ \&}]{legal\-Moves, }
-\item[{{\bf Piece} \&}]{piece}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_breaktrough_a6bf5d444ace61244df9a0255fde5d533}
-
-
-Check if game has ended. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em \&legal\-Moves} & reference to result vector \\
-\hline
-{\em \&piece} & reference to piece being moved \\
-\hline
-\end{DoxyParams}
-
-
-Reimplemented from \hyperlink{class_game_acf61b27aed22684d96fbc7fa2692feeb}{Game}.
-
-\hypertarget{class_breaktrough_a07006aa5d9919ddefa68554f3022afc6}{\index{Breaktrough@{Breaktrough}!make@{make}}
-\index{make@{make}!Breaktrough@{Breaktrough}}
-\subsubsection[{make}]{\setlength{\rightskip}{0pt plus 5cm}void Breaktrough\-::make (
-\begin{DoxyParamCaption}
-\item[{int}]{From\-X, }
-\item[{int}]{From\-Y, }
-\item[{int}]{To\-X, }
-\item[{int}]{To\-Y}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_breaktrough_a07006aa5d9919ddefa68554f3022afc6}
-
-
-$<$ Make move from current cord to dest cord 
-
-
-\begin{DoxyParams}{Parameters}
-{\em From\-X} & cord \\
-\hline
-{\em From\-Y} & cord \\
-\hline
-{\em To\-X} & cord \\
-\hline
-{\em To\-Y} & cord\-Initialize and starta game Breakthrough \\
-\hline
-\end{DoxyParams}
-
-
-Reimplemented from \hyperlink{class_game_a50b3e0e1e7a73793a9f9eae1b0660eff}{Game}.
-
-\hypertarget{class_breaktrough_a1e1244669a6ab63043329afcdaaeec37}{\index{Breaktrough@{Breaktrough}!set\-Move\-For\-Player@{set\-Move\-For\-Player}}
-\index{set\-Move\-For\-Player@{set\-Move\-For\-Player}!Breaktrough@{Breaktrough}}
-\subsubsection[{set\-Move\-For\-Player}]{\setlength{\rightskip}{0pt plus 5cm}void Breaktrough\-::set\-Move\-For\-Player (
-\begin{DoxyParamCaption}
-\item[{int}]{P}
-\end{DoxyParamCaption}
-)}}\label{class_breaktrough_a1e1244669a6ab63043329afcdaaeec37}
-
-\begin{DoxyParams}{Parameters}
-{\em P} & indicates what player, 0=player1 and 1 = player2 \\
-\hline
-\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}

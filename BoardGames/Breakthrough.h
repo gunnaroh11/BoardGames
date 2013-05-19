@@ -6,40 +6,25 @@
 class Breaktrough : public Game
 {
 public:
-	//!< Default Breaktrhough game constructor
+	
 	Breaktrough();
-
-	//!< initialize pieces for players and set distance for moves for each direction
-	/*!
-		\param P indicates what player, 0=player1 and 1 = player2
-	*/
+	//!< Default Breaktrhough game constructor
+	
 	void setMoveForPlayer(int P);
-	
-	//void display(int height,int with);
+	//!< initialize pieces for players and set distance for moves for each direction
 
-	//!< Make move from current cord to dest cord
-	/*!
-		\param FromX cord
-		\param FromY cord
-		\param ToX cord
-		\param ToY cord
-	*/
 	virtual void make(int FromX,int FromY,int ToX,int ToY);
+	//!< Make move from current cord to dest cord
 
-
-	//!< Initialize and starta game Breakthrough
-	virtual void start();
-
-	//!< Get legal moves for piece, returns up to 3 legal cords depending on position. Front, FrontRight, and FrontLeft
-	/*!
-		\param &legalMoves reference to result vector
-		\param &piece reference to piece being moved
-	*/	
-	void legal(vector<Point> &legalMoves, Piece &piece);
-
-	//!< Check if game has ended
-	virtual void checkFinished();
 	
+	virtual void start();
+	//!< Initialize and starta game Breakthrough
+	
+	void legal(vector<Point> &legalMoves, Piece &piece);
+	//!< Get legal moves for piece, returns up to 3 legal cords depending on position. Front, FrontRight, and FrontLeft
+	
+	virtual void checkFinished();
+	//!< Check if game has ended
 private:
 protected:
 };

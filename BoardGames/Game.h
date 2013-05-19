@@ -15,41 +15,33 @@ using namespace std;
  *  Game class is used as parent class for each type of boardgames. The class has some 
  *  basic default actions. 
  */
-
 class Game
 {
 public:
-	//! Default Game constructor 	
+	
 	Game();					
-
-	//!< Virtual void, returns legal moves for piece in current game with moves ref
-	/*!
-		\param &legalMoves a reference to vector of Point. Returns legal moves in vector
-		\param &piece a reference to piece being moved	
-	*/
+	//!< Default Game constructor 	
+	
+	
 	virtual void legal(vector<Point> &legalMoves, Piece &piece){}; 
+	//!< Virtual void, returns legal moves for piece in current game with moves ref
 	
-	//!< Virtual void to start game
+	
 	virtual void start();	
-
-	//!< Virtual void to make move, move 1 piece from cord to other cord
-	/*!
-		\param FromX x value for piece to be moved
-		\param FromY y value for piece to be moved
-		\param ToX x value for destination
-		\param ToY y value for destination
-	*/
+	//!< Virtual void to start game
+	
 	virtual void make(int FromX,int FromY,int ToX,int ToY); 
-
-	//!< Virtual void function to let cpu make move according to difficult level
+	//!< Virtual void to make move, move 1 piece from cord to other cord
+	
+	
 	virtual void go();				
+	//!< Virtual void function to let cpu make move according to difficult level
 	
-	//!< Retract last move, pops GameBoard state and sets game to last state
 	void retract();			
+	//!< Retract last move, pops GameBoard state and sets game to last state
 	
-	//!< Display board
 	virtual void display(); 
-	
+	//!< Display board
 	//!< Virtual void, evaluate if player can make move in current position and set score
 	virtual void evaluate();		
 	

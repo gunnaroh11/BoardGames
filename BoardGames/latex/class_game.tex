@@ -19,24 +19,26 @@ Inheritance diagram for Game\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game} ()
+\hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game} ()}\label{class_game_ad59df6562a58a614fda24622d3715b65}
+
 \begin{DoxyCompactList}\small\item\em Default \hyperlink{class_game}{Game} constructor. \end{DoxyCompactList}\item 
-virtual void \hyperlink{class_game_acf61b27aed22684d96fbc7fa2692feeb}{legal} (vector$<$ \hyperlink{struct_point}{Point} $>$ \&legal\-Moves, \hyperlink{class_piece}{Piece} \&piece)
+\hypertarget{class_game_a6e0ab8b7ceeecab810bbb69c183731d0}{virtual void {\bfseries legal} (vector$<$ \hyperlink{struct_point}{Point} $>$ \&legal\-Moves, \hyperlink{class_piece}{Piece} \&piece)}\label{class_game_a6e0ab8b7ceeecab810bbb69c183731d0}
+
 \item 
 virtual void \hyperlink{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90}{start} ()
-\begin{DoxyCompactList}\small\item\em Virtual void to start game. \end{DoxyCompactList}\item 
-virtual void \hyperlink{class_game_a50b3e0e1e7a73793a9f9eae1b0660eff}{make} (int From\-X, int From\-Y, int To\-X, int To\-Y)
-\begin{DoxyCompactList}\small\item\em Virtual void function to let cpu make move according to difficult level. \end{DoxyCompactList}\item 
-\hypertarget{class_game_ab411d0da584724addd4fdb96fc16b9a4}{virtual void \hyperlink{class_game_ab411d0da584724addd4fdb96fc16b9a4}{go} ()}\label{class_game_ab411d0da584724addd4fdb96fc16b9a4}
+\begin{DoxyCompactList}\small\item\em Virtual void, returns legal moves for piece in current game with moves ref. \end{DoxyCompactList}\item 
+\hypertarget{class_game_a50b3e0e1e7a73793a9f9eae1b0660eff}{virtual void \hyperlink{class_game_a50b3e0e1e7a73793a9f9eae1b0660eff}{make} (int From\-X, int From\-Y, int To\-X, int To\-Y)}\label{class_game_a50b3e0e1e7a73793a9f9eae1b0660eff}
 
-\begin{DoxyCompactList}\small\item\em Retract last move, pops Game\-Board state and sets game to last state. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Virtual void to make move, move 1 piece from cord to other cord. \end{DoxyCompactList}\item 
+\hypertarget{class_game_a41fb865a89791da04f767fc5a12934a3}{virtual void \hyperlink{class_game_a41fb865a89791da04f767fc5a12934a3}{go} ()}\label{class_game_a41fb865a89791da04f767fc5a12934a3}
+
+\begin{DoxyCompactList}\small\item\em Virtual void function to let cpu make move according to difficult level. \end{DoxyCompactList}\item 
 \hypertarget{class_game_a9be0655102af94f1a37a7eaec1be36fc}{void \hyperlink{class_game_a9be0655102af94f1a37a7eaec1be36fc}{retract} ()}\label{class_game_a9be0655102af94f1a37a7eaec1be36fc}
 
-\begin{DoxyCompactList}\small\item\em Display board. \end{DoxyCompactList}\item 
-\hypertarget{class_game_a4d0223a84926cbabea95ed7e0392690a}{virtual void \hyperlink{class_game_a4d0223a84926cbabea95ed7e0392690a}{display} ()}\label{class_game_a4d0223a84926cbabea95ed7e0392690a}
-
-\begin{DoxyCompactList}\small\item\em Virtual void, evaluate if player can make move in current position and set score. \end{DoxyCompactList}\item 
-\hypertarget{class_game_a3bc8822cacd9cf8c5f71021072eb24a4}{virtual void \hyperlink{class_game_a3bc8822cacd9cf8c5f71021072eb24a4}{evaluate} ()}\label{class_game_a3bc8822cacd9cf8c5f71021072eb24a4}
+\begin{DoxyCompactList}\small\item\em Retract last move, pops Game\-Board state and sets game to last state. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_game_a4d0223a84926cbabea95ed7e0392690a}{display} ()
+\item 
+\hypertarget{class_game_a9fb895bd0ce0684a2cf95d3d212487df}{virtual void \hyperlink{class_game_a9fb895bd0ce0684a2cf95d3d212487df}{evaluate} ()}\label{class_game_a9fb895bd0ce0684a2cf95d3d212487df}
 
 \begin{DoxyCompactList}\small\item\em Switch between debug mode and non-\/debug mode. \end{DoxyCompactList}\item 
 \hypertarget{class_game_a29997a321e10a5456f0aef9e95c51757}{void \hyperlink{class_game_a29997a321e10a5456f0aef9e95c51757}{debug} ()}\label{class_game_a29997a321e10a5456f0aef9e95c51757}
@@ -99,20 +101,6 @@ Brief description. Class \hyperlink{class_game}{Game} use as base interface for 
 
 \hyperlink{class_game}{Game} class is used as parent class for each type of boardgames. The class has some basic default actions. 
 
-\subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}{\index{Game@{Game}!Game@{Game}}
-\index{Game@{Game}!Game@{Game}}
-\subsubsection[{Game}]{\setlength{\rightskip}{0pt plus 5cm}Game\-::\-Game (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{class_game_ad59df6562a58a614fda24622d3715b65}
-
-
-Default \hyperlink{class_game}{Game} constructor. 
-
-Virtual void, returns legal moves for piece in current game with moves ref 
-
 \subsection{Member Function Documentation}
 \hypertarget{class_game_ae5be70ea28f2ec151cd93e86086f23a9}{\index{Game@{Game}!check\-Finished@{check\-Finished}}
 \index{check\-Finished@{check\-Finished}!Game@{Game}}
@@ -121,62 +109,21 @@ Virtual void, returns legal moves for piece in current game with moves ref
 {}
 \end{DoxyParamCaption}
 )}}\label{class_game_ae5be70ea28f2ec151cd93e86086f23a9}
-Toggle switch for debugging, if true program prints debug info \hypertarget{class_game_a1f47238d93728540edb7940a80a9db89}{\index{Game@{Game}!Get\-Test\-Game@{Get\-Test\-Game}}
+Toggle switch for debugging, if true program prints debug info \hypertarget{class_game_a4d0223a84926cbabea95ed7e0392690a}{\index{Game@{Game}!display@{display}}
+\index{display@{display}!Game@{Game}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_a4d0223a84926cbabea95ed7e0392690a}
+Display board Virtual void, evaluate if player can make move in current position and set score \hypertarget{class_game_a1f47238d93728540edb7940a80a9db89}{\index{Game@{Game}!Get\-Test\-Game@{Get\-Test\-Game}}
 \index{Get\-Test\-Game@{Get\-Test\-Game}!Game@{Game}}
 \subsubsection[{Get\-Test\-Game}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-::\-Get\-Test\-Game (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}}\label{class_game_a1f47238d93728540edb7940a80a9db89}
-Indicates if still possible to make moves or if game has finished \hypertarget{class_game_acf61b27aed22684d96fbc7fa2692feeb}{\index{Game@{Game}!legal@{legal}}
-\index{legal@{legal}!Game@{Game}}
-\subsubsection[{legal}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Game\-::legal (
-\begin{DoxyParamCaption}
-\item[{vector$<$ {\bf Point} $>$ \&}]{legal\-Moves, }
-\item[{{\bf Piece} \&}]{piece}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_game_acf61b27aed22684d96fbc7fa2692feeb}
-
-\begin{DoxyParams}{Parameters}
-{\em \&legal\-Moves} & a reference to vector of \hyperlink{struct_point}{Point}. Returns legal moves in vector \\
-\hline
-{\em \&piece} & a reference to piece being moved \\
-\hline
-\end{DoxyParams}
-
-
-Reimplemented in \hyperlink{class_breaktrough_a6bf5d444ace61244df9a0255fde5d533}{Breaktrough}.
-
-\hypertarget{class_game_a50b3e0e1e7a73793a9f9eae1b0660eff}{\index{Game@{Game}!make@{make}}
-\index{make@{make}!Game@{Game}}
-\subsubsection[{make}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-::make (
-\begin{DoxyParamCaption}
-\item[{int}]{From\-X, }
-\item[{int}]{From\-Y, }
-\item[{int}]{To\-X, }
-\item[{int}]{To\-Y}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_a50b3e0e1e7a73793a9f9eae1b0660eff}
-
-
-Virtual void function to let cpu make move according to difficult level. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em From\-X} & x value for piece to be moved \\
-\hline
-{\em From\-Y} & y value for piece to be moved \\
-\hline
-{\em To\-X} & x value for destination \\
-\hline
-{\em To\-Y} & y value for destination \\
-\hline
-\end{DoxyParams}
-
-
-Reimplemented in \hyperlink{class_breaktrough_a07006aa5d9919ddefa68554f3022afc6}{Breaktrough}.
-
-\hypertarget{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90}{\index{Game@{Game}!start@{start}}
+Indicates if still possible to make moves or if game has finished \hypertarget{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90}{\index{Game@{Game}!start@{start}}
 \index{start@{start}!Game@{Game}}
 \subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-::start (
 \begin{DoxyParamCaption}
@@ -185,9 +132,9 @@ Reimplemented in \hyperlink{class_breaktrough_a07006aa5d9919ddefa68554f3022afc6}
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90}
 
 
-Virtual void to start game. 
+Virtual void, returns legal moves for piece in current game with moves ref. 
 
-Virtual void to make move, move 1 piece from cord to other cord 
+Virtual void to start game 
 
 Reimplemented in \hyperlink{class_breaktrough_a1e4b2c80e074f7052c4c491abe95c9f6}{Breaktrough}.
 

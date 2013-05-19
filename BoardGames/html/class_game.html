@@ -110,33 +110,34 @@ Inheritance diagram for Game:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad59df6562a58a614fda24622d3715b65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ad59df6562a58a614fda24622d3715b65">Game</a> ()</td></tr>
-<tr class="memdesc:ad59df6562a58a614fda24622d3715b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default <a class="el" href="class_game.html" title="Brief description. Class Game use as base interface for 2 player board games.">Game</a> constructor.  <a href="#ad59df6562a58a614fda24622d3715b65">More...</a><br/></td></tr>
+<tr class="memitem:ad59df6562a58a614fda24622d3715b65"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad59df6562a58a614fda24622d3715b65"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ad59df6562a58a614fda24622d3715b65">Game</a> ()</td></tr>
+<tr class="memdesc:ad59df6562a58a614fda24622d3715b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default <a class="el" href="class_game.html" title="Brief description. Class Game use as base interface for 2 player board games.">Game</a> constructor. <br/></td></tr>
 <tr class="separator:ad59df6562a58a614fda24622d3715b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf61b27aed22684d96fbc7fa2692feeb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#acf61b27aed22684d96fbc7fa2692feeb">legal</a> (vector&lt; <a class="el" href="struct_point.html">Point</a> &gt; &amp;legalMoves, <a class="el" href="class_piece.html">Piece</a> &amp;piece)</td></tr>
-<tr class="separator:acf61b27aed22684d96fbc7fa2692feeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e0ab8b7ceeecab810bbb69c183731d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e0ab8b7ceeecab810bbb69c183731d0"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>legal</b> (vector&lt; <a class="el" href="struct_point.html">Point</a> &gt; &amp;legalMoves, <a class="el" href="class_piece.html">Piece</a> &amp;piece)</td></tr>
+<tr class="separator:a6e0ab8b7ceeecab810bbb69c183731d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d9b98f7c4a96ecf578f75b96c9f0e90"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a3d9b98f7c4a96ecf578f75b96c9f0e90">start</a> ()</td></tr>
-<tr class="memdesc:a3d9b98f7c4a96ecf578f75b96c9f0e90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual void to start game.  <a href="#a3d9b98f7c4a96ecf578f75b96c9f0e90">More...</a><br/></td></tr>
+<tr class="memdesc:a3d9b98f7c4a96ecf578f75b96c9f0e90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual void, returns legal moves for piece in current game with moves ref.  <a href="#a3d9b98f7c4a96ecf578f75b96c9f0e90">More...</a><br/></td></tr>
 <tr class="separator:a3d9b98f7c4a96ecf578f75b96c9f0e90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50b3e0e1e7a73793a9f9eae1b0660eff"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a50b3e0e1e7a73793a9f9eae1b0660eff">make</a> (int FromX, int FromY, int ToX, int ToY)</td></tr>
-<tr class="memdesc:a50b3e0e1e7a73793a9f9eae1b0660eff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual void function to let cpu make move according to difficult level.  <a href="#a50b3e0e1e7a73793a9f9eae1b0660eff">More...</a><br/></td></tr>
+<tr class="memitem:a50b3e0e1e7a73793a9f9eae1b0660eff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50b3e0e1e7a73793a9f9eae1b0660eff"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a50b3e0e1e7a73793a9f9eae1b0660eff">make</a> (int FromX, int FromY, int ToX, int ToY)</td></tr>
+<tr class="memdesc:a50b3e0e1e7a73793a9f9eae1b0660eff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual void to make move, move 1 piece from cord to other cord. <br/></td></tr>
 <tr class="separator:a50b3e0e1e7a73793a9f9eae1b0660eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab411d0da584724addd4fdb96fc16b9a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab411d0da584724addd4fdb96fc16b9a4"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ab411d0da584724addd4fdb96fc16b9a4">go</a> ()</td></tr>
-<tr class="memdesc:ab411d0da584724addd4fdb96fc16b9a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retract last move, pops GameBoard state and sets game to last state. <br/></td></tr>
-<tr class="separator:ab411d0da584724addd4fdb96fc16b9a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41fb865a89791da04f767fc5a12934a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41fb865a89791da04f767fc5a12934a3"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a41fb865a89791da04f767fc5a12934a3">go</a> ()</td></tr>
+<tr class="memdesc:a41fb865a89791da04f767fc5a12934a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual void function to let cpu make move according to difficult level. <br/></td></tr>
+<tr class="separator:a41fb865a89791da04f767fc5a12934a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9be0655102af94f1a37a7eaec1be36fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9be0655102af94f1a37a7eaec1be36fc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a9be0655102af94f1a37a7eaec1be36fc">retract</a> ()</td></tr>
-<tr class="memdesc:a9be0655102af94f1a37a7eaec1be36fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display board. <br/></td></tr>
+<tr class="memdesc:a9be0655102af94f1a37a7eaec1be36fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retract last move, pops GameBoard state and sets game to last state. <br/></td></tr>
 <tr class="separator:a9be0655102af94f1a37a7eaec1be36fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d0223a84926cbabea95ed7e0392690a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d0223a84926cbabea95ed7e0392690a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a4d0223a84926cbabea95ed7e0392690a">display</a> ()</td></tr>
-<tr class="memdesc:a4d0223a84926cbabea95ed7e0392690a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual void, evaluate if player can make move in current position and set score. <br/></td></tr>
+<tr class="memitem:a4d0223a84926cbabea95ed7e0392690a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a4d0223a84926cbabea95ed7e0392690a">display</a> ()</td></tr>
 <tr class="separator:a4d0223a84926cbabea95ed7e0392690a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bc8822cacd9cf8c5f71021072eb24a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3bc8822cacd9cf8c5f71021072eb24a4"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a3bc8822cacd9cf8c5f71021072eb24a4">evaluate</a> ()</td></tr>
-<tr class="memdesc:a3bc8822cacd9cf8c5f71021072eb24a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch between debug mode and non-debug mode. <br/></td></tr>
-<tr class="separator:a3bc8822cacd9cf8c5f71021072eb24a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fb895bd0ce0684a2cf95d3d212487df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9fb895bd0ce0684a2cf95d3d212487df"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a9fb895bd0ce0684a2cf95d3d212487df">evaluate</a> ()</td></tr>
+<tr class="memdesc:a9fb895bd0ce0684a2cf95d3d212487df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch between debug mode and non-debug mode. <br/></td></tr>
+<tr class="separator:a9fb895bd0ce0684a2cf95d3d212487df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29997a321e10a5456f0aef9e95c51757"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29997a321e10a5456f0aef9e95c51757"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a29997a321e10a5456f0aef9e95c51757">debug</a> ()</td></tr>
 <tr class="memdesc:a29997a321e10a5456f0aef9e95c51757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exit program. <br/></td></tr>
@@ -201,26 +202,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>CurrentPlayer</b></td>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Brief description. Class <a class="el" href="class_game.html" title="Brief description. Class Game use as base interface for 2 player board games.">Game</a> use as base interface for 2 player board games. </p>
 <p><a class="el" href="class_game.html" title="Brief description. Class Game use as base interface for 2 player board games.">Game</a> class is used as parent class for each type of boardgames. The class has some basic default actions. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ad59df6562a58a614fda24622d3715b65"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Game::Game </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Default <a class="el" href="class_game.html" title="Brief description. Class Game use as base interface for 2 player board games.">Game</a> constructor. </p>
-<p>Virtual void, returns legal moves for piece in current game with moves ref </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ae5be70ea28f2ec151cd93e86086f23a9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -237,6 +219,30 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>CurrentPlayer</b></td>
 
 </div>
 </div>
+<a class="anchor" id="a4d0223a84926cbabea95ed7e0392690a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::display </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Display board Virtual void, evaluate if player can make move in current position and set score </p>
+
+</div>
+</div>
 <a class="anchor" id="a1f47238d93728540edb7940a80a9db89"></a>
 <div class="memitem">
 <div class="memproto">
@@ -250,108 +256,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>CurrentPlayer</b></td>
       </table>
 </div><div class="memdoc">
 <p>Indicates if still possible to make moves or if game has finished </p>
-
-</div>
-</div>
-<a class="anchor" id="acf61b27aed22684d96fbc7fa2692feeb"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Game::legal </td>
-          <td>(</td>
-          <td class="paramtype">vector&lt; <a class="el" href="struct_point.html">Point</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>legalMoves</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_piece.html">Piece</a> &amp;&#160;</td>
-          <td class="paramname"><em>piece</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">&amp;legalMoves</td><td>a reference to vector of <a class="el" href="struct_point.html">Point</a>. Returns legal moves in vector </td></tr>
-    <tr><td class="paramname">&amp;piece</td><td>a reference to piece being moved </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented in <a class="el" href="class_breaktrough.html#a6bf5d444ace61244df9a0255fde5d533">Breaktrough</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a50b3e0e1e7a73793a9f9eae1b0660eff"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Game::make </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>FromX</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>FromY</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>ToX</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>ToY</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Virtual void function to let cpu make move according to difficult level. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">FromX</td><td>x value for piece to be moved </td></tr>
-    <tr><td class="paramname">FromY</td><td>y value for piece to be moved </td></tr>
-    <tr><td class="paramname">ToX</td><td>x value for destination </td></tr>
-    <tr><td class="paramname">ToY</td><td>y value for destination </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented in <a class="el" href="class_breaktrough.html#a07006aa5d9919ddefa68554f3022afc6">Breaktrough</a>.</p>
 
 </div>
 </div>
@@ -376,8 +280,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>CurrentPlayer</b></td>
 </table>
 </div><div class="memdoc">
 
-<p>Virtual void to start game. </p>
-<p>Virtual void to make move, move 1 piece from cord to other cord </p>
+<p>Virtual void, returns legal moves for piece in current game with moves ref. </p>
+<p>Virtual void to start game </p>
 
 <p>Reimplemented in <a class="el" href="class_breaktrough.html#a1e4b2c80e074f7052c4c491abe95c9f6">Breaktrough</a>.</p>
 
@@ -551,7 +455,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>CurrentPlayer</b></td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 19 2013 13:34:12 for BoardGame by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 19 2013 14:36:03 for BoardGame by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

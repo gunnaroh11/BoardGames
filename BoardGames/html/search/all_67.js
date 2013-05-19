@@ -7,5 +7,5 @@ var searchData=
   ['getmoves',['getMoves',['../class_pawn.html#ab08f4e1682965a0a251c60a9857685bf',1,'Pawn']]],
   ['getname',['GetName',['../class_game.html#ab81299d944d2779d482067640e576389',1,'Game']]],
   ['gettestgame',['GetTestGame',['../class_game.html#a1f47238d93728540edb7940a80a9db89',1,'Game']]],
-  ['go',['go',['../class_game.html#ab411d0da584724addd4fdb96fc16b9a4',1,'Game']]]
+  ['go',['go',['../class_game.html#a41fb865a89791da04f767fc5a12934a3',1,'Game']]]
 ];
