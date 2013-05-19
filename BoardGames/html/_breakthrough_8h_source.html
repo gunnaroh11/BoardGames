@@ -92,23 +92,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00006"></a><span class="lineno"><a class="code" href="class_breaktrough.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_breaktrough.html">Breaktrough</a> : <span class="keyword">public</span> <a class="code" href="class_game.html" title="Brief description. Class Game use as base interface for 2 player board games.">Game</a></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_breaktrough.html">Breaktrough</a>();</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">void</span> setMoveForPlayer(<span class="keywordtype">int</span> P);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment">//void display(int height,int with);</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_breaktrough.html#a07006aa5d9919ddefa68554f3022afc6">make</a>(<span class="keywordtype">int</span> FromX,<span class="keywordtype">int</span> FromY,<span class="keywordtype">int</span> ToX,<span class="keywordtype">int</span> ToY);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_breaktrough.html#a1e4b2c80e074f7052c4c491abe95c9f6" title="Virtual void to start game.">start</a>();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_breaktrough.html#a6bf5d444ace61244df9a0255fde5d533">legal</a>(vector&lt;Point&gt; &amp;legalMoves, <a class="code" href="class_piece.html">Piece</a> &amp;piece);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> checkFinished();</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_breaktrough.html#a988083f0722bff1058a980748c65705f" title="&lt; Default Breaktrhough game constructor">Breaktrough</a>();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_breaktrough.html#a1e1244669a6ab63043329afcdaaeec37">setMoveForPlayer</a>(<span class="keywordtype">int</span> P);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">//void display(int height,int with);</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_breaktrough.html#a07006aa5d9919ddefa68554f3022afc6" title="&lt; Make move from current cord to dest cord">make</a>(<span class="keywordtype">int</span> FromX,<span class="keywordtype">int</span> FromY,<span class="keywordtype">int</span> ToX,<span class="keywordtype">int</span> ToY);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_breaktrough.html#a1e4b2c80e074f7052c4c491abe95c9f6" title="Get legal moves for piece, returns up to 3 legal cords depending on position. Front, FrontRight, and FrontLeft.">start</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_breaktrough.html#a6bf5d444ace61244df9a0255fde5d533" title="Check if game has ended.">legal</a>(vector&lt;Point&gt; &amp;legalMoves, <a class="code" href="class_piece.html">Piece</a> &amp;piece);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> checkFinished();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 17 2013 18:25:13 for BoardGame by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 19 2013 13:34:12 for BoardGame by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
