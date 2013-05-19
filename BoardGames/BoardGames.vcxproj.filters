@@ -68,4 +68,9 @@
       <Filter>Documentation</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="REPORT - BOARDGAMES.md">
+      <Filter>Documentation</Filter>
+    </Text>
+  </ItemGroup>
 </Project>
