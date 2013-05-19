@@ -1,39 +1,135 @@
 \hypertarget{class_board}{\section{Board Class Reference}
 \label{class_board}\index{Board@{Board}}
 }
+
+
+Brief description. Gameboard used by class \hyperlink{class_game}{Game}, contains pieces and size etc for common properties and functions for board games.  
+
+
+
+
+{\ttfamily \#include $<$Board.\-h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_board_a2a454606767ae96c22a728f3268b10fc}{{\bfseries Board} (int h, int w)}\label{class_board_a2a454606767ae96c22a728f3268b10fc}
+\hypertarget{class_board_a9ee491d4fea680cf69b033374a9fdfcb}{\hyperlink{class_board_a9ee491d4fea680cf69b033374a9fdfcb}{Board} ()}\label{class_board_a9ee491d4fea680cf69b033374a9fdfcb}
 
-\item 
-\hypertarget{class_board_abe6ef93a03902a234b541130dab81366}{\hyperlink{class_board}{Board} \& {\bfseries operator=} (\hyperlink{class_board}{Board} \&rhs)}\label{class_board_abe6ef93a03902a234b541130dab81366}
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\hyperlink{class_board_a2a454606767ae96c22a728f3268b10fc}{Board} (int h, int w)
+\begin{DoxyCompactList}\small\item\em constructor sets height and width of board \end{DoxyCompactList}\item 
+\hypertarget{class_board_abe6ef93a03902a234b541130dab81366}{\hyperlink{class_board}{Board} \& \hyperlink{class_board_abe6ef93a03902a234b541130dab81366}{operator=} (\hyperlink{class_board}{Board} \&rhs)}\label{class_board_abe6ef93a03902a234b541130dab81366}
 
-\item 
-\hypertarget{class_board_ab4b499dd0102694b8eb2f67f6717f9d3}{std\-::string {\bfseries Check\-Owner} (int X, int Y)}\label{class_board_ab4b499dd0102694b8eb2f67f6717f9d3}
+\begin{DoxyCompactList}\small\item\em assignment operator \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_board_ab4b499dd0102694b8eb2f67f6717f9d3}{Check\-Owner} (int X, int Y)
+\begin{DoxyCompactList}\small\item\em Checks for owner of piece placed on provided cord returns string value for player. \end{DoxyCompactList}\item 
+void \hyperlink{class_board_a5bef79c659946f9849a3d163f27e5191}{Revert} (\hyperlink{class_board}{Board} G)
+\begin{DoxyCompactList}\small\item\em Reverts moves. \end{DoxyCompactList}\item 
+void \hyperlink{class_board_abbfb453ac45df0b5b1ca389c3edc3810}{Set\-Size} (int h, int w)
+\begin{DoxyCompactList}\small\item\em Sets size of board. \end{DoxyCompactList}\item 
+\hypertarget{class_board_a67905f3b441a8605aeb50d8978415aa0}{int \hyperlink{class_board_a67905f3b441a8605aeb50d8978415aa0}{get\-Width} ()}\label{class_board_a67905f3b441a8605aeb50d8978415aa0}
 
-\item 
-\hypertarget{class_board_a5bef79c659946f9849a3d163f27e5191}{void {\bfseries Revert} (\hyperlink{class_board}{Board} G)}\label{class_board_a5bef79c659946f9849a3d163f27e5191}
+\begin{DoxyCompactList}\small\item\em Returns width of the board. \end{DoxyCompactList}\item 
+\hypertarget{class_board_a14466e56568d523e5f4d0d695ccbcce1}{int \hyperlink{class_board_a14466e56568d523e5f4d0d695ccbcce1}{get\-Height} ()}\label{class_board_a14466e56568d523e5f4d0d695ccbcce1}
 
-\item 
-\hypertarget{class_board_abbfb453ac45df0b5b1ca389c3edc3810}{void {\bfseries Set\-Size} (int h, int w)}\label{class_board_abbfb453ac45df0b5b1ca389c3edc3810}
+\begin{DoxyCompactList}\small\item\em Returns height of the board. \end{DoxyCompactList}\item 
+\hypertarget{class_board_a9b90253fcbc77e78916f618c51558cc4}{void \hyperlink{class_board_a9b90253fcbc77e78916f618c51558cc4}{Generate\-Board} ()}\label{class_board_a9b90253fcbc77e78916f618c51558cc4}
 
-\item 
-\hypertarget{class_board_a67905f3b441a8605aeb50d8978415aa0}{int {\bfseries get\-Width} ()}\label{class_board_a67905f3b441a8605aeb50d8978415aa0}
-
-\item 
-\hypertarget{class_board_a14466e56568d523e5f4d0d695ccbcce1}{int {\bfseries get\-Height} ()}\label{class_board_a14466e56568d523e5f4d0d695ccbcce1}
-
-\item 
-\hypertarget{class_board_a9b90253fcbc77e78916f618c51558cc4}{void {\bfseries Generate\-Board} ()}\label{class_board_a9b90253fcbc77e78916f618c51558cc4}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Generates board. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_board_ac512a2358f2828b75f86de08c7c5bd57}{std\-::vector$<$ std\-::vector$<$ \hyperlink{class_piece}{Piece} $>$ $>$ {\bfseries Game\-Board}}\label{class_board_ac512a2358f2828b75f86de08c7c5bd57}
+\hypertarget{class_board_ac512a2358f2828b75f86de08c7c5bd57}{std\-::vector$<$ std\-::vector$<$ \hyperlink{class_piece}{Piece} $>$ $>$ \hyperlink{class_board_ac512a2358f2828b75f86de08c7c5bd57}{Game\-Board}}\label{class_board_ac512a2358f2828b75f86de08c7c5bd57}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Vector of gameboards and states of game. \end{DoxyCompactList}\item 
+\hypertarget{class_board_ab8f6c7f649ce262ddcb75458e3e1a984}{int \hyperlink{class_board_ab8f6c7f649ce262ddcb75458e3e1a984}{player1\-\_\-pieces}}\label{class_board_ab8f6c7f649ce262ddcb75458e3e1a984}
+
+\begin{DoxyCompactList}\small\item\em Amount of pieces for player 1. \end{DoxyCompactList}\item 
+\hypertarget{class_board_a3c60deb1a6669deafa24c3309e61b948}{int \hyperlink{class_board_a3c60deb1a6669deafa24c3309e61b948}{player2\-\_\-pieces}}\label{class_board_a3c60deb1a6669deafa24c3309e61b948}
+
+\begin{DoxyCompactList}\small\item\em Amount of pieces for player 2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Brief description. Gameboard used by class \hyperlink{class_game}{Game}, contains pieces and size etc for common properties and functions for board games. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_board_a2a454606767ae96c22a728f3268b10fc}{\index{Board@{Board}!Board@{Board}}
+\index{Board@{Board}!Board@{Board}}
+\subsubsection[{Board}]{\setlength{\rightskip}{0pt plus 5cm}Board\-::\-Board (
+\begin{DoxyParamCaption}
+\item[{int}]{h, }
+\item[{int}]{w}
+\end{DoxyParamCaption}
+)}}\label{class_board_a2a454606767ae96c22a728f3268b10fc}
+
+
+constructor sets height and width of board 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & heigt \\
+\hline
+{\em w} & width \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_board_ab4b499dd0102694b8eb2f67f6717f9d3}{\index{Board@{Board}!Check\-Owner@{Check\-Owner}}
+\index{Check\-Owner@{Check\-Owner}!Board@{Board}}
+\subsubsection[{Check\-Owner}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Board\-::\-Check\-Owner (
+\begin{DoxyParamCaption}
+\item[{int}]{X, }
+\item[{int}]{Y}
+\end{DoxyParamCaption}
+)}}\label{class_board_ab4b499dd0102694b8eb2f67f6717f9d3}
+
+
+Checks for owner of piece placed on provided cord returns string value for player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & x value for piece position cord \\
+\hline
+{\em Y} & y value for piece position cord \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_board_a5bef79c659946f9849a3d163f27e5191}{\index{Board@{Board}!Revert@{Revert}}
+\index{Revert@{Revert}!Board@{Board}}
+\subsubsection[{Revert}]{\setlength{\rightskip}{0pt plus 5cm}void Board\-::\-Revert (
+\begin{DoxyParamCaption}
+\item[{{\bf Board}}]{G}
+\end{DoxyParamCaption}
+)}}\label{class_board_a5bef79c659946f9849a3d163f27e5191}
+
+
+Reverts moves. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & Current board to revert \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_board_abbfb453ac45df0b5b1ca389c3edc3810}{\index{Board@{Board}!Set\-Size@{Set\-Size}}
+\index{Set\-Size@{Set\-Size}!Board@{Board}}
+\subsubsection[{Set\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void Board\-::\-Set\-Size (
+\begin{DoxyParamCaption}
+\item[{int}]{h, }
+\item[{int}]{w}
+\end{DoxyParamCaption}
+)}}\label{class_board_abbfb453ac45df0b5b1ca389c3edc3810}
+
+
+Sets size of board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & heigt \\
+\hline
+{\em w} & width\-Returns width of the board \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}

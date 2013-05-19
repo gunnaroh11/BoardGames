@@ -19,67 +19,73 @@ Inheritance diagram for Game\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game} ()
+\hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game} ()}\label{class_game_ad59df6562a58a614fda24622d3715b65}
+
 \begin{DoxyCompactList}\small\item\em Default \hyperlink{class_game}{Game} constructor. \end{DoxyCompactList}\item 
-virtual void \hyperlink{class_game_acf61b27aed22684d96fbc7fa2692feeb}{legal} (vector$<$ \hyperlink{struct_point}{Point} $>$ \&legal\-Moves, \hyperlink{class_piece}{Piece} \&piece)
-\item 
-virtual void \hyperlink{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90}{start} ()
+\hypertarget{class_game_a6e0ab8b7ceeecab810bbb69c183731d0}{virtual void \hyperlink{class_game_a6e0ab8b7ceeecab810bbb69c183731d0}{legal} (vector$<$ \hyperlink{struct_point}{Point} $>$ \&legal\-Moves, \hyperlink{class_piece}{Piece} \&piece)}\label{class_game_a6e0ab8b7ceeecab810bbb69c183731d0}
+
+\begin{DoxyCompactList}\small\item\em Virtual void, returns legal moves for piece in current game with moves ref. \end{DoxyCompactList}\item 
+\hypertarget{class_game_a7fef725397df911f2f78053433de7bf8}{virtual void \hyperlink{class_game_a7fef725397df911f2f78053433de7bf8}{Player\-Legal} (vector$<$ \hyperlink{struct_played_games}{Played\-Games} $>$ \&Moves, int player)}\label{class_game_a7fef725397df911f2f78053433de7bf8}
+
+\begin{DoxyCompactList}\small\item\em Virtual void, returns all legal moves for player, result stored in \&Move. \end{DoxyCompactList}\item 
+\hypertarget{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90}{virtual void \hyperlink{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90}{start} ()}\label{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90}
+
 \begin{DoxyCompactList}\small\item\em Virtual void to start game. \end{DoxyCompactList}\item 
-virtual void \hyperlink{class_game_a50b3e0e1e7a73793a9f9eae1b0660eff}{make} (int From\-X, int From\-Y, int To\-X, int To\-Y)
-\begin{DoxyCompactList}\small\item\em Virtual void function to let cpu make move according to difficult level. \end{DoxyCompactList}\item 
+\hypertarget{class_game_a50b3e0e1e7a73793a9f9eae1b0660eff}{virtual void \hyperlink{class_game_a50b3e0e1e7a73793a9f9eae1b0660eff}{make} (int From\-X, int From\-Y, int To\-X, int To\-Y)}\label{class_game_a50b3e0e1e7a73793a9f9eae1b0660eff}
+
+\begin{DoxyCompactList}\small\item\em Virtual void to make move, move 1 piece from cord to other cord. \end{DoxyCompactList}\item 
 \hypertarget{class_game_ab411d0da584724addd4fdb96fc16b9a4}{virtual void \hyperlink{class_game_ab411d0da584724addd4fdb96fc16b9a4}{go} ()}\label{class_game_ab411d0da584724addd4fdb96fc16b9a4}
 
-\begin{DoxyCompactList}\small\item\em Retract last move, pops Game\-Board state and sets game to last state. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Virtual void function to let cpu make move according to difficult level. \end{DoxyCompactList}\item 
+\hypertarget{class_game_acb55f2004706d2ec387750c59681dcdb}{virtual \hyperlink{struct_played_games}{Played\-Games} \hyperlink{class_game_acb55f2004706d2ec387750c59681dcdb}{go} (\hyperlink{class_board}{Board} B, int player, int deapth)}\label{class_game_acb55f2004706d2ec387750c59681dcdb}
+
+\begin{DoxyCompactList}\small\item\em Virtual handles played from and to, also handles score. \end{DoxyCompactList}\item 
 \hypertarget{class_game_a9be0655102af94f1a37a7eaec1be36fc}{void \hyperlink{class_game_a9be0655102af94f1a37a7eaec1be36fc}{retract} ()}\label{class_game_a9be0655102af94f1a37a7eaec1be36fc}
 
-\begin{DoxyCompactList}\small\item\em Display board. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Retract last move, pops Game\-Board state and sets game to last state. \end{DoxyCompactList}\item 
 \hypertarget{class_game_a4d0223a84926cbabea95ed7e0392690a}{virtual void \hyperlink{class_game_a4d0223a84926cbabea95ed7e0392690a}{display} ()}\label{class_game_a4d0223a84926cbabea95ed7e0392690a}
 
-\begin{DoxyCompactList}\small\item\em Virtual void, evaluate if player can make move in current position and set score. \end{DoxyCompactList}\item 
-\hypertarget{class_game_a3bc8822cacd9cf8c5f71021072eb24a4}{virtual void \hyperlink{class_game_a3bc8822cacd9cf8c5f71021072eb24a4}{evaluate} ()}\label{class_game_a3bc8822cacd9cf8c5f71021072eb24a4}
+\begin{DoxyCompactList}\small\item\em Display board. \end{DoxyCompactList}\item 
+\hypertarget{class_game_a57c576172c457a1c128fb46ea557b6c6}{virtual int \hyperlink{class_game_a57c576172c457a1c128fb46ea557b6c6}{evaluate} (\hyperlink{class_board}{Board} B, int P)}\label{class_game_a57c576172c457a1c128fb46ea557b6c6}
 
-\begin{DoxyCompactList}\small\item\em Switch between debug mode and non-\/debug mode. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Virtual void, evaluate if player can make move in current position and set score. \end{DoxyCompactList}\item 
 \hypertarget{class_game_a29997a321e10a5456f0aef9e95c51757}{void \hyperlink{class_game_a29997a321e10a5456f0aef9e95c51757}{debug} ()}\label{class_game_a29997a321e10a5456f0aef9e95c51757}
 
-\begin{DoxyCompactList}\small\item\em Exit program. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Switch between debug mode and non-\/debug mode. \end{DoxyCompactList}\item 
 \hypertarget{class_game_a8272be134d16c277bb014ad6a22fc357}{void \hyperlink{class_game_a8272be134d16c277bb014ad6a22fc357}{quit} ()}\label{class_game_a8272be134d16c277bb014ad6a22fc357}
 
-\begin{DoxyCompactList}\small\item\em Returns name. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Exit program. \end{DoxyCompactList}\item 
 \hypertarget{class_game_ab81299d944d2779d482067640e576389}{string \hyperlink{class_game_ab81299d944d2779d482067640e576389}{Get\-Name} ()}\label{class_game_ab81299d944d2779d482067640e576389}
 
-\begin{DoxyCompactList}\small\item\em Sets difficult state 0 = random, 1 = easy, 2 = medium, 3 = hard. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Returns name. \end{DoxyCompactList}\item 
 \hypertarget{class_game_ae8ac0005c039f0f5f2dd1c10a299fe8d}{void \hyperlink{class_game_ae8ac0005c039f0f5f2dd1c10a299fe8d}{set\-Difficulty} (int diff)}\label{class_game_ae8ac0005c039f0f5f2dd1c10a299fe8d}
 
-\begin{DoxyCompactList}\small\item\em Returns current difficulty level. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Sets difficult state 0 = random, 1 = easy, 2 = medium, 3 = hard. \end{DoxyCompactList}\item 
 \hypertarget{class_game_a2c0efe888e453a7fc0e644503fbd6316}{int \hyperlink{class_game_a2c0efe888e453a7fc0e644503fbd6316}{get\-Difficulty} ()}\label{class_game_a2c0efe888e453a7fc0e644503fbd6316}
 
-\begin{DoxyCompactList}\small\item\em Runs Test game. \end{DoxyCompactList}\item 
-void \hyperlink{class_game_a1f47238d93728540edb7940a80a9db89}{Get\-Test\-Game} ()
-\item 
-void \hyperlink{class_game_ae5be70ea28f2ec151cd93e86086f23a9}{check\-Finished} ()
-\item 
-\hypertarget{class_game_a37edad1c1ded84b1735653f809ccb585}{bool {\bfseries can\-Make} (\hyperlink{class_piece}{Piece} $\ast$piece, \hyperlink{struct_point}{Point} p)}\label{class_game_a37edad1c1ded84b1735653f809ccb585}
+\begin{DoxyCompactList}\small\item\em Returns current difficulty level. \end{DoxyCompactList}\item 
+\hypertarget{class_game_a1f47238d93728540edb7940a80a9db89}{void \hyperlink{class_game_a1f47238d93728540edb7940a80a9db89}{Get\-Test\-Game} ()}\label{class_game_a1f47238d93728540edb7940a80a9db89}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Runs Test game. \end{DoxyCompactList}\item 
+\hypertarget{class_game_ae5be70ea28f2ec151cd93e86086f23a9}{void \hyperlink{class_game_ae5be70ea28f2ec151cd93e86086f23a9}{check\-Finished} ()}\label{class_game_ae5be70ea28f2ec151cd93e86086f23a9}
+
+\begin{DoxyCompactList}\small\item\em Prints out result if game has finished. \end{DoxyCompactList}\item 
+\hypertarget{class_game_a37edad1c1ded84b1735653f809ccb585}{bool \hyperlink{class_game_a37edad1c1ded84b1735653f809ccb585}{can\-Make} (\hyperlink{class_piece}{Piece} $\ast$piece, \hyperlink{struct_point}{Point} p)}\label{class_game_a37edad1c1ded84b1735653f809ccb585}
+
+\begin{DoxyCompactList}\small\item\em Cheks if piece can make move to cord p. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_game_aee0b70deb19422d35b2061beb339bdf8}{bool \hyperlink{class_game_aee0b70deb19422d35b2061beb339bdf8}{m\-\_\-finished}}\label{class_game_aee0b70deb19422d35b2061beb339bdf8}
-
-\begin{DoxyCompactList}\small\item\em Prints out result if game has finished. \end{DoxyCompactList}\item 
+bool \hyperlink{class_game_aee0b70deb19422d35b2061beb339bdf8}{m\-\_\-finished}
+\item 
 bool \hyperlink{class_game_ad79740c2d2fa299cf322bf6ea322d9aa}{Debug}
 \item 
-\hypertarget{class_game_aeb67bc4fc06221330cfd7c862c85b66d}{\hyperlink{class_board}{Board} \hyperlink{class_game_aeb67bc4fc06221330cfd7c862c85b66d}{Game\-Board}}\label{class_game_aeb67bc4fc06221330cfd7c862c85b66d}
-
-\begin{DoxyCompactList}\small\item\em Cheks if piece can make move to cord p. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_board}{Board} \hyperlink{class_game_aeb67bc4fc06221330cfd7c862c85b66d}{Game\-Board}
+\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 string \hyperlink{class_game_a1b56d5db37d900da0911378cc01f4cad}{Game\-Name}
-\item 
-int \hyperlink{class_game_aea2c7f8bdb891f32026750c81f6eac16}{player1\-\_\-pieces}
-\item 
-int \hyperlink{class_game_a2b82ab082220d93bab2d7d1d181ad639}{player2\-\_\-pieces}
 \item 
 int \hyperlink{class_game_a536a6390d16f05d402928bd731e06ef3}{difficulty}
 \item 
@@ -89,8 +95,7 @@ int \hyperlink{class_game_a53cb9be6604469db6b3abac24c5a2ab6}{Max\-Plays}
 \item 
 int \hyperlink{class_game_a88700a4643e08b12130ba2950c54ed8b}{Current\-Turn}
 \item 
-\hypertarget{class_game_a661282d67a0e4a972293c98478bc02e4}{int {\bfseries Current\-Player}}\label{class_game_a661282d67a0e4a972293c98478bc02e4}
-
+int \hyperlink{class_game_a661282d67a0e4a972293c98478bc02e4}{Current\-Player}
 \end{DoxyCompactItemize}
 
 
@@ -99,126 +104,35 @@ Brief description. Class \hyperlink{class_game}{Game} use as base interface for 
 
 \hyperlink{class_game}{Game} class is used as parent class for each type of boardgames. The class has some basic default actions. 
 
-\subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}{\index{Game@{Game}!Game@{Game}}
-\index{Game@{Game}!Game@{Game}}
-\subsubsection[{Game}]{\setlength{\rightskip}{0pt plus 5cm}Game\-::\-Game (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{class_game_ad59df6562a58a614fda24622d3715b65}
-
-
-Default \hyperlink{class_game}{Game} constructor. 
-
-Virtual void, returns legal moves for piece in current game with moves ref 
-
-\subsection{Member Function Documentation}
-\hypertarget{class_game_ae5be70ea28f2ec151cd93e86086f23a9}{\index{Game@{Game}!check\-Finished@{check\-Finished}}
-\index{check\-Finished@{check\-Finished}!Game@{Game}}
-\subsubsection[{check\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-::check\-Finished (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{class_game_ae5be70ea28f2ec151cd93e86086f23a9}
-Toggle switch for debugging, if true program prints debug info \hypertarget{class_game_a1f47238d93728540edb7940a80a9db89}{\index{Game@{Game}!Get\-Test\-Game@{Get\-Test\-Game}}
-\index{Get\-Test\-Game@{Get\-Test\-Game}!Game@{Game}}
-\subsubsection[{Get\-Test\-Game}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-::\-Get\-Test\-Game (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{class_game_a1f47238d93728540edb7940a80a9db89}
-Indicates if still possible to make moves or if game has finished \hypertarget{class_game_acf61b27aed22684d96fbc7fa2692feeb}{\index{Game@{Game}!legal@{legal}}
-\index{legal@{legal}!Game@{Game}}
-\subsubsection[{legal}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Game\-::legal (
-\begin{DoxyParamCaption}
-\item[{vector$<$ {\bf Point} $>$ \&}]{legal\-Moves, }
-\item[{{\bf Piece} \&}]{piece}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_game_acf61b27aed22684d96fbc7fa2692feeb}
-
-\begin{DoxyParams}{Parameters}
-{\em \&legal\-Moves} & a reference to vector of \hyperlink{struct_point}{Point}. Returns legal moves in vector \\
-\hline
-{\em \&piece} & a reference to piece being moved \\
-\hline
-\end{DoxyParams}
-
-
-Reimplemented in \hyperlink{class_breaktrough_a6bf5d444ace61244df9a0255fde5d533}{Breaktrough}.
-
-\hypertarget{class_game_a50b3e0e1e7a73793a9f9eae1b0660eff}{\index{Game@{Game}!make@{make}}
-\index{make@{make}!Game@{Game}}
-\subsubsection[{make}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-::make (
-\begin{DoxyParamCaption}
-\item[{int}]{From\-X, }
-\item[{int}]{From\-Y, }
-\item[{int}]{To\-X, }
-\item[{int}]{To\-Y}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_a50b3e0e1e7a73793a9f9eae1b0660eff}
-
-
-Virtual void function to let cpu make move according to difficult level. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em From\-X} & x value for piece to be moved \\
-\hline
-{\em From\-Y} & y value for piece to be moved \\
-\hline
-{\em To\-X} & x value for destination \\
-\hline
-{\em To\-Y} & y value for destination \\
-\hline
-\end{DoxyParams}
-
-
-Reimplemented in \hyperlink{class_breaktrough_a07006aa5d9919ddefa68554f3022afc6}{Breaktrough}.
-
-\hypertarget{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90}{\index{Game@{Game}!start@{start}}
-\index{start@{start}!Game@{Game}}
-\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void Game\-::start (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90}
-
-
-Virtual void to start game. 
-
-Virtual void to make move, move 1 piece from cord to other cord 
-
-Reimplemented in \hyperlink{class_breaktrough_a1e4b2c80e074f7052c4c491abe95c9f6}{Breaktrough}.
-
-
-
 \subsection{Member Data Documentation}
-\hypertarget{class_game_a88700a4643e08b12130ba2950c54ed8b}{\index{Game@{Game}!Current\-Turn@{Current\-Turn}}
+\hypertarget{class_game_a661282d67a0e4a972293c98478bc02e4}{\index{Game@{Game}!Current\-Player@{Current\-Player}}
+\index{Current\-Player@{Current\-Player}!Game@{Game}}
+\subsubsection[{Current\-Player}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-::\-Current\-Player\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_game_a661282d67a0e4a972293c98478bc02e4}
+Indicates who´s player turn it is \hypertarget{class_game_a88700a4643e08b12130ba2950c54ed8b}{\index{Game@{Game}!Current\-Turn@{Current\-Turn}}
 \index{Current\-Turn@{Current\-Turn}!Game@{Game}}
 \subsubsection[{Current\-Turn}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-::\-Current\-Turn\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_game_a88700a4643e08b12130ba2950c54ed8b}
-Indicates who´s player turn it is \hypertarget{class_game_ad79740c2d2fa299cf322bf6ea322d9aa}{\index{Game@{Game}!Debug@{Debug}}
+Keeps current move, counts each move \hypertarget{class_game_ad79740c2d2fa299cf322bf6ea322d9aa}{\index{Game@{Game}!Debug@{Debug}}
 \index{Debug@{Debug}!Game@{Game}}
 \subsubsection[{Debug}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\-::\-Debug}}\label{class_game_ad79740c2d2fa299cf322bf6ea322d9aa}
-\hyperlink{class_game}{Game} instance of class Game\-Board \hypertarget{class_game_a536a6390d16f05d402928bd731e06ef3}{\index{Game@{Game}!difficulty@{difficulty}}
+Toggle switch for debugging, if true program prints debug info \hypertarget{class_game_a536a6390d16f05d402928bd731e06ef3}{\index{Game@{Game}!difficulty@{difficulty}}
 \index{difficulty@{difficulty}!Game@{Game}}
 \subsubsection[{difficulty}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-::difficulty\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_game_a536a6390d16f05d402928bd731e06ef3}
-Vector of each game state, changes each turn \hypertarget{class_game_a1b56d5db37d900da0911378cc01f4cad}{\index{Game@{Game}!Game\-Name@{Game\-Name}}
+Keeps difficulty level \hypertarget{class_game_aeb67bc4fc06221330cfd7c862c85b66d}{\index{Game@{Game}!Game\-Board@{Game\-Board}}
+\index{Game\-Board@{Game\-Board}!Game@{Game}}
+\subsubsection[{Game\-Board}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Board} Game\-::\-Game\-Board}}\label{class_game_aeb67bc4fc06221330cfd7c862c85b66d}
+\hyperlink{class_game}{Game} instance of class Game\-Board \hypertarget{class_game_a1b56d5db37d900da0911378cc01f4cad}{\index{Game@{Game}!Game\-Name@{Game\-Name}}
 \index{Game\-Name@{Game\-Name}!Game@{Game}}
 \subsubsection[{Game\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Game\-::\-Game\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_game_a1b56d5db37d900da0911378cc01f4cad}
-$<$ Name of the game Amount of pieces for player 1 \hypertarget{class_game_a7c0dd74fa2e5c366638596b7e82428f1}{\index{Game@{Game}!history@{history}}
+Name of the game \hypertarget{class_game_a7c0dd74fa2e5c366638596b7e82428f1}{\index{Game@{Game}!history@{history}}
 \index{history@{history}!Game@{Game}}
 \subsubsection[{history}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Board}$>$ Game\-::history\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_game_a7c0dd74fa2e5c366638596b7e82428f1}
-Keeps max moves in game \hypertarget{class_game_a53cb9be6604469db6b3abac24c5a2ab6}{\index{Game@{Game}!Max\-Plays@{Max\-Plays}}
+Vector of each game state, changes each turn \hypertarget{class_game_aee0b70deb19422d35b2061beb339bdf8}{\index{Game@{Game}!m\-\_\-finished@{m\-\_\-finished}}
+\index{m\-\_\-finished@{m\-\_\-finished}!Game@{Game}}
+\subsubsection[{m\-\_\-finished}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\-::m\-\_\-finished}}\label{class_game_aee0b70deb19422d35b2061beb339bdf8}
+Indicates if still possible to make moves or if game has finished \hypertarget{class_game_a53cb9be6604469db6b3abac24c5a2ab6}{\index{Game@{Game}!Max\-Plays@{Max\-Plays}}
 \index{Max\-Plays@{Max\-Plays}!Game@{Game}}
 \subsubsection[{Max\-Plays}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-::\-Max\-Plays\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_game_a53cb9be6604469db6b3abac24c5a2ab6}
-Keeps current move, counts each move \hypertarget{class_game_aea2c7f8bdb891f32026750c81f6eac16}{\index{Game@{Game}!player1\-\_\-pieces@{player1\-\_\-pieces}}
-\index{player1\-\_\-pieces@{player1\-\_\-pieces}!Game@{Game}}
-\subsubsection[{player1\-\_\-pieces}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-::player1\-\_\-pieces\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_game_aea2c7f8bdb891f32026750c81f6eac16}
-Amount of pieces for player 2 \hypertarget{class_game_a2b82ab082220d93bab2d7d1d181ad639}{\index{Game@{Game}!player2\-\_\-pieces@{player2\-\_\-pieces}}
-\index{player2\-\_\-pieces@{player2\-\_\-pieces}!Game@{Game}}
-\subsubsection[{player2\-\_\-pieces}]{\setlength{\rightskip}{0pt plus 5cm}int Game\-::player2\-\_\-pieces\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_game_a2b82ab082220d93bab2d7d1d181ad639}
-Keeps difficulty level 
+Keeps max moves in game 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 

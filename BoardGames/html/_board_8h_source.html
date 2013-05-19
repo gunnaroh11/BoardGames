@@ -25,7 +25,7 @@
    <div id="projectname">BoardGame
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Simpleboardgameinterfacewithexamplegames</div>
+   <div id="projectbrief">Simple boardgame interface with example games</div>
   </td>
  </tr>
  </tbody>
@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,29 +89,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Pieces.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="code" href="class_board.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_board.html">Board</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_board.html">Board</a>();</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_board.html">Board</a>(<span class="keywordtype">int</span> h,<span class="keywordtype">int</span> w);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_board.html">Board</a>&amp; operator=(<a class="code" href="class_board.html">Board</a>&amp; rhs);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    std::string CheckOwner(<span class="keywordtype">int</span> X,<span class="keywordtype">int</span> Y);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">void</span> Revert(<a class="code" href="class_board.html">Board</a> G);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> SetSize(<span class="keywordtype">int</span> h,<span class="keywordtype">int</span> w);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">int</span> getWidth();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">int</span> getHeight();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> GenerateBoard();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::vector&lt;std::vector&lt;Piece&gt; &gt; GameBoard;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> height;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> width;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="class_board.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_board.html" title="Brief description. Gameboard used by class Game, contains pieces and size etc for common properties a...">Board</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_board.html#a9ee491d4fea680cf69b033374a9fdfcb" title="default constructor">Board</a>(); </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_board.html#a9ee491d4fea680cf69b033374a9fdfcb" title="default constructor">Board</a>(<span class="keywordtype">int</span> h,<span class="keywordtype">int</span> w); </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_board.html" title="Brief description. Gameboard used by class Game, contains pieces and size etc for common properties a...">Board</a>&amp; <a class="code" href="class_board.html#abe6ef93a03902a234b541130dab81366" title="assignment operator">operator=</a>(<a class="code" href="class_board.html" title="Brief description. Gameboard used by class Game, contains pieces and size etc for common properties a...">Board</a>&amp; rhs); </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::string <a class="code" href="class_board.html#ab4b499dd0102694b8eb2f67f6717f9d3" title="Checks for owner of piece placed on provided cord returns string value for player.">CheckOwner</a>(<span class="keywordtype">int</span> X,<span class="keywordtype">int</span> Y); </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#a5bef79c659946f9849a3d163f27e5191" title="Reverts moves.">Revert</a>(<a class="code" href="class_board.html" title="Brief description. Gameboard used by class Game, contains pieces and size etc for common properties a...">Board</a> G);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#abbfb453ac45df0b5b1ca389c3edc3810" title="Sets size of board.">SetSize</a>(<span class="keywordtype">int</span> h,<span class="keywordtype">int</span> w);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_board.html#a67905f3b441a8605aeb50d8978415aa0" title="Returns width of the board.">getWidth</a>(); </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_board.html#a14466e56568d523e5f4d0d695ccbcce1" title="Returns height of the board.">getHeight</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#a9b90253fcbc77e78916f618c51558cc4" title="Generates board.">GenerateBoard</a>(); </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="class_board.html#ac512a2358f2828b75f86de08c7c5bd57">   49</a></span>&#160;    std::vector&lt;std::vector&lt;Piece&gt; &gt; <a class="code" href="class_board.html#ac512a2358f2828b75f86de08c7c5bd57" title="Vector of gameboards and states of game.">GameBoard</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="class_board.html#ab8f6c7f649ce262ddcb75458e3e1a984">   52</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_board.html#ab8f6c7f649ce262ddcb75458e3e1a984" title="Amount of pieces for player 1.">player1_pieces</a>;     </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="class_board.html#a3c60deb1a6669deafa24c3309e61b948">   54</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_board.html#a3c60deb1a6669deafa24c3309e61b948" title="Amount of pieces for player 2.">player2_pieces</a>;     </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">int</span> height; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">int</span> width; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 19 2013 13:34:12 for BoardGame by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 19 2013 16:52:02 for BoardGame by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

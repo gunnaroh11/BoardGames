@@ -1,6 +1,15 @@
 \hypertarget{class_breaktrough}{\section{Breaktrough Class Reference}
 \label{class_breaktrough}\index{Breaktrough@{Breaktrough}}
 }
+
+
+Brief description. Class \hyperlink{class_breaktrough}{Breaktrough} derived from \hyperlink{class_game}{Game} interface class.  
+
+
+
+
+{\ttfamily \#include $<$Breakthrough.\-h$>$}
+
 Inheritance diagram for Breaktrough\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,36 +19,30 @@ Inheritance diagram for Breaktrough\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_breaktrough_a988083f0722bff1058a980748c65705f}{Breaktrough} ()
-\begin{DoxyCompactList}\small\item\em $<$ Default Breaktrhough game constructor \end{DoxyCompactList}\item 
+\hypertarget{class_breaktrough_a988083f0722bff1058a980748c65705f}{\hyperlink{class_breaktrough_a988083f0722bff1058a980748c65705f}{Breaktrough} ()}\label{class_breaktrough_a988083f0722bff1058a980748c65705f}
+
+\begin{DoxyCompactList}\small\item\em Default Breaktrhough game constructor. \end{DoxyCompactList}\item 
 void \hyperlink{class_breaktrough_a1e1244669a6ab63043329afcdaaeec37}{set\-Move\-For\-Player} (int P)
-\item 
+\begin{DoxyCompactList}\small\item\em initialize pieces for players and set distance for moves for each direction \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_breaktrough_a07006aa5d9919ddefa68554f3022afc6}{make} (int From\-X, int From\-Y, int To\-X, int To\-Y)
-\begin{DoxyCompactList}\small\item\em $<$ Make move from current cord to dest cord \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Make move from current cord to dest cord. \end{DoxyCompactList}\item 
 \hypertarget{class_breaktrough_a1e4b2c80e074f7052c4c491abe95c9f6}{virtual void \hyperlink{class_breaktrough_a1e4b2c80e074f7052c4c491abe95c9f6}{start} ()}\label{class_breaktrough_a1e4b2c80e074f7052c4c491abe95c9f6}
 
-\begin{DoxyCompactList}\small\item\em Get legal moves for piece, returns up to 3 legal cords depending on position. Front, Front\-Right, and Front\-Left. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Initialize and starta game Breakthrough. \end{DoxyCompactList}\item 
 void \hyperlink{class_breaktrough_a6bf5d444ace61244df9a0255fde5d533}{legal} (vector$<$ \hyperlink{struct_point}{Point} $>$ \&legal\-Moves, \hyperlink{class_piece}{Piece} \&piece)
-\begin{DoxyCompactList}\small\item\em Check if game has ended. \end{DoxyCompactList}\item 
-\hypertarget{class_breaktrough_ae9e5edbac2c2fcce47711697eb3a8a2d}{virtual void {\bfseries check\-Finished} ()}\label{class_breaktrough_ae9e5edbac2c2fcce47711697eb3a8a2d}
+\begin{DoxyCompactList}\small\item\em Get legal moves for piece, returns up to 3 legal cords depending on position. Front, Front\-Right, and Front\-Left. \end{DoxyCompactList}\item 
+\hypertarget{class_breaktrough_ae9e5edbac2c2fcce47711697eb3a8a2d}{virtual void \hyperlink{class_breaktrough_ae9e5edbac2c2fcce47711697eb3a8a2d}{check\-Finished} ()}\label{class_breaktrough_ae9e5edbac2c2fcce47711697eb3a8a2d}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if game has ended. \end{DoxyCompactList}\item 
+void \hyperlink{class_breaktrough_ae06baf0cb3f6473725075a40cd57ee37}{Swap\-Tiles} (\hyperlink{struct_point}{Point} From, \hyperlink{struct_point}{Point} To, int player)
+\begin{DoxyCompactList}\small\item\em Swaps pieces from one point to another when making moves. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
-\subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_breaktrough_a988083f0722bff1058a980748c65705f}{\index{Breaktrough@{Breaktrough}!Breaktrough@{Breaktrough}}
-\index{Breaktrough@{Breaktrough}!Breaktrough@{Breaktrough}}
-\subsubsection[{Breaktrough}]{\setlength{\rightskip}{0pt plus 5cm}Breaktrough\-::\-Breaktrough (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{class_breaktrough_a988083f0722bff1058a980748c65705f}
+\subsection{Detailed Description}
+Brief description. Class \hyperlink{class_breaktrough}{Breaktrough} derived from \hyperlink{class_game}{Game} interface class. 
 
-
-$<$ Default Breaktrhough game constructor 
-
-initialize pieces for players and set distance for moves for each direction 
+\hyperlink{class_breaktrough}{Breaktrough} implements the game \char`\"{}\-Breaktrough\char`\"{}, a two player boardgame A piece may move one space straight or diagonally forward if the target square is empty. In the diagram on the right, the white piece on c5 can move into any of the marked squares. A piece may move into a square containing an opponent's piece if and only if that square is one step diagonally forward. The opponent's piece is removed and the player's piece replaces it. For example, the black piece can capture either the white piece e2 or the one on g2; it would replace them if it chose to capture. Note that capturing is not compulsory, nor is it \char`\"{}chained\char`\"{} as in checkers. The first player to reach the opponent's home row -\/ the one farthest from the player -\/ is the winner. If all the pieces of a player are captured, that player loses. A draw is impossible because pieces can only move ahead (or be captured), and the piece closest to the opponent's home row always has at least one forward diagonal move available. 
 
 \subsection{Member Function Documentation}
 \hypertarget{class_breaktrough_a6bf5d444ace61244df9a0255fde5d533}{\index{Breaktrough@{Breaktrough}!legal@{legal}}
@@ -52,18 +55,23 @@ initialize pieces for players and set distance for moves for each direction
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_breaktrough_a6bf5d444ace61244df9a0255fde5d533}
 
 
-Check if game has ended. 
+Get legal moves for piece, returns up to 3 legal cords depending on position. Front, Front\-Right, and Front\-Left. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em \&legal\-Moves} & reference to result vector \\
+{\em \&legal\-Moves} & result vector of \hyperlink{struct_point}{Point} for legal destination cords \\
 \hline
-{\em \&piece} & reference to piece being moved \\
+{\em \&piece} & reference to piece to move \\
 \hline
 \end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{struct_point}{Point} 
+
+Game\-::get\-Moves(std\-::vector$<$\-Point$>$ \&points, const int board\-Size) 
+\end{DoxySeeAlso}
 
 
-Reimplemented from \hyperlink{class_game_acf61b27aed22684d96fbc7fa2692feeb}{Game}.
+Reimplemented from \hyperlink{class_game_a6e0ab8b7ceeecab810bbb69c183731d0}{Game}.
 
 \hypertarget{class_breaktrough_a07006aa5d9919ddefa68554f3022afc6}{\index{Breaktrough@{Breaktrough}!make@{make}}
 \index{make@{make}!Breaktrough@{Breaktrough}}
@@ -77,17 +85,17 @@ Reimplemented from \hyperlink{class_game_acf61b27aed22684d96fbc7fa2692feeb}{Game
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_breaktrough_a07006aa5d9919ddefa68554f3022afc6}
 
 
-$<$ Make move from current cord to dest cord 
+Make move from current cord to dest cord. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em From\-X} & cord \\
+{\em From\-X} & x value for from cord \\
 \hline
-{\em From\-Y} & cord \\
+{\em From\-Y} & y value for from cord \\
 \hline
-{\em To\-X} & cord \\
+{\em To\-X} & x value for To cord \\
 \hline
-{\em To\-Y} & cord\-Initialize and starta game Breakthrough \\
+{\em To\-Y} & y value for To cord \\
 \hline
 \end{DoxyParams}
 
@@ -102,8 +110,34 @@ Reimplemented from \hyperlink{class_game_a50b3e0e1e7a73793a9f9eae1b0660eff}{Game
 \end{DoxyParamCaption}
 )}}\label{class_breaktrough_a1e1244669a6ab63043329afcdaaeec37}
 
+
+initialize pieces for players and set distance for moves for each direction 
+
+
 \begin{DoxyParams}{Parameters}
-{\em P} & indicates what player, 0=player1 and 1 = player2 \\
+{\em P} & player number \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_breaktrough_ae06baf0cb3f6473725075a40cd57ee37}{\index{Breaktrough@{Breaktrough}!Swap\-Tiles@{Swap\-Tiles}}
+\index{Swap\-Tiles@{Swap\-Tiles}!Breaktrough@{Breaktrough}}
+\subsubsection[{Swap\-Tiles}]{\setlength{\rightskip}{0pt plus 5cm}void Breaktrough\-::\-Swap\-Tiles (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}}]{From, }
+\item[{{\bf Point}}]{To, }
+\item[{int}]{player}
+\end{DoxyParamCaption}
+)}}\label{class_breaktrough_ae06baf0cb3f6473725075a40cd57ee37}
+
+
+Swaps pieces from one point to another when making moves. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em From} & source cord \\
+\hline
+{\em To} & destination cord \\
+\hline
+{\em player} & player number \\
 \hline
 \end{DoxyParams}
 
