@@ -70,12 +70,12 @@ using namespace std;
 			
 				if(CurrentPlayer == 0)
 				{
-					player2_pieces--;
+					GameBoard.player2_pieces--;
 					CurrentPlayer = 1;
 				}	
 				else
 				{
-					player1_pieces--;
+					GameBoard.player1_pieces--;
 					CurrentPlayer = 0;
 				}
 				CurrentTurn++;
@@ -111,19 +111,24 @@ using namespace std;
 		{
 			cout<< "that piece does not belong to the current player "<< endl;
 		}
-		display();
+		//display();
 		//check if the piece at fromX,fromY belongs to current player
 		//evaluate if move is leagal
 		//if(evaluate(fromX,fromY,toX,toY){
 		//exchange GameBoard[FromX,FromY] with GameBoard[ToX,ToY]
 				//else{cout<<"illegal Move"<<end;}
 	}
-	 PlayedGames Game::go(Board B,int player,int deapth)
+	void Game::go()
+	{
+		PlayedGames testMove = go(GameBoard,CurrentPlayer,0);
+		make(testMove.From.m_x,testMove.From.m_y,testMove.To.m_x,testMove.To.m_y);
+	}
+	PlayedGames Game::go(Board B,int player,int deapth)
 	{
 		
-
+		
 		//if difficulty 
-		int Maxdeapth = 1;
+		int Maxdeapth = 0;
 		int nextPlayer;
 		vector<PlayedGames> Moves;
 		if(player == 0)
@@ -163,6 +168,7 @@ using namespace std;
 				}
 			}
 		}
+		return bestGame;
 		
 	}
 	
@@ -198,7 +204,7 @@ using namespace std;
 		CurrentTurn-=1;
 		GameBoard = history[CurrentTurn];
 		//GameBoard.Revert(history[CurrentTurn]);
-		display();
+		//display();
 		}
 		else
 		{
@@ -209,17 +215,17 @@ using namespace std;
 	{
 		cout << "current player is "<< CurrentPlayer << " and turn is " << CurrentTurn << "off "<<MaxPlays <<" turns "<< endl;
 		GameBoard.GenerateBoard();
-		cout << "player 0 has " << player1_pieces << " left and player 1 has " <<player2_pieces << " pieces left" <<endl;
+		cout << "player 0 has " << GameBoard.player1_pieces << " left and player 1 has " <<GameBoard.player2_pieces << " pieces left" <<endl;
 	}
 	int Game::evaluate(Board B ,int player)
 		{
 			if(player == 0)
 			{
-				return player2_pieces;
+				return GameBoard.player2_pieces;
 			}
 			else
 			{
-				return player1_pieces;
+				return GameBoard.player1_pieces;
 			}
 		}
 	void Game::debug()
@@ -252,21 +258,21 @@ using namespace std;
 		GameName = "TestGame";
 			Debug = false;
 		difficulty = 0;
-		player1_pieces = 0;
-		player2_pieces = 0;
+		GameBoard.player1_pieces = 0;
+		GameBoard.player2_pieces = 0;
 		MaxPlays = 10;
 		CurrentTurn = 0;
 		CurrentPlayer = 0;
 		GameBoard.SetSize(5,5);
 		GameBoard.GameBoard[3][1].setPlayer(0);
-		player1_pieces++;
+		GameBoard.player1_pieces++;
 		GameBoard.GameBoard[2][1].setPlayer(0);
-		player1_pieces++;
+		GameBoard.player1_pieces++;
 		
 		GameBoard.GameBoard[0][2].setMoves(1,1,1,1);
 		GameBoard.GameBoard[2][1].setMoves(1,1,1,1);
 		GameBoard.GameBoard[1][1].setPlayer(1);
-		player2_pieces++;
+		GameBoard.player2_pieces++;
 		GameBoard.GameBoard[1][1].setMoves(1,1,1,1);
 		GameBoard.GenerateBoard();
 		history.push_back(GameBoard);
@@ -275,12 +281,12 @@ using namespace std;
 	}
 	void Game::checkFinished()
 	{
-		if(player1_pieces == 0)
+		if(GameBoard.player1_pieces == 0)
 		{
 			cout << "Player 0 wins he did it in "<< CurrentTurn << " turns " <<endl;
 			m_finished = true;
 		}
-		else if(player2_pieces == 0)
+		else if(GameBoard.player2_pieces == 0)
 		{
 			cout << "Player 1 wins he did it in "<< CurrentTurn << " turns " <<endl;
 			m_finished = true;

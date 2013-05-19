@@ -118,8 +118,8 @@ void Breaktrough::start()
 		Debug = false;
 		difficulty = 0;
 		GameBoard.SetSize(7,7);
-		player1_pieces = GameBoard.getWidth()*2;
-		player2_pieces = GameBoard.getWidth()*2;
+		GameBoard.player1_pieces = GameBoard.getWidth()*2;
+		GameBoard.player2_pieces = GameBoard.getWidth()*2;
 		MaxPlays = 100;
 		CurrentTurn = 0;
 		CurrentPlayer = 0;
@@ -168,11 +168,11 @@ void Breaktrough::SwapTiles(Point From,Point To,int player)
 						
 	if(player == 0)
 	{
-		player1_pieces--;
+		GameBoard.player1_pieces--;
 	}
 	else if(player == 1)
 	{
-		player2_pieces--;
+		GameBoard.player2_pieces--;
 	}
 }
 
@@ -305,12 +305,12 @@ void Breaktrough::make(int FromX,int FromY,int ToX,int ToY)
 
 void Breaktrough::checkFinished()
 {
-	if(player1_pieces == 0)
+	if(GameBoard.player1_pieces == 0)
 		{
 			cout << "Player 0 wins he did it in "<< CurrentTurn << " turns " <<endl;
 			m_finished = true;
 		}
-		else if(player2_pieces == 0)
+		else if(GameBoard.player2_pieces == 0)
 		{
 			cout << "Player 1 wins he did it in "<< CurrentTurn << " turns " <<endl;
 			m_finished = true;

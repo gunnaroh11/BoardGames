@@ -16,6 +16,10 @@ public:
 	int getHeight();
 	void GenerateBoard();
 	std::vector<std::vector<Piece> > GameBoard;
+	/**< Amount of pieces for player 1 */
+	int player1_pieces;		
+	/**< Amount of pieces for player 2 */
+	int player2_pieces;	
 private:
 	int height;
 	int width;

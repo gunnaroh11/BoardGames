@@ -15,6 +15,23 @@ using namespace std;
  *  Game class is used as parent class for each type of boardgames. The class has some 
  *  basic default actions. 
  */
+struct PlayerPieces
+{
+
+};
+struct PlayedGames
+{
+	Point From;
+	Point To;
+	int score;
+
+	PlayedGames(Point F,Point T,int S)
+	{
+		From = F;
+		To = T;
+		score = S;
+	}
+};
 
 class Game
 {
@@ -27,8 +44,8 @@ public:
 		\param &legalMoves a reference to vector of Point. Returns legal moves in vector
 		\param &piece a reference to piece being moved	
 	*/
-	virtual void legal(vector<Point> &legalMoves, Piece &piece){}; 
-	
+	virtual void legal(vector<Point> &legalMoves, Piece &piece); 
+	virtual void PlayerLegal(vector<PlayedGames> &Moves,int player); 
 	//!< Virtual void to start game
 	virtual void start();	
 
@@ -42,7 +59,8 @@ public:
 	virtual void make(int FromX,int FromY,int ToX,int ToY); 
 
 	//!< Virtual void function to let cpu make move according to difficult level
-	virtual void go();				
+	virtual void go();		
+	virtual PlayedGames go(Board B,int player,int deapth);
 	
 	//!< Retract last move, pops GameBoard state and sets game to last state
 	void retract();			
@@ -51,8 +69,9 @@ public:
 	virtual void display(); 
 	
 	//!< Virtual void, evaluate if player can make move in current position and set score
-	virtual void evaluate();		
-	
+	//virtual void evaluate();		
+	virtual int evaluate(Board B,int P);		//!< Virtual void, 
+
 	//!< Switch between debug mode and non-debug mode
 	void debug();					
 	
@@ -89,10 +108,7 @@ public:
 protected:
 	/**< Name of the game */
 	string GameName;		
-	/**< Amount of pieces for player 1 */
-	int player1_pieces;		
-	/**< Amount of pieces for player 2 */
-	int player2_pieces;		
+		
 	/**< Keeps difficulty level */
 	int difficulty;			
 	/**< Vector of each game state, changes each turn */

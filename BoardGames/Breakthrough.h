@@ -39,6 +39,8 @@ public:
 
 	//!< Check if game has ended
 	virtual void checkFinished();
+
+	void SwapTiles(Point From,Point To,int player);
 	
 private:
 protected:
