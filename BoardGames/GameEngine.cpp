@@ -6,7 +6,7 @@
 
 using namespace std;
 
-const string DIFF_EASY = "easy";
+const string DIFF_EASY = "easy"; 
 const string DIFF_MID = "medium";
 const string DIFF_HARD = "hard";
 const string DIFF_RANDOM = "random";

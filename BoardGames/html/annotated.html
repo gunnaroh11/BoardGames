@@ -25,7 +25,7 @@
    <div id="projectname">BoardGame
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Simpleboardgameinterfacewithexamplegames</div>
+   <div id="projectbrief">Simple boardgame interface with example games</div>
   </td>
  </tr>
  </tbody>
@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,20 +89,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock">Here are the classes, structs, unions and interfaces with brief descriptions:</div><div class="directory">
 <table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_board.html" target="_self">Board</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_breaktrough.html" target="_self">Breaktrough</a></td><td class="desc"></td></tr>
+<tr id="row_0_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_board.html" target="_self">Board</a></td><td class="desc">Brief description. Gameboard used by class <a class="el" href="class_game.html" title="Brief description. Class Game use as base interface for 2 player board games.">Game</a>, contains pieces and size etc for common properties and functions for board games</td></tr>
+<tr id="row_1_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_breaktrough.html" target="_self">Breaktrough</a></td><td class="desc">Brief description. Class <a class="el" href="class_breaktrough.html" title="Brief description. Class Breaktrough derived from Game interface class.">Breaktrough</a> derived from <a class="el" href="class_game.html" title="Brief description. Class Game use as base interface for 2 player board games.">Game</a> interface class</td></tr>
 <tr id="row_2_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_game.html" target="_self">Game</a></td><td class="desc">Brief description. Class <a class="el" href="class_game.html" title="Brief description. Class Game use as base interface for 2 player board games.">Game</a> use as base interface for 2 player board games</td></tr>
-<tr id="row_3_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="struct_move_dir.html" target="_self">MoveDir</a></td><td class="desc"></td></tr>
-<tr id="row_4_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_pawn.html" target="_self">Pawn</a></td><td class="desc"></td></tr>
-<tr id="row_5_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_piece.html" target="_self">Piece</a></td><td class="desc"></td></tr>
-<tr id="row_6_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="struct_point.html" target="_self">Point</a></td><td class="desc"></td></tr>
-<tr id="row_7_"><td class="entry"><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_test_game.html" target="_self">TestGame</a></td><td class="desc"></td></tr>
+<tr id="row_3_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="struct_move_dir.html" target="_self">MoveDir</a></td><td class="desc">Brief description. Simple struct that indicats how far a piece can move each turn for each direction</td></tr>
+<tr id="row_4_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_pawn.html" target="_self">Pawn</a></td><td class="desc">Brief description. <a class="el" href="class_pawn.html" title="Brief description. Pawn is a derived class from Piece and implements its own function getMoves...">Pawn</a> is a derived class from <a class="el" href="class_piece.html" title="Brief description. Class Piece is a default piece class that can be derived from. And can have differ...">Piece</a> and implements its own function getMoves</td></tr>
+<tr id="row_5_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_piece.html" target="_self">Piece</a></td><td class="desc">Brief description. Class <a class="el" href="class_piece.html" title="Brief description. Class Piece is a default piece class that can be derived from. And can have differ...">Piece</a> is a default piece class that can be derived from. And can have different settings and behavior</td></tr>
+<tr id="row_6_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="struct_played_games.html" target="_self">PlayedGames</a></td><td class="desc">Brief description. <a class="el" href="struct_played_games.html" title="Brief description. PlayedGames is a simple struct to handle moves.">PlayedGames</a> is a simple struct to handle moves</td></tr>
+<tr id="row_7_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="struct_point.html" target="_self">Point</a></td><td class="desc">Brief description. struct <a class="el" href="struct_point.html" title="Brief description. struct Point simple struct for cords, implements comparision between Point instanc...">Point</a> simple struct for cords, implements comparision between <a class="el" href="struct_point.html" title="Brief description. struct Point simple struct for cords, implements comparision between Point instanc...">Point</a> instances and assigning values</td></tr>
+<tr id="row_8_" class="even"><td class="entry"><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_test_game.html" target="_self">TestGame</a></td><td class="desc">Brief description. Simple test game to show functionality of class <a class="el" href="class_game.html" title="Brief description. Class Game use as base interface for 2 player board games.">Game</a> and its inheridance</td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 19 2013 14:36:03 for BoardGame by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 19 2013 16:52:02 for BoardGame by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

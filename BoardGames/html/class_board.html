@@ -25,7 +25,7 @@
    <div id="projectname">BoardGame
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Simpleboardgameinterfacewithexamplegames</div>
+   <div id="projectbrief">Simple boardgame interface with example games</div>
   </td>
  </tr>
  </tbody>
@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,40 +91,195 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Board Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Brief description. Gameboard used by class <a class="el" href="class_game.html" title="Brief description. Class Game use as base interface for 2 player board games.">Game</a>, contains pieces and size etc for common properties and functions for board games.  
+ <a href="class_board.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_board_8h_source.html">Board.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2a454606767ae96c22a728f3268b10fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a454606767ae96c22a728f3268b10fc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Board</b> (int h, int w)</td></tr>
+<tr class="memitem:a9ee491d4fea680cf69b033374a9fdfcb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ee491d4fea680cf69b033374a9fdfcb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a9ee491d4fea680cf69b033374a9fdfcb">Board</a> ()</td></tr>
+<tr class="memdesc:a9ee491d4fea680cf69b033374a9fdfcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">default constructor <br/></td></tr>
+<tr class="separator:a9ee491d4fea680cf69b033374a9fdfcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a454606767ae96c22a728f3268b10fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a2a454606767ae96c22a728f3268b10fc">Board</a> (int h, int w)</td></tr>
+<tr class="memdesc:a2a454606767ae96c22a728f3268b10fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor sets height and width of board  <a href="#a2a454606767ae96c22a728f3268b10fc">More...</a><br/></td></tr>
 <tr class="separator:a2a454606767ae96c22a728f3268b10fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe6ef93a03902a234b541130dab81366"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe6ef93a03902a234b541130dab81366"></a>
-<a class="el" href="class_board.html">Board</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="class_board.html">Board</a> &amp;rhs)</td></tr>
+<a class="el" href="class_board.html">Board</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#abe6ef93a03902a234b541130dab81366">operator=</a> (<a class="el" href="class_board.html">Board</a> &amp;rhs)</td></tr>
+<tr class="memdesc:abe6ef93a03902a234b541130dab81366"><td class="mdescLeft">&#160;</td><td class="mdescRight">assignment operator <br/></td></tr>
 <tr class="separator:abe6ef93a03902a234b541130dab81366"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4b499dd0102694b8eb2f67f6717f9d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4b499dd0102694b8eb2f67f6717f9d3"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>CheckOwner</b> (int X, int Y)</td></tr>
+<tr class="memitem:ab4b499dd0102694b8eb2f67f6717f9d3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#ab4b499dd0102694b8eb2f67f6717f9d3">CheckOwner</a> (int X, int Y)</td></tr>
+<tr class="memdesc:ab4b499dd0102694b8eb2f67f6717f9d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for owner of piece placed on provided cord returns string value for player.  <a href="#ab4b499dd0102694b8eb2f67f6717f9d3">More...</a><br/></td></tr>
 <tr class="separator:ab4b499dd0102694b8eb2f67f6717f9d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bef79c659946f9849a3d163f27e5191"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5bef79c659946f9849a3d163f27e5191"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Revert</b> (<a class="el" href="class_board.html">Board</a> G)</td></tr>
+<tr class="memitem:a5bef79c659946f9849a3d163f27e5191"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a5bef79c659946f9849a3d163f27e5191">Revert</a> (<a class="el" href="class_board.html">Board</a> G)</td></tr>
+<tr class="memdesc:a5bef79c659946f9849a3d163f27e5191"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverts moves.  <a href="#a5bef79c659946f9849a3d163f27e5191">More...</a><br/></td></tr>
 <tr class="separator:a5bef79c659946f9849a3d163f27e5191"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbfb453ac45df0b5b1ca389c3edc3810"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abbfb453ac45df0b5b1ca389c3edc3810"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSize</b> (int h, int w)</td></tr>
+<tr class="memitem:abbfb453ac45df0b5b1ca389c3edc3810"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#abbfb453ac45df0b5b1ca389c3edc3810">SetSize</a> (int h, int w)</td></tr>
+<tr class="memdesc:abbfb453ac45df0b5b1ca389c3edc3810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets size of board.  <a href="#abbfb453ac45df0b5b1ca389c3edc3810">More...</a><br/></td></tr>
 <tr class="separator:abbfb453ac45df0b5b1ca389c3edc3810"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67905f3b441a8605aeb50d8978415aa0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67905f3b441a8605aeb50d8978415aa0"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getWidth</b> ()</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a67905f3b441a8605aeb50d8978415aa0">getWidth</a> ()</td></tr>
+<tr class="memdesc:a67905f3b441a8605aeb50d8978415aa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns width of the board. <br/></td></tr>
 <tr class="separator:a67905f3b441a8605aeb50d8978415aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14466e56568d523e5f4d0d695ccbcce1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14466e56568d523e5f4d0d695ccbcce1"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getHeight</b> ()</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a14466e56568d523e5f4d0d695ccbcce1">getHeight</a> ()</td></tr>
+<tr class="memdesc:a14466e56568d523e5f4d0d695ccbcce1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns height of the board. <br/></td></tr>
 <tr class="separator:a14466e56568d523e5f4d0d695ccbcce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b90253fcbc77e78916f618c51558cc4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b90253fcbc77e78916f618c51558cc4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>GenerateBoard</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a9b90253fcbc77e78916f618c51558cc4">GenerateBoard</a> ()</td></tr>
+<tr class="memdesc:a9b90253fcbc77e78916f618c51558cc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates board. <br/></td></tr>
 <tr class="separator:a9b90253fcbc77e78916f618c51558cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ac512a2358f2828b75f86de08c7c5bd57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac512a2358f2828b75f86de08c7c5bd57"></a>
-std::vector&lt; std::vector&lt; <a class="el" href="class_piece.html">Piece</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GameBoard</b></td></tr>
+std::vector&lt; std::vector&lt; <a class="el" href="class_piece.html">Piece</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#ac512a2358f2828b75f86de08c7c5bd57">GameBoard</a></td></tr>
+<tr class="memdesc:ac512a2358f2828b75f86de08c7c5bd57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of gameboards and states of game. <br/></td></tr>
 <tr class="separator:ac512a2358f2828b75f86de08c7c5bd57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f6c7f649ce262ddcb75458e3e1a984"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8f6c7f649ce262ddcb75458e3e1a984"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#ab8f6c7f649ce262ddcb75458e3e1a984">player1_pieces</a></td></tr>
+<tr class="memdesc:ab8f6c7f649ce262ddcb75458e3e1a984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Amount of pieces for player 1. <br/></td></tr>
+<tr class="separator:ab8f6c7f649ce262ddcb75458e3e1a984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c60deb1a6669deafa24c3309e61b948"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c60deb1a6669deafa24c3309e61b948"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a3c60deb1a6669deafa24c3309e61b948">player2_pieces</a></td></tr>
+<tr class="memdesc:a3c60deb1a6669deafa24c3309e61b948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Amount of pieces for player 2. <br/></td></tr>
+<tr class="separator:a3c60deb1a6669deafa24c3309e61b948"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Brief description. Gameboard used by class <a class="el" href="class_game.html" title="Brief description. Class Game use as base interface for 2 player board games.">Game</a>, contains pieces and size etc for common properties and functions for board games. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a2a454606767ae96c22a728f3268b10fc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Board::Board </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>constructor sets height and width of board </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">h</td><td>heigt </td></tr>
+    <tr><td class="paramname">w</td><td>width </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ab4b499dd0102694b8eb2f67f6717f9d3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Board::CheckOwner </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>X</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks for owner of piece placed on provided cord returns string value for player. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">X</td><td>x value for piece position cord </td></tr>
+    <tr><td class="paramname">Y</td><td>y value for piece position cord </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5bef79c659946f9849a3d163f27e5191"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Board::Revert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_board.html">Board</a>&#160;</td>
+          <td class="paramname"><em>G</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reverts moves. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">G</td><td>Current board to revert </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abbfb453ac45df0b5b1ca389c3edc3810"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Board::SetSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets size of board. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">h</td><td>heigt </td></tr>
+    <tr><td class="paramname">w</td><td>widthReturns width of the board </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_board_8h_source.html">Board.h</a></li>
 <li>Board.cpp</li>
@@ -132,7 +287,7 @@ std::vector&lt; std::vector&lt; <a class="el" href="class_piece.html">Piece</a> 
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 19 2013 14:36:03 for BoardGame by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 19 2013 16:52:02 for BoardGame by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

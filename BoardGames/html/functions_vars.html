@@ -25,7 +25,7 @@
    <div id="projectname">BoardGame
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Simpleboardgameinterfacewithexamplegames</div>
+   <div id="projectbrief">Simple boardgame interface with example games</div>
   </td>
  </tr>
  </tbody>
@@ -72,6 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -80,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,6 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="contents">
 &#160;<ul>
+<li>CurrentPlayer
+: <a class="el" href="class_game.html#a661282d67a0e4a972293c98478bc02e4">Game</a>
+</li>
 <li>CurrentTurn
 : <a class="el" href="class_game.html#a88700a4643e08b12130ba2950c54ed8b">Game</a>
 </li>
@@ -100,8 +104,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>difficulty
 : <a class="el" href="class_game.html#a536a6390d16f05d402928bd731e06ef3">Game</a>
 </li>
+<li>From
+: <a class="el" href="struct_played_games.html#a8161889db8ad5de4d0583f776c3b11a9">PlayedGames</a>
+</li>
 <li>GameBoard
-: <a class="el" href="class_game.html#aeb67bc4fc06221330cfd7c862c85b66d">Game</a>
+: <a class="el" href="class_board.html#ac512a2358f2828b75f86de08c7c5bd57">Board</a>
+, <a class="el" href="class_game.html#aeb67bc4fc06221330cfd7c862c85b66d">Game</a>
 </li>
 <li>GameName
 : <a class="el" href="class_game.html#a1b56d5db37d900da0911378cc01f4cad">Game</a>
@@ -112,20 +120,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>m_finished
 : <a class="el" href="class_game.html#aee0b70deb19422d35b2061beb339bdf8">Game</a>
 </li>
+<li>m_x
+: <a class="el" href="struct_point.html#a885daee8c5064cd51f6a4c3888091fc9">Point</a>
+</li>
+<li>m_y
+: <a class="el" href="struct_point.html#a00e243381d01e186dc2fcc5d24b4d3be">Point</a>
+</li>
 <li>MaxPlays
 : <a class="el" href="class_game.html#a53cb9be6604469db6b3abac24c5a2ab6">Game</a>
 </li>
 <li>player1_pieces
-: <a class="el" href="class_game.html#aea2c7f8bdb891f32026750c81f6eac16">Game</a>
+: <a class="el" href="class_board.html#ab8f6c7f649ce262ddcb75458e3e1a984">Board</a>
 </li>
 <li>player2_pieces
-: <a class="el" href="class_game.html#a2b82ab082220d93bab2d7d1d181ad639">Game</a>
+: <a class="el" href="class_board.html#a3c60deb1a6669deafa24c3309e61b948">Board</a>
+</li>
+<li>score
+: <a class="el" href="struct_played_games.html#a6a97cbfe533f61817c49b063f2d9b49e">PlayedGames</a>
+</li>
+<li>To
+: <a class="el" href="struct_played_games.html#a713c66ac564a5e6abd614bbb54377b78">PlayedGames</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 19 2013 14:36:03 for BoardGame by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 19 2013 16:52:02 for BoardGame by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

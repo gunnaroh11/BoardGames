@@ -1,6 +1,15 @@
 \hypertarget{class_pawn}{\section{Pawn Class Reference}
 \label{class_pawn}\index{Pawn@{Pawn}}
 }
+
+
+Brief description. \hyperlink{class_pawn}{Pawn} is a derived class from \hyperlink{class_piece}{Piece} and implements its own function get\-Moves.  
+
+
+
+
+{\ttfamily \#include $<$Pawn.\-h$>$}
+
 Inheritance diagram for Pawn\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,10 +19,16 @@ Inheritance diagram for Pawn\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\hypertarget{class_pawn_ab7880b10c514f4b9fab9766fbe7c06fd}{\hyperlink{class_pawn_ab7880b10c514f4b9fab9766fbe7c06fd}{Pawn} ()}\label{class_pawn_ab7880b10c514f4b9fab9766fbe7c06fd}
+
+\begin{DoxyCompactList}\small\item\em Defeult constructor. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_pawn_ab08f4e1682965a0a251c60a9857685bf}{get\-Moves} (std\-::vector$<$ \hyperlink{struct_point}{Point} $>$ \&points, const int board\-Size)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets avalible moves for current \hyperlink{class_pawn}{Pawn}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
+
+\subsection{Detailed Description}
+Brief description. \hyperlink{class_pawn}{Pawn} is a derived class from \hyperlink{class_piece}{Piece} and implements its own function get\-Moves. 
 
 \subsection{Member Function Documentation}
 \hypertarget{class_pawn_ab08f4e1682965a0a251c60a9857685bf}{\index{Pawn@{Pawn}!get\-Moves@{get\-Moves}}
@@ -24,6 +39,17 @@ virtual void \hyperlink{class_pawn_ab08f4e1682965a0a251c60a9857685bf}{get\-Moves
 \item[{const int}]{board\-Size}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_pawn_ab08f4e1682965a0a251c60a9857685bf}
+
+
+Gets avalible moves for current \hyperlink{class_pawn}{Pawn}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&points} & result vector of \hyperlink{struct_point}{Point} \\
+\hline
+{\em board\-Size} & Size of the board \\
+\hline
+\end{DoxyParams}
 if player = 1 
 
 Reimplemented from \hyperlink{class_piece}{Piece}.

@@ -25,7 +25,7 @@
    <div id="projectname">BoardGame
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Simpleboardgameinterfacewithexamplegames</div>
+   <div id="projectbrief">Simple boardgame interface with example games</div>
   </td>
  </tr>
  </tbody>
@@ -72,6 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -80,14 +81,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_c"><span>c</span></a></li>
       <li><a href="#index_d"><span>d</span></a></li>
       <li><a href="#index_e"><span>e</span></a></li>
+      <li><a href="#index_f"><span>f</span></a></li>
       <li><a href="#index_g"><span>g</span></a></li>
       <li><a href="#index_h"><span>h</span></a></li>
       <li><a href="#index_l"><span>l</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_o"><span>o</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_q"><span>q</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
+      <li><a href="#index_t"><span>t</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -96,7 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Friends</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -109,6 +113,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div>
 
 <h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
+<li>Board()
+: <a class="el" href="class_board.html#a9ee491d4fea680cf69b033374a9fdfcb">Board</a>
+</li>
 <li>Breaktrough()
 : <a class="el" href="class_breaktrough.html#a988083f0722bff1058a980748c65705f">Breaktrough</a>
 </li>
@@ -116,9 +123,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>canMake()
+: <a class="el" href="class_game.html#a37edad1c1ded84b1735653f809ccb585">Game</a>
+</li>
 <li>checkFinished()
 : <a class="el" href="class_breaktrough.html#ae9e5edbac2c2fcce47711697eb3a8a2d">Breaktrough</a>
 , <a class="el" href="class_game.html#ae5be70ea28f2ec151cd93e86086f23a9">Game</a>
+</li>
+<li>CheckOwner()
+: <a class="el" href="class_board.html#ab4b499dd0102694b8eb2f67f6717f9d3">Board</a>
+</li>
+<li>CurrentPlayer
+: <a class="el" href="class_game.html#a661282d67a0e4a972293c98478bc02e4">Game</a>
 </li>
 <li>CurrentTurn
 : <a class="el" href="class_game.html#a88700a4643e08b12130ba2950c54ed8b">Game</a>
@@ -144,7 +160,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
 <li>evaluate()
-: <a class="el" href="class_game.html#a9fb895bd0ce0684a2cf95d3d212487df">Game</a>
+: <a class="el" href="class_game.html#a57c576172c457a1c128fb46ea557b6c6">Game</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
+<li>From
+: <a class="el" href="struct_played_games.html#a8161889db8ad5de4d0583f776c3b11a9">PlayedGames</a>
 </li>
 </ul>
 
@@ -154,13 +177,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_game.html#ad59df6562a58a614fda24622d3715b65">Game</a>
 </li>
 <li>GameBoard
-: <a class="el" href="class_game.html#aeb67bc4fc06221330cfd7c862c85b66d">Game</a>
+: <a class="el" href="class_board.html#ac512a2358f2828b75f86de08c7c5bd57">Board</a>
+, <a class="el" href="class_game.html#aeb67bc4fc06221330cfd7c862c85b66d">Game</a>
 </li>
 <li>GameName
 : <a class="el" href="class_game.html#a1b56d5db37d900da0911378cc01f4cad">Game</a>
 </li>
+<li>GenerateBoard()
+: <a class="el" href="class_board.html#a9b90253fcbc77e78916f618c51558cc4">Board</a>
+</li>
 <li>getDifficulty()
 : <a class="el" href="class_game.html#a2c0efe888e453a7fc0e644503fbd6316">Game</a>
+</li>
+<li>getHeight()
+: <a class="el" href="class_board.html#a14466e56568d523e5f4d0d695ccbcce1">Board</a>
 </li>
 <li>getMoves()
 : <a class="el" href="class_pawn.html#ab08f4e1682965a0a251c60a9857685bf">Pawn</a>
@@ -171,8 +201,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>GetTestGame()
 : <a class="el" href="class_game.html#a1f47238d93728540edb7940a80a9db89">Game</a>
 </li>
+<li>getWidth()
+: <a class="el" href="class_board.html#a67905f3b441a8605aeb50d8978415aa0">Board</a>
+</li>
 <li>go()
-: <a class="el" href="class_game.html#a41fb865a89791da04f767fc5a12934a3">Game</a>
+: <a class="el" href="class_game.html#acb55f2004706d2ec387750c59681dcdb">Game</a>
 </li>
 </ul>
 
@@ -187,6 +220,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
 <li>legal()
 : <a class="el" href="class_breaktrough.html#a6bf5d444ace61244df9a0255fde5d533">Breaktrough</a>
+, <a class="el" href="class_game.html#a6e0ab8b7ceeecab810bbb69c183731d0">Game</a>
 </li>
 </ul>
 
@@ -194,6 +228,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
 <li>m_finished
 : <a class="el" href="class_game.html#aee0b70deb19422d35b2061beb339bdf8">Game</a>
+</li>
+<li>m_x
+: <a class="el" href="struct_point.html#a885daee8c5064cd51f6a4c3888091fc9">Point</a>
+</li>
+<li>m_y
+: <a class="el" href="struct_point.html#a00e243381d01e186dc2fcc5d24b4d3be">Point</a>
 </li>
 <li>make()
 : <a class="el" href="class_breaktrough.html#a07006aa5d9919ddefa68554f3022afc6">Breaktrough</a>
@@ -205,12 +245,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ul>
 
 
+<h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
+<li>operator=()
+: <a class="el" href="class_board.html#abe6ef93a03902a234b541130dab81366">Board</a>
+</li>
+<li>operator==
+: <a class="el" href="struct_point.html#a75de5fa7971bc4ffdd3c5d06d776495c">Point</a>
+</li>
+</ul>
+
+
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>Pawn()
+: <a class="el" href="class_pawn.html#ab7880b10c514f4b9fab9766fbe7c06fd">Pawn</a>
+</li>
+<li>PlayedGames()
+: <a class="el" href="struct_played_games.html#a0f9c993c3feaf9db2f11a0e1334d2934">PlayedGames</a>
+</li>
 <li>player1_pieces
-: <a class="el" href="class_game.html#aea2c7f8bdb891f32026750c81f6eac16">Game</a>
+: <a class="el" href="class_board.html#ab8f6c7f649ce262ddcb75458e3e1a984">Board</a>
 </li>
 <li>player2_pieces
-: <a class="el" href="class_game.html#a2b82ab082220d93bab2d7d1d181ad639">Game</a>
+: <a class="el" href="class_board.html#a3c60deb1a6669deafa24c3309e61b948">Board</a>
+</li>
+<li>PlayerLegal()
+: <a class="el" href="class_game.html#a7fef725397df911f2f78053433de7bf8">Game</a>
+</li>
+<li>Point()
+: <a class="el" href="struct_point.html#a001c4958c310b248f5c26037aea38a9c">Point</a>
+</li>
+<li>print()
+: <a class="el" href="struct_point.html#a76c5855c06d98aed16b5796a9a50bbee">Point</a>
 </li>
 </ul>
 
@@ -226,25 +291,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>retract()
 : <a class="el" href="class_game.html#a9be0655102af94f1a37a7eaec1be36fc">Game</a>
 </li>
+<li>Revert()
+: <a class="el" href="class_board.html#a5bef79c659946f9849a3d163f27e5191">Board</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>score
+: <a class="el" href="struct_played_games.html#a6a97cbfe533f61817c49b063f2d9b49e">PlayedGames</a>
+</li>
 <li>setDifficulty()
 : <a class="el" href="class_game.html#ae8ac0005c039f0f5f2dd1c10a299fe8d">Game</a>
 </li>
 <li>setMoveForPlayer()
 : <a class="el" href="class_breaktrough.html#a1e1244669a6ab63043329afcdaaeec37">Breaktrough</a>
 </li>
+<li>SetSize()
+: <a class="el" href="class_board.html#abbfb453ac45df0b5b1ca389c3edc3810">Board</a>
+</li>
 <li>start()
 : <a class="el" href="class_breaktrough.html#a1e4b2c80e074f7052c4c491abe95c9f6">Breaktrough</a>
 , <a class="el" href="class_game.html#a3d9b98f7c4a96ecf578f75b96c9f0e90">Game</a>
+</li>
+<li>SwapTiles()
+: <a class="el" href="class_breaktrough.html#ae06baf0cb3f6473725075a40cd57ee37">Breaktrough</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>To
+: <a class="el" href="struct_played_games.html#a713c66ac564a5e6abd614bbb54377b78">PlayedGames</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 19 2013 14:36:03 for BoardGame by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 19 2013 16:52:02 for BoardGame by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>
